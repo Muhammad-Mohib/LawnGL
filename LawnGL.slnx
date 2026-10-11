@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="LawnGL.vcxproj" Id="754adff5-a73d-4c8b-9630-92544028e8f9" />
+</Solution>
