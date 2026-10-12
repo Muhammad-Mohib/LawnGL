@@ -5,6 +5,7 @@
 #include "Window.h"
 #include "Shader.h"
 #include<stb/stb_image.h>
+#include "Texture.h"
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
@@ -55,25 +56,7 @@ int main()
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
 
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	int width, height, channels;
-	stbi_set_flip_vertically_on_load(true);
-
-	unsigned char* data = stbi_load("D:\\GraphicsStuff\\LawnGL\\Textures\\aaa.png", &width, &height, &channels, 0);
-
-	unsigned int texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-	glGenerateMipmap(GL_TEXTURE_2D);
-
-	stbi_image_free(data);
+	Texture text = Texture("D:\\GraphicsStuff\\LawnGL\\Textures\\aaa.png");
 
 	while (!glfwWindowShouldClose(currentWindow.window))
 	{
@@ -82,7 +65,9 @@ int main()
 
 		MyShader.Activate();
 
-		glBindTexture(GL_TEXTURE_2D, texture);
+		text.Bind();
+
+		//glBindTexture(GL_TEXTURE_2D, texture);
 		//glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
