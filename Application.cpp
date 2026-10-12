@@ -3,6 +3,7 @@
 #include "Application.h"
 #include<stdio.h>
 #include "Window.h"
+#include "Shader.h"
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
@@ -46,6 +47,9 @@ int main()
 	}
 	glViewport(0, 0, 800, 600);
 
+
+	Shader MyShader = Shader("D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
+
 	unsigned int VAO, VBO, EBO;
 
 	glGenBuffers(1, &VBO);
@@ -60,21 +64,22 @@ int main()
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	unsigned int vertexShader, fragmentShader, shaderProgram;
 
-	vertexShader = glCreateShader(GL_VERTEX_SHADER);
-	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+	//unsigned int vertexShader, fragmentShader, shaderProgram;
 
-	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-	glCompileShader(vertexShader);
-	glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-	glCompileShader(fragmentShader);
+	//vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	//fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 
-	shaderProgram = glCreateProgram();
-	glAttachShader(shaderProgram, vertexShader);
-	glAttachShader(shaderProgram, fragmentShader);
+	//glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+	//glCompileShader(vertexShader);
+	//glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+	//glCompileShader(fragmentShader);
 
-	glLinkProgram(shaderProgram);
+	//shaderProgram = glCreateProgram();
+	//glAttachShader(shaderProgram, vertexShader);
+	//glAttachShader(shaderProgram, fragmentShader);
+
+	//glLinkProgram(shaderProgram);
 
 
 	while (!glfwWindowShouldClose(currentWindow.window))
@@ -82,7 +87,9 @@ int main()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		glUseProgram(shaderProgram);
+		MyShader.Activate();
+
+		//glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
