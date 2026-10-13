@@ -1,5 +1,6 @@
 #include "SpriteRenderer.h"
 
-SpriteRenderer::SpriteRenderer()
+SpriteRenderer::SpriteRenderer(Texture* SR_Sprite, Material* SR_Material)
 {
+
 }

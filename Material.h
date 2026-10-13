@@ -3,6 +3,7 @@
 class Material
 {
 public:
-	Shader shader;
+	Material(Shader* MaterialShader);
+	Shader* MatShader;
 };
 

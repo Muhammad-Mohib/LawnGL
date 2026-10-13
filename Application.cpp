@@ -6,10 +6,7 @@
 #include "Shader.h"
 #include<stb/stb_image.h>
 #include "Texture.h"
-#include "VAO.h"
-#include "EBO.h"
-#include "Mesh.h"
-#include "SpriteRenderer.h"
+#include "GameObject.h"
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
@@ -43,19 +40,19 @@ int main()
 	Shader MyShader = Shader("D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
 
 	Texture text = Texture("D:\\GraphicsStuff\\LawnGL\\Textures\\aaa.png");
+
+	Material mat = Material(&MyShader);
 	
 	Mesh mesh = Mesh(vertices, sizeof(vertices), indices, sizeof(indices));
+
+	GameObject gameObj = GameObject(&mesh, &text, &mat);
 
 	while (!glfwWindowShouldClose(currentWindow.window))
 	{
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		MyShader.Activate();
-		text.Bind();
-
-		mesh.MeshVAO.Bind();
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		gameObj.Draw();
 
 		glfwSwapBuffers(currentWindow.window);
 		glfwPollEvents();
