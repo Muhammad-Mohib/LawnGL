@@ -9,6 +9,7 @@
 #include "VAO.h"
 #include "EBO.h"
 #include "Mesh.h"
+#include "SpriteRenderer.h"
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
@@ -39,47 +40,11 @@ int main()
 	}
 	glViewport(0, 0, 800, 600);
 
-
 	Shader MyShader = Shader("D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
-
-	unsigned int VAO, VBO, EBO;
-
-	glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
-	glGenVertexArrays(1, &VAO);
-	glBindVertexArray(VAO);
-
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), &vertices, GL_STATIC_DRAW);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), &indices, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	
 
 	Texture text = Texture("D:\\GraphicsStuff\\LawnGL\\Textures\\aaa.png");
 	
 	Mesh mesh = Mesh(vertices, sizeof(vertices), indices, sizeof(indices));
-
-	//VAO vao1;
-	//vao1.Bind();
-
-	//VBO vbo1(vertices, sizeof(vertices));
-
-	//glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
-	//glEnableVertexAttribArray(1);
-	//
-	//EBO ebo1(indices, sizeof(indices));
-
-
-	//vao1.LinkVBO(vbo1, 0);
-
-	//vao1.Unbind();
-	//vbo1.Unbind();
-	//ebo1.Unbind();
-
-	//
-
 
 	while (!glfwWindowShouldClose(currentWindow.window))
 	{
@@ -90,7 +55,6 @@ int main()
 		text.Bind();
 
 		mesh.MeshVAO.Bind();
-		//vao1.Bind();
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		glfwSwapBuffers(currentWindow.window);

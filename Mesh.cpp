@@ -9,7 +9,7 @@ Mesh::Mesh(const GLfloat* vertices, GLsizeiptr vertexSize,
 {
 	MeshVAO.Bind();
 
-	MeshVBO.Upload(vertices, vertexSize);
+	MeshVBO.Upload(vertices, vertexSize);	
 
 	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
