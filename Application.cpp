@@ -7,6 +7,7 @@
 #include<stb/stb_image.h>
 #include "Texture.h"
 #include "GameObject.h"
+#include "ResourceManager.h"
 
 int WINDOW_WIDTH = 800;
 int WINDOW_HEIGHT = 600;
@@ -16,11 +17,19 @@ int main()
 {
 
 	float vertices[] = {
-		// positions          // colors           // texture coords
-		 0.5f,  0.5f, 0.0f,   1.0f, 1.0f,   // top right
-		 0.5f, -0.5f, 0.0f,   1.0f, 0.0f,   // bottom right
-		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f,   // bottom left
-		-0.5f,  0.5f, 0.0f,   0.0f, 1.0f    // top left 
+		// positions                   // texture coords
+		 400.0f,  300.0f,   1.0f, 1.0f,   // top right
+		 400.0f, -300.0f,   1.0f, 0.0f,   // bottom right
+		-400.0f, -300.0f,   0.0f, 0.0f,   // bottom left
+		-400.0f,  300.0f,   0.0f, 1.0f    // top left 
+	};
+
+	float seedBankVertices[] = {
+		// positions                   // texture coords
+		 250.0f,  50.0f,   1.0f, 1.0f,   // top right
+		 250.0f, -50.0f,   1.0f, 0.0f,   // bottom right
+		-250.0f, -50.0f,   0.0f, 0.0f,   // bottom left
+		-250.0f,  50.0f,   0.0f, 1.0f    // top left 
 	};
 
 	unsigned int indices[] = {
@@ -37,15 +46,33 @@ int main()
 	}
 	glViewport(0, 0, 800, 600);
 
-	Shader MyShader = Shader("D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
 
-	Texture text = Texture("D:\\GraphicsStuff\\LawnGL\\Textures\\aaa.png");
+	Shader MyShader = Shader("Default","D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
 
-	Material mat = Material(&MyShader);
+	Texture text = Texture("Bg","D:\\GraphicsStuff\\LawnGL\\Textures\\background.jpg");
+
+	Material mat = Material("Default", & MyShader);
+
+
+	Mesh mesh = Mesh("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
+	Mesh seedBankMesh = Mesh("SeedBank", seedBankVertices, sizeof(seedBankVertices), indices, sizeof(indices));
+
+	ResourceManager RM = ResourceManager();
+	RM.AddResource(&MyShader);
+	RM.AddResource(&text);
+	RM.AddResource(&mat);
+	RM.AddResource(&mesh);
 	
-	Mesh mesh = Mesh(vertices, sizeof(vertices), indices, sizeof(indices));
 
-	GameObject gameObj = GameObject(&mesh, &text, &mat);
+	GameObject gameObj = GameObject(RM.GetResource<Mesh>("Bg"), RM.GetResource<Texture>("Bg"), RM.GetResource<Material>("Default"));
+	gameObj.transform.position = { 500.0f, 300.0f };
+	gameObj.transform.scale = { 1.6f, 1.0f };
+
+	Texture seedBankTex = Texture("SeedBank","D:\\GraphicsStuff\\LawnGL\\Textures\\SeedBank.png");
+	
+	GameObject seedBankObj = GameObject(&seedBankMesh, &seedBankTex, &mat);
+	seedBankObj.transform.position = { 350.0f, 550.0f };
+	seedBankObj.transform.scale = { 1.0f, 1.0f };
 
 	while (!glfwWindowShouldClose(currentWindow.window))
 	{
@@ -53,6 +80,7 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		gameObj.Draw();
+		seedBankObj.Draw();
 
 		glfwSwapBuffers(currentWindow.window);
 		glfwPollEvents();

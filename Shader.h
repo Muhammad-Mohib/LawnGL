@@ -10,12 +10,13 @@ class Shader
 {
 public:
 	GLuint ID;
+	std::string Name;
 
-	Shader(const char* vertexFile, const char* fragmentFile);
+	Shader(std::string ShaderName, const char* vertexFile, const char* fragmentFile);
+	~Shader();
 	void Activate();
 	void Delete();
 private:
-
 	std::string ReadFile(const char* FilePath);
 };
 

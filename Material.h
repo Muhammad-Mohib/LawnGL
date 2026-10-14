@@ -3,7 +3,8 @@
 class Material
 {
 public:
-	Material(Shader* MaterialShader);
+	Material(std::string MaterialName, Shader* MaterialShader);
 	Shader* MatShader;
+	std::string Name;
 };
 

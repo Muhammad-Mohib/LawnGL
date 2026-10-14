@@ -1,8 +1,9 @@
 #include "Shader.h"
 #include <sstream>
 
-Shader::Shader(const char* vertexFile, const char* fragmentFile)
+Shader::Shader(std::string ShaderName, const char* vertexFile, const char* fragmentFile)
 {
+	Name = ShaderName;
 	std::string vertexShaderStr = ReadFile(vertexFile);
 	std::string fragmentShaderStr = ReadFile(fragmentFile);
 
@@ -26,6 +27,11 @@ Shader::Shader(const char* vertexFile, const char* fragmentFile)
 	glLinkProgram(ID);
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
+}
+
+Shader::~Shader()
+{
+	Delete();
 }
 
 std::string Shader::ReadFile(const char* FilePath)

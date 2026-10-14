@@ -1,14 +1,15 @@
 #pragma once
 #include<glad/glad.h>
+#include <string>
 
 
 class Texture
 {
 public:
-	Texture(char const* filename);
+	Texture(std::string TextureName, char const* filename);
 
 	GLuint ID;
-
+	std::string Name;
 	void Bind();
 	void Activate();
 };

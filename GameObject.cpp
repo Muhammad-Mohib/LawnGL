@@ -9,7 +9,23 @@ GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat) : GameObject_
 
 void GameObject::Draw()
 {
+
 	GameObject_SpriteRenderer.SpriteMaterial->MatShader->Activate();
+
+	glm::mat4 projection = glm::ortho(
+		0.0f, 800.0f,
+		0.0f, 600.0f
+	);
+
+	glm::mat4 model = transform.GetMatrix();
+
+	GLint projectionLoc = glGetUniformLocation(GameObject_SpriteRenderer.SpriteMaterial->MatShader->ID, "projection");
+
+	GLint modelLoc = glGetUniformLocation(GameObject_SpriteRenderer.SpriteMaterial->MatShader->ID, "model");
+
+	glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+
 	GameObject_SpriteRenderer.Sprite->Bind();
 	GameObject_Mesh->MeshVAO.Bind();
 

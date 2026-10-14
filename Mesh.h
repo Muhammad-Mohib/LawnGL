@@ -2,13 +2,16 @@
 
 #include "VAO.h"
 #include "EBO.h"
+#include <string>
 
 
 class Mesh
 {
 public:
-	Mesh(const GLfloat* vertices, GLsizeiptr vertexSize,
+	std::string Name;
+	Mesh(std::string MeshName, const GLfloat* vertices, GLsizeiptr vertexSize,
 		const GLuint* indices, GLsizeiptr indexSize);
+	~Mesh();
 	VAO MeshVAO;
 	VBO MeshVBO;
 	EBO MeshEBO;
