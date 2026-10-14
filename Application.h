@@ -1,13 +1,17 @@
 #pragma once
-//#include "Window.h"
+#include "ResourceManager.h"
+#include "Window.h"
+
 class Application
 {
 public:
+	ResourceManager _ResourceManager;
+	Application();
+	void Run();
+	void AllocateResources();
 	
 
 private:
-	void Run();
-
-	//Window* window;
+	GLFWwindow* currentWindow;
 };
 
