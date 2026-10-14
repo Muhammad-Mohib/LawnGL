@@ -1,11 +1,12 @@
 #include "Shader.h"
 #include <sstream>
+#include "Paths.h"
 
 Shader::Shader(std::string ShaderName, const char* vertexFile, const char* fragmentFile)
 {
 	Name = ShaderName;
-	std::string vertexShaderStr = ReadFile(vertexFile);
-	std::string fragmentShaderStr = ReadFile(fragmentFile);
+	std::string vertexShaderStr = ReadFile(Paths::Shader(vertexFile).c_str());
+	std::string fragmentShaderStr = ReadFile(Paths::Shader(fragmentFile).c_str());
 
 	const char* vertexShaderCode = vertexShaderStr.c_str();
 	const char* fragmentShaderCode = fragmentShaderStr.c_str();

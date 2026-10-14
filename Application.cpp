@@ -63,9 +63,9 @@ Application::Application()
 void Application::Run()
 {
 
-	//GameObject gameObj = GameObject(_ResourceManager.GetResource<Mesh>("Bg"), _ResourceManager.GetResource<Texture>("Bg"), _ResourceManager.GetResource<Material>("Default"));
-	//gameObj.transform.position = { 500.0f, 300.0f };
-	//gameObj.transform.scale = { 1.6f, 1.0f };
+	GameObject gameObj = GameObject(_ResourceManager.GetResource<Mesh>("Bg"), _ResourceManager.GetResource<Texture>("Bg"), _ResourceManager.GetResource<Material>("Default"));
+	gameObj.transform.position = { 500.0f, 300.0f };
+	gameObj.transform.scale = { 1.6f, 1.0f };
 
 	//Texture seedBankTex = Texture("SeedBank", "D:\\GraphicsStuff\\LawnGL\\Textures\\SeedBank.png");
 
@@ -78,7 +78,7 @@ void Application::Run()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		//gameObj.Draw();
+		gameObj.Draw();
 		//seedBankObj.Draw();
 
 		glfwSwapBuffers(currentWindow);
@@ -105,10 +105,10 @@ void Application::AllocateResources()
 	//Mesh mesh = Mesh("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
 	//Mesh seedBankMesh = Mesh("SeedBank", seedBankVertices, sizeof(seedBankVertices), indices, sizeof(indices));
 
-	_ResourceManager.AddResource<Shader>("Default", "D:\\GraphicsStuff\\LawnGL\\default.vert", "D:\\GraphicsStuff\\LawnGL\\default.frag");
+	_ResourceManager.AddResource<Shader>("Default", "default.vert", "default.frag");
 	_ResourceManager.AddResource<Material>("Default", _ResourceManager.GetResource<Shader>("Default"));
 	_ResourceManager.AddResource<Mesh>("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
-	_ResourceManager.AddResource<Texture>("Bg", "D:\\GraphicsStuff\\LawnGL\\Textures\\background.jpg");
+	_ResourceManager.AddResource<Texture>("Bg", "background.jpg");
 
  	_ResourceManager.GetResource<Material>("Default");
 }

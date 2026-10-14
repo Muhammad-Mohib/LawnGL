@@ -2,6 +2,7 @@
 #include "ResourceManager.h"
 #include "Window.h"
 
+
 class Application
 {
 public:
@@ -9,7 +10,6 @@ public:
 	Application();
 	void Run();
 	void AllocateResources();
-	
 
 private:
 	GLFWwindow* currentWindow;

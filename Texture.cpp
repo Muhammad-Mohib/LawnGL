@@ -1,5 +1,6 @@
 #include "Texture.h"
 #include <stb/stb_image.h>
+#include"Paths.h"
 
 Texture::Texture(std::string TextureName, char const* filename)
 {
@@ -13,7 +14,7 @@ Texture::Texture(std::string TextureName, char const* filename)
 	int width, height, channels;
 	stbi_set_flip_vertically_on_load(true);
 
-	unsigned char* data = stbi_load(filename, &width, &height, &channels, 0);
+	unsigned char* data = stbi_load(Paths::Texture(filename).c_str(), &width, &height, &channels, 0);
 
 	GLenum format = (channels == 4) ? GL_RGBA : GL_RGB;
 	glGenTextures(1, &ID);
