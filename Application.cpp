@@ -44,7 +44,7 @@ int main()
 	return 0;
 }
 
-Application::Application()
+Application::Application() : _SceneManager(&_ResourceManager)
 {
 	Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 	currentWindow = window.window;
@@ -56,33 +56,54 @@ Application::Application()
 	}
 	glViewport(0, 0, 800, 600);
 
-
 	AllocateResources();
+
+	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager));
+	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager));
+
+	_SceneManager.Scenes[_SceneManager.SceneIndex]->Load();
 }
 
 void Application::Run()
 {
+	//GameObject gameObj = GameObject(_ResourceManager.GetResource<Mesh>("Bg"), _ResourceManager.GetResource<Texture>("Bg"), _ResourceManager.GetResource<Material>("Default"));
+	//gameObj.transform.position = { 500.0f, 300.0f };
+	//gameObj.transform.scale = { 1.6f, 1.0f };
 
-	GameObject gameObj = GameObject(_ResourceManager.GetResource<Mesh>("Bg"), _ResourceManager.GetResource<Texture>("Bg"), _ResourceManager.GetResource<Material>("Default"));
-	gameObj.transform.position = { 500.0f, 300.0f };
-	gameObj.transform.scale = { 1.6f, 1.0f };
-
-	//Texture seedBankTex = Texture("SeedBank", "D:\\GraphicsStuff\\LawnGL\\Textures\\SeedBank.png");
+	//Texture seedBankTex = Texture("SeedBank", "SeedBank.png");
 
 	//GameObject seedBankObj = GameObject(_ResourceManager.GetResource<Mesh>("SeedBank"), &seedBankTex, _ResourceManager.GetResource<Material>("Default"));
 	//seedBankObj.transform.position = { 350.0f, 550.0f };
 	//seedBankObj.transform.scale = { 1.0f, 1.0f };
 
+	double lastTime = glfwGetTime();
+	float timer = 0.0f;
+	bool x = false;
+
 	while (!glfwWindowShouldClose(currentWindow))
 	{
+		double currentTime = glfwGetTime();
+		float deltaTime = static_cast<float>(currentTime - lastTime);
+		lastTime = currentTime;
+
+		if (deltaTime > 0.1f) deltaTime = 0.1f;
+
+		if (timer > 10000 && !x)
+		{
+			_SceneManager.LoadScene(1);
+			x = true;
+		}
+
+		timer++;
+		glfwPollEvents();
+
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		gameObj.Draw();
-		//seedBankObj.Draw();
+		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
+		std::cout << _SceneManager.SceneIndex << std::endl;
 
 		glfwSwapBuffers(currentWindow);
-		glfwPollEvents();
 	}
 
 	//vao1.Delete();
@@ -105,10 +126,12 @@ void Application::AllocateResources()
 	//Mesh mesh = Mesh("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
 	//Mesh seedBankMesh = Mesh("SeedBank", seedBankVertices, sizeof(seedBankVertices), indices, sizeof(indices));
 
+	_ResourceManager.AddResource<Mesh>("SeedBank", seedBankVertices, sizeof(seedBankVertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Shader>("Default", "default.vert", "default.frag");
 	_ResourceManager.AddResource<Material>("Default", _ResourceManager.GetResource<Shader>("Default"));
 	_ResourceManager.AddResource<Mesh>("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Texture>("Bg", "background.jpg");
+	_ResourceManager.AddResource<Texture>("SeedBank", "SeedBank.png");
 
  	_ResourceManager.GetResource<Material>("Default");
 }

@@ -1,3 +1,4 @@
+#pragma once
 #include "Mesh.h"
 #include "SpriteRenderer.h"
 #include<GLM/gtc/matrix_transform.hpp>
@@ -33,5 +34,6 @@ public:
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;
 	void Draw();
+	void Update(float deltaTime);
 };
 

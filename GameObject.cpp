@@ -9,7 +9,6 @@ GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat) : GameObject_
 
 void GameObject::Draw()
 {
-
 	GameObject_SpriteRenderer.SpriteMaterial->MatShader->Activate();
 
 	glm::mat4 projection = glm::ortho(
@@ -30,4 +29,10 @@ void GameObject::Draw()
 	GameObject_Mesh->MeshVAO.Bind();
 
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+}
+
+void GameObject::Update(float deltaTime)
+{
+	Draw();
+	//transform.position.x += 100 * deltaTime;
 }
