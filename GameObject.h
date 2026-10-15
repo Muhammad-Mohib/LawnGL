@@ -29,6 +29,8 @@ class GameObject
 {
 public:
 	Transform2D transform;
+	
+	std::string Name = "DefaultGameObject";
 
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat);
 	Mesh* GameObject_Mesh;

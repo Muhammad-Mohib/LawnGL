@@ -149,6 +149,7 @@
     <ClInclude Include="EBO.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="json.hpp" />
+    <ClInclude Include="LevelEditor.h" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Paths.h" />
@@ -168,6 +169,7 @@
     <ClCompile Include="C:\Users\mohib\source\repos\Muhammad-Mohib\Verdant-Engine\VerdantEngine\Includes\GLAD\glad.c" />
     <ClCompile Include="EBO.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="LevelEditor.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Paths.cpp" />
