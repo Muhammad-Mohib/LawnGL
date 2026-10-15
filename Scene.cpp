@@ -3,14 +3,15 @@
 #include "Application.h"
 #include "json.hpp"
 
-Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager)
+Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager, std::string sceneName)
 {
 	_ResourceManager = resourceManager;
 	_SceneManager = sceneManager;
+	SceneName = sceneName;
 }
 void Scene::Load()
 {
-	std::ifstream file("x.json");
+	std::ifstream file(SceneName+".json");
 
 	nlohmann::json data = nlohmann::json::parse(file);
 

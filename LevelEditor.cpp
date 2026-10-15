@@ -23,14 +23,16 @@ void LevelEditor::OnKey(int key, int action)
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 	{
-		//selectedObject = nullptr;
-		//isDragging = false;
-		//_SceneManager.Destroy(Mover);
-		//Mover = nullptr;
-		//std::cout << "ESC pressed\n";
-		//EDITOR_IsMove = false;
+		selectedObject = nullptr;
+		isDragging = false;
+		_SceneManager.Destroy(Mover);
+		Mover = nullptr;
 
+	}
+	else if ((key == GLFW_KEY_F9 && action == GLFW_PRESS))
+	{
 		SaveLevel();
+		std::cout << "Saving Level..." << _SceneManager.SceneIndex;
 	}
 }
 
@@ -129,7 +131,6 @@ void LevelEditor::OnMouseButton(int btn, int action)
 			mover->transform.position = glm::vec2(selectedObject->transform.position.x, selectedObject->transform.position.y);
 			mover->transform.scale = { 0.2, 0.2 };
 			mover->Name = "EDITOR_Mover";
-			EDITOR_IsMove = true;
 			Mover = mover;
 		}
 		Mover->transform.position = hit->transform.position;
@@ -193,11 +194,11 @@ void LevelEditor::SetCallbacks()
 
 void LevelEditor::SaveLevel()
 {
-	std::ifstream in("x.json");
+	std::string FileName = _SceneManager.Scenes[_SceneManager.SceneIndex]->SceneName + ".json";
+	std::ifstream in(FileName);
 	nlohmann::json data = nlohmann::json::parse(in, nullptr, false);
 	in.close();
 
-	int counter = 0;
 	for (auto& obj : data)
 	{
 		auto& SceneObjects = _SceneManager.Scenes[_SceneManager.SceneIndex]->SceneGameObjects;
@@ -212,9 +213,8 @@ void LevelEditor::SaveLevel()
 				//std::cout << obj["Name"] << "   " << obj["Position"][0] << "   " << SceneObj->Name << "   " << SceneObj->transform.position.x << "\n";
 			}
 		}
-		std::ofstream out("x.json");
+		std::ofstream out(FileName);
 		out << data.dump(2);
-		counter++;
 	}
 }
 

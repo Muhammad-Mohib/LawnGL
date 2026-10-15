@@ -10,7 +10,6 @@ public:
 	// --- Move tool ---
 	GameObject* selectedObject = nullptr;
 	bool isDragging = false;
-	bool EDITOR_IsMove = false;
 	glm::vec2 grabOffset{ 0.f };
 
 	GLFWwindow* currentWindow;

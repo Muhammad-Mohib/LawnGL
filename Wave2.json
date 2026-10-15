@@ -1,0 +1,110 @@
+[
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "Bg",
+    "Name": "BG",
+    "Object": "GameObject",
+    "Position": [
+      500.0,
+      300.0
+    ],
+    "Scale": [
+      1.5,
+      1.0
+    ],
+    "Texture": "Bg"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedBank",
+    "Name": "A1",
+    "Object": "GameObject",
+    "Position": [
+      340.0,
+      550.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedBank"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "A2",
+    "Object": "GameObject",
+    "Position": [
+      298.0,
+      175.0
+    ],
+    "Scale": [
+      0.1,
+      0.1
+    ],
+    "Texture": "Peashooter0"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedPacket",
+    "Name": "A3",
+    "Object": "GameObject",
+    "Position": [
+      215.0,
+      551.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedPacket"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedPacket",
+    "Name": "A4",
+    "Object": "GameObject",
+    "Position": [
+      294.0,
+      551.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedPacket"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedPacket",
+    "Name": "A5",
+    "Object": "GameObject",
+    "Position": [
+      373.0,
+      551.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedPacket"
+  }
+]

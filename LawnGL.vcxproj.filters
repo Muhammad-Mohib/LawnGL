@@ -126,7 +126,10 @@
   <ItemGroup>
     <None Include="default.vert" />
     <None Include="default.frag" />
-    <None Include="x.json">
+    <None Include="Wave1.json">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Wave2.json">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
