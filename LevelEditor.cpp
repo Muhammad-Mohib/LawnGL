@@ -1,4 +1,5 @@
 #include "LevelEditor.h"
+#include "json.hpp"
 
 LevelEditor::LevelEditor(GLFWwindow* window, SceneManager& sceneManager) : _SceneManager(sceneManager)
 {
@@ -28,33 +29,8 @@ void LevelEditor::OnKey(int key, int action)
 		//Mover = nullptr;
 		//std::cout << "ESC pressed\n";
 		//EDITOR_IsMove = false;
-		glm::vec2 c = Mover->transform.position;
 
-		double x, y;
-		glfwGetCursorPos(currentWindow, &x, &y);
-		glm::vec2 m = ScreenToWorld(x, y);
-
-		float length = 68.0f;    // Match your drawn arrow length
-		float tolerance = 6.0f;  // Clickable distance from the line
-
-		glm::vec2 d = m - c;     // Mouse position relative to arrow origin
-
-		bool onGreen =
-			d.x >= 0.0f && d.x <= length &&
-			std::abs(d.y) <= tolerance;
-
-		bool onRed =
-			d.y >= 0.0f && d.y <= length &&
-			std::abs(d.x) <= tolerance;
-
-		if (onGreen && !onRed)
-		{
-			std::cout << "Green\n";
-		}
-		else if (onRed && !onGreen)
-		{
-			std::cout << "Red\n";
-		}
+		SaveLevel();
 	}
 }
 
@@ -172,7 +148,7 @@ void LevelEditor::OnCursorPos(double x, double y)
 	if (Mover)
 	{
 		float length = 68.0f;    // Match your drawn arrow length
-		float tolerance = 6.0f;  // Clickable distance from the line
+		float tolerance = 10.0f;  // Clickable distance from the line
 		glm::vec2 m = ScreenToWorld(x, y);
 		glm::vec2 c = Mover->transform.position;
 		glm::vec2 d = m - c;     // Mouse position relative to arrow origin
@@ -189,16 +165,18 @@ void LevelEditor::OnCursorPos(double x, double y)
 
 		if (onGreen && !onRed)
 		{
-			std::cout << "Green\n";
-
 			selectedObject->transform.position.x = p.x;
-			if (Mover) Mover->transform.position.x = p.x;
+			Mover->transform.position.x = p.x;
 		}
 		else if (onRed && !onGreen)
 		{
-			std::cout << "Red\n";
+			Mover->transform.position.y = p.y;
 			selectedObject->transform.position.y = p.y;
-			if (Mover) Mover->transform.position.y = p.y;
+		}
+		else if (c.x == m.x+10 || c.x == m.x - 10)
+		{
+			Mover->transform.position = p;
+			selectedObject->transform.position = p;
 		}
 
 	}
@@ -211,5 +189,32 @@ void LevelEditor::SetCallbacks()
 	glfwSetCursorPosCallback(currentWindow, LevelEditor::CursorPosCallback);
 	glfwSetKeyCallback(currentWindow, &LevelEditor::KeyCallback);
 
+}
+
+void LevelEditor::SaveLevel()
+{
+	std::ifstream in("x.json");
+	nlohmann::json data = nlohmann::json::parse(in, nullptr, false);
+	in.close();
+
+	int counter = 0;
+	for (auto& obj : data)
+	{
+		auto& SceneObjects = _SceneManager.Scenes[_SceneManager.SceneIndex]->SceneGameObjects;
+
+		for (auto& SceneObj : SceneObjects)
+		{
+			if (obj.value("Name", "") == SceneObj->Name)
+			{
+				obj["Position"][0] = SceneObj->transform.position.x;
+				obj["Position"][1] = SceneObj->transform.position.y;
+				
+				//std::cout << obj["Name"] << "   " << obj["Position"][0] << "   " << SceneObj->Name << "   " << SceneObj->transform.position.x << "\n";
+			}
+		}
+		std::ofstream out("x.json");
+		out << data.dump(2);
+		counter++;
+	}
 }
 

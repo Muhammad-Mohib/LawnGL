@@ -16,26 +16,11 @@ void Scene::Load()
 
 	for (auto& gameObj : data)
 	{
-		std::cout << gameObj << std::endl;
 		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"));
 		obj->Name = gameObj.at("Name");
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
 	}
-
-	//Clear();
-	//if (_SceneManager->SceneIndex == 0)
-	//{
-	//	auto* gameObj = CreateGameObject("Bg", "Bg", "Default");
-	//	gameObj->transform.position = { 500.0f, 300.0f };
-	//	gameObj->transform.scale = { 1.6f, 1.0f };
-	//}
-	//else if (_SceneManager->SceneIndex == 1)
-	//{
-	//	auto* gameObj = CreateGameObject("SeedBank", "SeedBank", "Default");
-	//	gameObj->transform.position = { 500.0f, 300.0f };
-	//	gameObj->transform.scale = { 1.6f, 1.0f };
-	//}
 }
 
 void Scene::Run(float deltaTime)

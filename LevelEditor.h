@@ -23,6 +23,7 @@ public:
 	void OnMouseButton(int btn, int action);
 	void OnCursorPos(double x, double y);
 	void SetCallbacks();
+	void SaveLevel();
 
 	GameObject* Mover = nullptr;
 
