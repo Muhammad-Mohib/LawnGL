@@ -3,6 +3,9 @@
 #include "SpriteRenderer.h"
 #include<GLM/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "Behaviour.h"
+#include <type_traits>
+#include <utility>
 
 struct Transform2D {
 	glm::vec2 position{0.0f, 0.0f};
@@ -35,7 +38,24 @@ public:
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat);
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;
+
+	std::vector<std::unique_ptr<Behaviour>> Behaviours;
+
 	void Draw();
 	void Update(float deltaTime);
+
+	template<typename T>
+	T& AddBehaviour()
+	{
+		auto behaviour = std::make_unique<T>();
+
+		behaviour->owner = this;
+
+		T* result = behaviour.get();
+		Behaviours.push_back(std::move(behaviour));
+
+		result->Start();
+		return *result;
+	}
 };
 

@@ -2,6 +2,7 @@
 #include<iostream>
 #include "Application.h"
 #include "json.hpp"
+#include "ShooterBehaviour.h"
 
 Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager, std::string sceneName)
 {
@@ -21,6 +22,12 @@ void Scene::Load()
 		obj->Name = gameObj.at("Name");
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
+
+		if (obj->Name == "Peashooter")
+		{
+			auto& pointer = obj->AddBehaviour<ShooterBehaviour>();
+			pointer.owner = obj;
+		}
 	}
 }
 
@@ -29,6 +36,11 @@ void Scene::Run(float deltaTime)
 	for (auto& gameObject : SceneGameObjects)
 	{
 		gameObject->Update(deltaTime);
+		
+		if (gameObject->Behaviours.size() > 0)
+		{
+			gameObject->Behaviours[0]->Update();
+		}
 	}
 }
 

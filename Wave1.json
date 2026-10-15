@@ -41,11 +41,11 @@
     ],
     "Material": "Default",
     "Mesh": "Peashooter",
-    "Name": "A2",
+    "Name": "Peashooter",
     "Object": "GameObject",
     "Position": [
-      538.0,
-      271.0
+      168.0,
+      268.0
     ],
     "Scale": [
       0.1,
@@ -62,7 +62,7 @@
     "Name": "A3",
     "Object": "GameObject",
     "Position": [
-      215.0,
+      218.0,
       551.0
     ],
     "Scale": [
@@ -80,7 +80,7 @@
     "Name": "A4",
     "Object": "GameObject",
     "Position": [
-      294.0,
+      298.0,
       551.0
     ],
     "Scale": [
@@ -98,7 +98,43 @@
     "Name": "A5",
     "Object": "GameObject",
     "Position": [
-      373.0,
+      377.0,
+      551.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedPacket"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedPacket",
+    "Name": "A6",
+    "Object": "GameObject",
+    "Position": [
+      456.0,
+      551.0
+    ],
+    "Scale": [
+      1.0,
+      1.0
+    ],
+    "Texture": "SeedPacket"
+  },
+  {
+    "Behaviours": [
+      "PlantShooter.cpp"
+    ],
+    "Material": "Default",
+    "Mesh": "SeedPacket",
+    "Name": "A7",
+    "Object": "GameObject",
+    "Position": [
+      537.0,
       551.0
     ],
     "Scale": [

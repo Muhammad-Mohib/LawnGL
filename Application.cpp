@@ -74,6 +74,8 @@ Application::Application() : _SceneManager(&_ResourceManager)
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave1"));
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave2"));
 
+
+
 	_SceneManager.LoadScene(0);
 }
 
