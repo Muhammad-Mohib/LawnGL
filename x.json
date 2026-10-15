@@ -1,0 +1,29 @@
+[
+  {
+    "Name": "A1",
+    "Object": "GameObject",
+    "Material": "Default",
+    "Mesh": "SeedBank",
+    "Texture": "SeedBank",
+    "Behaviours": [ "PlantShooter.cpp" ],
+    "Position": [ 300.0, 500.0 ]
+  },
+  {
+    "Name": "A2",
+    "Object": "GameObject",
+    "Material": "Default",
+    "Mesh": "SeedBank",
+    "Texture": "SeedBank",
+    "Behaviours": [ "PlantShooter.cpp" ],
+    "Position": [ 200.0, 300.0 ]
+  },
+  {
+    "Name": "A3",
+    "Object": "GameObject",
+    "Material": "Default",
+    "Mesh": "SeedBank",
+    "Texture": "SeedBank",
+    "Behaviours": [ "PlantShooter.cpp" ],
+    "Position": [ 500.0, 300.0 ]
+  }
+]

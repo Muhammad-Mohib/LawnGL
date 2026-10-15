@@ -60,6 +60,9 @@
     <ClInclude Include="Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -117,5 +120,8 @@
   <ItemGroup>
     <None Include="default.vert" />
     <None Include="default.frag" />
+    <None Include="x.json">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

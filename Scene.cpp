@@ -1,6 +1,7 @@
 #include "Scene.h"
 #include<iostream>
 #include "Application.h"
+#include "json.hpp"
 
 Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager)
 {
@@ -9,20 +10,30 @@ Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager)
 }
 void Scene::Load()
 {
-	//std::cout << "Loading Scene...\n" << MoEngine::_SceneManager.Scenes.size();
-	Clear();
-	if (_SceneManager->SceneIndex == 0)
+	std::ifstream file("x.json");
+
+	nlohmann::json data = nlohmann::json::parse(file);
+
+	for (auto& gameObj : data)
 	{
-		auto* gameObj = CreateGameObject("Bg", "Bg", "Default");
-		gameObj->transform.position = { 500.0f, 300.0f };
-		gameObj->transform.scale = { 1.6f, 1.0f };
+		std::cout << gameObj << std::endl;
+		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"));
+		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 	}
-	else if (_SceneManager->SceneIndex == 1)
-	{
-		auto* gameObj = CreateGameObject("SeedBank", "SeedBank", "Default");
-		gameObj->transform.position = { 500.0f, 300.0f };
-		gameObj->transform.scale = { 1.6f, 1.0f };
-	}
+
+	//Clear();
+	//if (_SceneManager->SceneIndex == 0)
+	//{
+	//	auto* gameObj = CreateGameObject("Bg", "Bg", "Default");
+	//	gameObj->transform.position = { 500.0f, 300.0f };
+	//	gameObj->transform.scale = { 1.6f, 1.0f };
+	//}
+	//else if (_SceneManager->SceneIndex == 1)
+	//{
+	//	auto* gameObj = CreateGameObject("SeedBank", "SeedBank", "Default");
+	//	gameObj->transform.position = { 500.0f, 300.0f };
+	//	gameObj->transform.scale = { 1.6f, 1.0f };
+	//}
 }
 
 void Scene::Run(float deltaTime)

@@ -148,6 +148,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="EBO.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="json.hpp" />
     <ClInclude Include="Material.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Paths.h" />
@@ -183,6 +184,7 @@
   <ItemGroup>
     <None Include="default.frag" />
     <None Include="default.vert" />
+    <None Include="x.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

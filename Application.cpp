@@ -61,21 +61,11 @@ Application::Application() : _SceneManager(&_ResourceManager)
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager));
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager));
 
-	_SceneManager.Scenes[_SceneManager.SceneIndex]->Load();
+	_SceneManager.LoadScene(1);
 }
 
 void Application::Run()
 {
-	//GameObject gameObj = GameObject(_ResourceManager.GetResource<Mesh>("Bg"), _ResourceManager.GetResource<Texture>("Bg"), _ResourceManager.GetResource<Material>("Default"));
-	//gameObj.transform.position = { 500.0f, 300.0f };
-	//gameObj.transform.scale = { 1.6f, 1.0f };
-
-	//Texture seedBankTex = Texture("SeedBank", "SeedBank.png");
-
-	//GameObject seedBankObj = GameObject(_ResourceManager.GetResource<Mesh>("SeedBank"), &seedBankTex, _ResourceManager.GetResource<Material>("Default"));
-	//seedBankObj.transform.position = { 350.0f, 550.0f };
-	//seedBankObj.transform.scale = { 1.0f, 1.0f };
-
 	double lastTime = glfwGetTime();
 	float timer = 0.0f;
 	bool x = false;
@@ -88,20 +78,12 @@ void Application::Run()
 
 		if (deltaTime > 0.1f) deltaTime = 0.1f;
 
-		if (timer > 10000 && !x)
-		{
-			_SceneManager.LoadScene(1);
-			x = true;
-		}
-
-		timer++;
 		glfwPollEvents();
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
-		std::cout << _SceneManager.SceneIndex << std::endl;
 
 		glfwSwapBuffers(currentWindow);
 	}
@@ -135,3 +117,44 @@ void Application::AllocateResources()
 
  	_ResourceManager.GetResource<Material>("Default");
 }
+
+
+
+//
+//Application
+//SceneManager
+//Scenes->Collection of Scene
+//
+//Scene->a json file that tells where each gameobject is
+//
+//{
+//	"object": "GameObject",
+//	"Material: "",
+//	"Mesh" : "",
+//	"Texture" : "",
+//	"Behaviours: ["PlantShooter.cpp"]
+//}
+//
+//vector<unique_ptr<T>> Behaviours;
+//
+//
+//
+//GameObject::GameObject() {
+//	for (auto& behaviour : Behaviours)
+//	{
+//		auto obj = std::make_unique<behaviour>(std::forward<Args>(args)...);
+//		obj.Start();
+//	}
+//}
+//
+//class Peashooter {
+//	void Start()
+//	{
+//
+//	}
+//
+//	void Update()
+//	{
+//
+//	}
+//}
