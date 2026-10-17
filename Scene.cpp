@@ -18,8 +18,18 @@ void Scene::Load()
 
 	for (auto& gameObj : data)
 	{
-		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"));
+		std::string anim = "Sunflower_Idle_Frames";
+		if (gameObj.at("Name").get<std::string>()[1] == 'u')
+		{
+			anim = "Sunflower_Idle_Frames";
+		}
+		else
+		{
+			anim = "Peashooter_Idle_Frames";
+		}
+		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"), anim);
 		obj->Name = gameObj.at("Name");
+		std::cout << "OBJ: "<< obj->Name << "\n";
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
 		if (obj->Name == "Peashooter")
@@ -49,16 +59,29 @@ void Scene::Clear()
 	SceneGameObjects.clear();
 }
 
-GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_view ObjectTexture, std::string_view ObjectMaterial)
+GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_view ObjectTexture, std::string_view ObjectMaterial, std::string_view ObjectAnimation)
 {
-	auto obj = std::make_unique<GameObject>(
-		_ResourceManager->GetResource<Mesh>(ObjectMesh.data()), 
-		_ResourceManager->GetResource<Texture>(ObjectTexture.data()), 
-		_ResourceManager->GetResource<Material>(ObjectMaterial.data()),
-		_ResourceManager->GetResource<AnimationClip>("Peashooter_Idle_Frames"));
-	GameObject* pointer = obj.get();
-	SceneGameObjects.push_back(std::move(obj));
-	return pointer;
+	if (ObjectAnimation != "")
+	{
+		auto obj = std::make_unique<GameObject>(
+			_ResourceManager->GetResource<Mesh>(ObjectMesh.data()),
+			_ResourceManager->GetResource<Texture>(ObjectTexture.data()),
+			_ResourceManager->GetResource<Material>(ObjectMaterial.data()),
+			_ResourceManager->GetResource<AnimationClip>(ObjectAnimation.data()));
+		GameObject* pointer = obj.get();
+		SceneGameObjects.push_back(std::move(obj));
+		return pointer;
+	}
+	else
+	{
+		auto obj = std::make_unique<GameObject>(
+			_ResourceManager->GetResource<Mesh>(ObjectMesh.data()),
+			_ResourceManager->GetResource<Texture>(ObjectTexture.data()),
+			_ResourceManager->GetResource<Material>(ObjectMaterial.data()));
+		GameObject* pointer = obj.get();
+		SceneGameObjects.push_back(std::move(obj));
+		return pointer;
+	}
 }
 
 GameObject* Scene::GetObjectByName(std::string Name)

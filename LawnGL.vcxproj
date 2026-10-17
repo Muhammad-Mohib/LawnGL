@@ -169,7 +169,6 @@
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\FirstRenderer\FirstRenderer\FirstRenderer\stb.cpp" />
     <ClCompile Include="AnimationClip.cpp" />
     <ClCompile Include="AnimationController.cpp" />
     <ClCompile Include="AnimationFrame.cpp" />
@@ -188,6 +187,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShooterBehaviour.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
+    <ClCompile Include="stb.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VAO.cpp" />
     <ClCompile Include="VBO.cpp" />
@@ -195,6 +195,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
+    <None Include="Animations\Sunflower_Idle_Frames.json" />
     <None Include="default.frag" />
     <None Include="default.vert" />
     <None Include="Wave1.json" />

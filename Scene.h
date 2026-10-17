@@ -12,7 +12,7 @@ public:
 	void Run(float deltaTime);
 	void Clear();
 	void OnExit();
-	GameObject* CreateGameObject(std::string_view Mesh, std::string_view Texture, std::string_view Material);
+	GameObject* CreateGameObject(std::string_view Mesh, std::string_view Texture, std::string_view Material, std::string_view ObjectAnimation);
 
 	std::string SceneName;
 	ResourceManager* _ResourceManager;

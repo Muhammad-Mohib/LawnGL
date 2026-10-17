@@ -123,10 +123,18 @@ void Application::AllocateResources()
 
 
 	//Peashooter Resource Allocation
+	_ResourceManager.AddResource<AnimationClip>("Sunflower_Idle_Frames");
 	_ResourceManager.AddResource<Texture>("Peashooter_Face", "Animations_Atlas/Peashooter/Peashooter_Face.png");
 	_ResourceManager.AddResource<Texture>("Peashooter_Mouth", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
 	_ResourceManager.AddResource<Texture>("Peashooter_Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");
 	_ResourceManager.AddResource<Texture>("Peashooter_Leaves", "Animations_Atlas/Peashooter/Peashooter_Leaves.png");
+
+	//Sunflower Resource Allocation
+	_ResourceManager.AddResource<Texture>("Sunflower_Stem", "Animations_Atlas/Sunflower/Sunflower_Stem.png");
+	_ResourceManager.AddResource<Texture>("Sunflower_Leaves", "Animations_Atlas/Sunflower/Sunflower_Leaves.png");
+	_ResourceManager.AddResource<Texture>("Sunflower_Petals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
+	_ResourceManager.AddResource<Texture>("Sunflower_Head", "Animations_Atlas/Sunflower/Sunflower_Head.png");
+	_ResourceManager.AddResource<Texture>("Sunflower_Blink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
 }
 
 //

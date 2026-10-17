@@ -37,6 +37,7 @@ public:
 	
 	std::string Name = "DefaultGameObject";
 
+	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat);
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat, AnimationClip* Animation);
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;

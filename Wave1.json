@@ -40,24 +40,6 @@
       "PlantShooter.cpp"
     ],
     "Material": "Default",
-    "Mesh": "Peashooter",
-    "Name": "Peashooter",
-    "Object": "GameObject",
-    "Position": [
-      500.0,
-      300.0
-    ],
-    "Scale": [
-      0.1,
-      0.1
-    ],
-    "Texture": "Peashooter"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
     "Mesh": "SeedPacket",
     "Name": "A3",
     "Object": "GameObject",
@@ -182,5 +164,57 @@
     "Position": [ 222.0, 91.0 ],
     "Scale": [ 0.072, 0.055 ],
     "Texture": "Peashooter_Leaves"
+  },
+
+
+  {
+    "Behaviours": [ "PlantSunflower.cpp" ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "SunflowerStem",
+    "Object": "GameObject",
+    "Position": [ 114.2, 206.6 ],
+    "Scale": [ 0.0131, 0.0274 ],
+    "Texture": "Sunflower_Stem"
+  },
+  {
+    "Behaviours": [ "PlantSunflower.cpp" ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "SunflowerLeaves",
+    "Object": "GameObject",
+    "Position": [ 116.6, 175.4 ],
+    "Scale": [ 0.0168, 0.0187 ],
+    "Texture": "Sunflower_Leaves"
+  },
+  {
+    "Behaviours": [ "PlantSunflower.cpp" ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "SunflowerPetals",
+    "Object": "GameObject",
+    "Position": [ 107.2, 243.9 ],
+    "Scale": [ 0.0628, 0.0785 ],
+    "Texture": "Sunflower_Petals"
+  },
+  {
+    "Behaviours": [ "PlantSunflower.cpp" ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "SunflowerHead",
+    "Object": "GameObject",
+    "Position": [ 109.9, 246.3 ],
+    "Scale": [ 0.0625, 0.0842 ],
+    "Texture": "Sunflower_Head"
+  },
+  {
+    "Behaviours": [ "PlantSunflower.cpp" ],
+    "Material": "Default",
+    "Mesh": "Peashooter",
+    "Name": "SunflowerBlink",
+    "Object": "GameObject",
+    "Position": [ 109.9, 254.4 ],
+    "Scale": [ 0.0625, 0.0842 ],
+    "Texture": "Sunflower_Blink"
   }
 ]

@@ -98,9 +98,6 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\FirstRenderer\FirstRenderer\FirstRenderer\stb.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -155,6 +152,9 @@
     <ClCompile Include="AnimationFrame.cpp">
       <Filter>Source Files\AnimationSystem</Filter>
     </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="default.vert" />
@@ -166,5 +166,6 @@
       <Filter>Source Files</Filter>
     </None>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
+    <None Include="Animations\Sunflower_Idle_Frames.json" />
   </ItemGroup>
 </Project>

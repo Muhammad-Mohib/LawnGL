@@ -127,7 +127,7 @@ void LevelEditor::OnMouseButton(int btn, int action)
 		std::cout << hit->Name << "\n";
 		if (!Mover)
 		{
-			auto* mover = _SceneManager.Scenes[_SceneManager.SceneIndex].get()->CreateGameObject("Peashooter", "Mover", "Default");
+			auto* mover = _SceneManager.Scenes[_SceneManager.SceneIndex].get()->CreateGameObject("Peashooter", "Mover", "Default", "");
 			mover->transform.position = glm::vec2(selectedObject->transform.position.x, selectedObject->transform.position.y);
 			mover->transform.scale = { 0.2, 0.2 };
 			mover->Name = "EDITOR_Mover";

@@ -1,5 +1,12 @@
 #include "GameObject.h"
 
+GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat) : GameObject_SpriteRenderer(Sprite, Mat), _AnimationController(nullptr)
+{
+	GameObject_Mesh = mesh;
+	GameObject_SpriteRenderer.Sprite = Sprite;
+	GameObject_SpriteRenderer.SpriteMaterial = Mat;
+}
+
 GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat, AnimationClip* Animation) : GameObject_SpriteRenderer(Sprite, Mat), _AnimationController(Animation)
 {
 	GameObject_Mesh = mesh;
