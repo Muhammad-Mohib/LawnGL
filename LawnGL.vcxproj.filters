@@ -165,5 +165,6 @@
     <None Include="Wave2.json">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Animations\Peashooter_Idle_Frames.json" />
   </ItemGroup>
 </Project>

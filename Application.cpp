@@ -104,7 +104,7 @@ void Application::Run()
 void Application::AllocateResources()
 {
 
-	_ResourceManager.AddResource<AnimationClip>("DefaultClip");
+	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Texture>("Peashooter0", "peashooter2.png");
@@ -120,6 +120,13 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("SeedBank", "SeedBank.png");
 
  	_ResourceManager.GetResource<Material>("Default");
+
+
+	//Peashooter Resource Allocation
+	_ResourceManager.AddResource<Texture>("Peashooter_Face", "Animations_Atlas/Peashooter/Peashooter_Face.png");
+	_ResourceManager.AddResource<Texture>("Peashooter_Mouth", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
+	_ResourceManager.AddResource<Texture>("Peashooter_Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");
+	_ResourceManager.AddResource<Texture>("Peashooter_Leaves", "Animations_Atlas/Peashooter/Peashooter_Leaves.png");
 }
 
 //

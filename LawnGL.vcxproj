@@ -194,6 +194,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Animations\Peashooter_Idle_Frames.json" />
     <None Include="default.frag" />
     <None Include="default.vert" />
     <None Include="Wave1.json" />

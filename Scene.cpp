@@ -55,7 +55,7 @@ GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_vie
 		_ResourceManager->GetResource<Mesh>(ObjectMesh.data()), 
 		_ResourceManager->GetResource<Texture>(ObjectTexture.data()), 
 		_ResourceManager->GetResource<Material>(ObjectMaterial.data()),
-		_ResourceManager->GetResource<AnimationClip>("DefaultClip"));
+		_ResourceManager->GetResource<AnimationClip>("Peashooter_Idle_Frames"));
 	GameObject* pointer = obj.get();
 	SceneGameObjects.push_back(std::move(obj));
 	return pointer;
