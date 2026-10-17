@@ -31,10 +31,7 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 					glm::vec2 unitySize = texSize / 100.0f;
 					obj->transform.position = Origin + config->Position * PixelsPerUnit * ObjectScale;
 					obj->transform.scale = config->Scale * unitySize * PixelsPerUnit * ObjectScale / QuadSize;
-
-					printf("%s  tex: %.0f x %.0f  scale: %.4f, %.4f\n",
-						config->Name.c_str(), texSize.x, texSize.y,
-						obj->transform.scale.x, obj->transform.scale.y);
+					obj->isActive = config->Active;
 				}
 			}
 

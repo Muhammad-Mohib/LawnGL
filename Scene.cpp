@@ -29,14 +29,14 @@ void Scene::Load()
 		}
 		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"), anim);
 		obj->Name = gameObj.at("Name");
-		std::cout << "OBJ: "<< obj->Name << "\n";
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
-		if (obj->Name == "Peashooter")
-		{
-			auto& pointer = obj->AddBehaviour<ShooterBehaviour>();
-			pointer.owner = obj;
-		}
+
+		//if (obj->Name == "Peashooter")
+		//{
+		//	auto& pointer = obj->AddBehaviour<ShooterBehaviour>();
+		//	pointer.owner = obj;
+		//}
 	}
 }
 

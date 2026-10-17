@@ -19,9 +19,30 @@ AnimationClip::AnimationClip(std::string AnimationName)
 		//std::cout << object["FrameConfig"] << "\n";
 		for (auto& frameConfig : object["FrameConfig"])
 		{
-			FrameConfig config = { frameConfig["Name"], glm::vec2(frameConfig["Position"][0].get<float>(), frameConfig["Position"][1].get<float>()), glm::vec2(frameConfig["Scale"][0].get<float>(), frameConfig["Scale"][1].get<float>()) };
-			configuration.push_back(std::make_unique<FrameConfig>(config));
-			std::cout << config.Name << "\n";
+			if (frameConfig["Active"].is_null())
+			{
+				FrameConfig config = { frameConfig["Name"],
+					glm::vec2(frameConfig["Position"][0].get<float>(),
+						frameConfig["Position"][1].get<float>()),
+					glm::vec2(frameConfig["Scale"][0].get<float>(),
+						frameConfig["Scale"][1].get<float>()),
+					 true };
+				configuration.push_back(std::make_unique<FrameConfig>(config));
+			}
+			else if(!frameConfig["Active"].is_null())
+			{
+
+				FrameConfig config = { frameConfig["Name"],
+					glm::vec2(frameConfig["Position"][0].get<float>(),
+						frameConfig["Position"][1].get<float>()),
+					glm::vec2(frameConfig["Scale"][0].get<float>(),
+						frameConfig["Scale"][1].get<float>()),
+					 frameConfig["Active"].get<bool>()};
+
+				configuration.push_back(std::make_unique<FrameConfig>(config));
+			}
+
+			std::cout << frameConfig["Name"] << "   " << frameConfig["Active"] << "\n";
 		}
 		AnimationFrames.push_back(std::make_unique<AnimationFrame>(std::move(configuration), object["FrameExecutionMoment"]));
 	}

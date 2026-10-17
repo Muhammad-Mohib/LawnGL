@@ -41,6 +41,7 @@ public:
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat, AnimationClip* Animation);
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;
+	bool isActive = true;
 
 	std::vector<std::unique_ptr<Behaviour>> Behaviours;
 

@@ -8,6 +8,7 @@ struct FrameConfig {
 	std::string Name;
 	glm::vec2 Position;
 	glm::vec2 Scale;
+	bool Active = true;
 };
 
 
