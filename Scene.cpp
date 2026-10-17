@@ -22,7 +22,6 @@ void Scene::Load()
 		obj->Name = gameObj.at("Name");
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
-
 		if (obj->Name == "Peashooter")
 		{
 			auto& pointer = obj->AddBehaviour<ShooterBehaviour>();
@@ -41,6 +40,7 @@ void Scene::Run(float deltaTime)
 		{
 			gameObject->Behaviours[0]->Update();
 		}
+		gameObject->_AnimationController.Run(this, deltaTime);
 	}
 }
 
@@ -51,8 +51,24 @@ void Scene::Clear()
 
 GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_view ObjectTexture, std::string_view ObjectMaterial)
 {
-	auto obj = std::make_unique<GameObject>(_ResourceManager->GetResource<Mesh>(ObjectMesh.data()), _ResourceManager->GetResource<Texture>(ObjectTexture.data()), _ResourceManager->GetResource<Material>(ObjectMaterial.data()));
+	auto obj = std::make_unique<GameObject>(
+		_ResourceManager->GetResource<Mesh>(ObjectMesh.data()), 
+		_ResourceManager->GetResource<Texture>(ObjectTexture.data()), 
+		_ResourceManager->GetResource<Material>(ObjectMaterial.data()),
+		_ResourceManager->GetResource<AnimationClip>("DefaultClip"));
 	GameObject* pointer = obj.get();
 	SceneGameObjects.push_back(std::move(obj));
 	return pointer;
+}
+
+GameObject* Scene::GetObjectByName(std::string Name)
+{
+	for (auto& obj : SceneGameObjects)
+	{
+		if (obj->Name == Name)
+		{
+			return obj.get();
+		}
+	}
+	return nullptr;
 }

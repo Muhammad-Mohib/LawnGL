@@ -2,18 +2,15 @@
 #include "Behaviour.h"
 #include<iostream>
 #include "GameObject.h"
+#include"Texture.h"
 
 class ShooterBehaviour : public Behaviour
 {
 public:
-	void Start()
-	{
-		std::cout << "Start from \n";
-	}
+	Texture txt;
+	ShooterBehaviour() : txt("Repeater","sunflower.png") {};
+	void Start();
 
-	void Update()
-	{
-		owner->transform.position.x += 0.01f;
-	}
+	void Update();
 };
 

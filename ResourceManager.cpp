@@ -1,6 +1,7 @@
 #include "ResourceManager.h"
 #include <algorithm>
 #include <type_traits>
+#include "AnimationClip.h"
 
 template<typename T>
 T* ResourceManager::GetResource(const std::string& ResourceName)
@@ -53,9 +54,22 @@ T* ResourceManager::GetResource(const std::string& ResourceName)
 		}
 		return nullptr;
 	}
+	else if constexpr (std::is_same_v<T, AnimationClip>)
+	{
+		auto Element = std::find_if(AnimationClips.begin(), AnimationClips.end(), [&ResourceName](const std::unique_ptr<T>& mat) {
+			return mat->Name == ResourceName;
+		});
+
+		if (Element != AnimationClips.end())
+		{
+			return Element->get();
+		}
+		return nullptr;
+	}
 }
 
 template Shader* ResourceManager::GetResource<Shader>(const std::string&);
 template Material* ResourceManager::GetResource<Material>(const std::string&);
 template Texture* ResourceManager::GetResource<Texture>(const std::string&);
 template Mesh* ResourceManager::GetResource<Mesh>(const std::string&);
+template AnimationClip* ResourceManager::GetResource<AnimationClip>(const std::string&);

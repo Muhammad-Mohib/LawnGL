@@ -63,9 +63,6 @@ Application::Application() : _SceneManager(&_ResourceManager)
 	}
 	glViewport(0, 0, 800, 600);
 
-	//glfwSetWindowUserPointer(currentWindow, this);
-	//glfwSetMouseButtonCallback(currentWindow, Application::MouseButtonCallback);
-	//glfwSetCursorPosCallback(currentWindow, Application::CursorPosCallback);
 	if(IS_APPLICATION_DEBUG_MODE)
 		editor = std::make_unique<LevelEditor>(currentWindow, _SceneManager);
 
@@ -74,18 +71,12 @@ Application::Application() : _SceneManager(&_ResourceManager)
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave1"));
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave2"));
 
-
-
 	_SceneManager.LoadScene(0);
 }
 
 void Application::Run()
 {
 	double lastTime = glfwGetTime();
-	float timer = 0.0f;
-	bool x = false;
-
-	bool isMoverEnabled = false;
 
 	while (!glfwWindowShouldClose(currentWindow))
 	{
@@ -100,6 +91,7 @@ void Application::Run()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
 
 		glEnable(GL_BLEND);
@@ -112,6 +104,7 @@ void Application::Run()
 void Application::AllocateResources()
 {
 
+	_ResourceManager.AddResource<AnimationClip>("DefaultClip");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Texture>("Peashooter0", "peashooter2.png");
@@ -167,3 +160,20 @@ void Application::AllocateResources()
 //
 //	}
 //}
+
+
+/*
+
+
+Animation controller that would have a tree that tells you that state from start and combines animation to it
+
+Now, Animation Clip is the big thing. It will have a reference to the sprite of gameObject.
+It will contain a special class vector collection. 
+That special AnimationFrame class would capture all the detail happening in that particular frame only when something is happening.
+Frames when nothing is happening would add a null in the vector or AnimationFrame with special parameter of no frame
+Animation Clip would contain all the gameobjects being targetted for the animation.
+Animation Frame would record all the gameobjects targetted positions and rotations and scale in future
+
+
+
+*/

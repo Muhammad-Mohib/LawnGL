@@ -18,4 +18,6 @@ public:
 	ResourceManager* _ResourceManager;
 	SceneManager* _SceneManager;
 	std::vector<std::unique_ptr<GameObject>> SceneGameObjects;
+
+	GameObject* GetObjectByName(std::string Name);
 };

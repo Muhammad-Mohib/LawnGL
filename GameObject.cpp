@@ -1,12 +1,11 @@
 #include "GameObject.h"
 
-GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat) : GameObject_SpriteRenderer(Sprite, Mat)
+GameObject::GameObject(Mesh* mesh, Texture* Sprite, Material* Mat, AnimationClip* Animation) : GameObject_SpriteRenderer(Sprite, Mat), _AnimationController(Animation)
 {
 	GameObject_Mesh = mesh;
 	GameObject_SpriteRenderer.Sprite = Sprite;
 	GameObject_SpriteRenderer.SpriteMaterial = Mat;
 }
-
 void GameObject::Draw()
 {
 	GameObject_SpriteRenderer.SpriteMaterial->MatShader->Activate();
@@ -26,6 +25,7 @@ void GameObject::Draw()
 	glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
 	GameObject_SpriteRenderer.Sprite->Bind();
+	glUniform1i(glGetUniformLocation(GameObject_SpriteRenderer.SpriteMaterial->MatShader->ID, "ourTexture"), 0);
 	GameObject_Mesh->MeshVAO.Bind();
 
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);

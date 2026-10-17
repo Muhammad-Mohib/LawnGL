@@ -5,6 +5,7 @@
 #include "Texture.h"
 #include "Material.h"
 #include "Mesh.h"
+#include "AnimationClip.h"
 
 class ResourceManager
 {
@@ -33,6 +34,10 @@ public:
 		{
 			Meshes.push_back(std::move(obj));
 		}
+		else if constexpr (std::is_same_v<T, AnimationClip>)
+		{
+			AnimationClips.push_back(std::move(obj));
+		}
 		return raw;
 	}
 
@@ -44,5 +49,6 @@ private:
 	std::vector<std::unique_ptr<Texture>> Textures;
 	std::vector<std::unique_ptr<Material>> Materials;
 	std::vector<std::unique_ptr<Mesh>> Meshes;
+	std::vector<std::unique_ptr<AnimationClip>> AnimationClips;
 };
 

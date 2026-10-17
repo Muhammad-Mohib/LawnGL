@@ -3,6 +3,7 @@
 #include<vector>
 #include "ResourceManager.h"
 #include "Scene.h"
+#include<memory>
 
 class SceneManager
 {

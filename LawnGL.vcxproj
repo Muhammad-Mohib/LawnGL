@@ -145,6 +145,9 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationClip.h" />
+    <ClInclude Include="AnimationController.h" />
+    <ClInclude Include="AnimationFrame.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Behaviour.h" />
     <ClInclude Include="EBO.h" />
@@ -167,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\FirstRenderer\FirstRenderer\FirstRenderer\stb.cpp" />
+    <ClCompile Include="AnimationClip.cpp" />
+    <ClCompile Include="AnimationController.cpp" />
+    <ClCompile Include="AnimationFrame.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Behaviour.cpp" />
     <ClCompile Include="C:\Users\mohib\source\repos\Muhammad-Mohib\Verdant-Engine\VerdantEngine\Includes\GLAD\glad.c" />
