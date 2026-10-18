@@ -30,3 +30,8 @@ void SceneManager::Destroy(GameObject* gameObject)
         gameObjects.erase(it);
     }
 }
+
+Scene* SceneManager::GetCurrentScene()
+{
+    return Scenes[SceneIndex].get();
+}

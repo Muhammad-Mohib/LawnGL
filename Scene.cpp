@@ -3,6 +3,7 @@
 #include "Application.h"
 #include "json.hpp"
 #include "ShooterBehaviour.h"
+#include "Paths.h"
 
 Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager, std::string sceneName)
 {
@@ -12,7 +13,7 @@ Scene::Scene(ResourceManager* resourceManager, SceneManager* sceneManager, std::
 }
 void Scene::Load()
 {
-	std::ifstream file(SceneName+".json");
+	std::ifstream file(Paths::Scenes(SceneName)+".json");
 
 	nlohmann::json data = nlohmann::json::parse(file);
 
@@ -27,8 +28,9 @@ void Scene::Load()
 		{
 			anim = "Peashooter_Idle_Frames";
 		}
-		auto* obj = CreateGameObject(gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"), anim);
-		obj->Name = gameObj.at("Name");
+		auto* obj = CreateGameObject(gameObj.at("Name"), gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"), anim);
+		if (!gameObj["TagID"].is_null())
+			obj->TagID = gameObj.at("TagID");
 		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
 		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
 
@@ -59,7 +61,7 @@ void Scene::Clear()
 	SceneGameObjects.clear();
 }
 
-GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_view ObjectTexture, std::string_view ObjectMaterial, std::string_view ObjectAnimation)
+GameObject* Scene::CreateGameObject(std::string_view Name, std::string_view ObjectMesh, std::string_view ObjectTexture, std::string_view ObjectMaterial, std::string_view ObjectAnimation)
 {
 	if (ObjectAnimation != "")
 	{
@@ -68,6 +70,7 @@ GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_vie
 			_ResourceManager->GetResource<Texture>(ObjectTexture.data()),
 			_ResourceManager->GetResource<Material>(ObjectMaterial.data()),
 			_ResourceManager->GetResource<AnimationClip>(ObjectAnimation.data()));
+		obj->Name = Name;
 		GameObject* pointer = obj.get();
 		SceneGameObjects.push_back(std::move(obj));
 		return pointer;
@@ -78,12 +81,12 @@ GameObject* Scene::CreateGameObject(std::string_view ObjectMesh, std::string_vie
 			_ResourceManager->GetResource<Mesh>(ObjectMesh.data()),
 			_ResourceManager->GetResource<Texture>(ObjectTexture.data()),
 			_ResourceManager->GetResource<Material>(ObjectMaterial.data()));
+		obj->Name = Name;
 		GameObject* pointer = obj.get();
 		SceneGameObjects.push_back(std::move(obj));
 		return pointer;
 	}
 }
-
 GameObject* Scene::GetObjectByName(std::string Name)
 {
 	for (auto& obj : SceneGameObjects)
@@ -94,4 +97,17 @@ GameObject* Scene::GetObjectByName(std::string Name)
 		}
 	}
 	return nullptr;
+}
+
+std::vector<GameObject*> Scene::GetObjectsByTagID(std::string TagID)
+{
+	std::vector<GameObject*> gameObjects;
+	for (auto& object : SceneGameObjects)
+	{
+		if (object->TagID == TagID)
+		{
+			gameObjects.push_back(object.get());
+		}
+	}
+	return gameObjects;
 }

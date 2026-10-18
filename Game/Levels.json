@@ -1,0 +1,13 @@
+[
+  {
+    "LevelName": "Wave1",
+    "Category": "Adventure",
+    "BankPlants": [ "Sunflower" ]
+  },
+  {
+    "LevelName": "Wave2",
+    "Category": "Adventure",
+    "BankPlants": [ "Sunflower" ]
+  }
+
+]

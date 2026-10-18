@@ -36,6 +36,7 @@ public:
 	Transform2D transform;
 	
 	std::string Name = "DefaultGameObject";
+	std::string TagID = "";
 
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat);
 	GameObject(Mesh* mesh, Texture* Sprite, Material* Mat, AnimationClip* Animation);

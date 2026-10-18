@@ -25,7 +25,10 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 				{
 					if (obj->Name[2] == 'n')
 					{
-						Origin = { 422.0f, 250.0f };
+						Origin = {
+							218.0,
+							120.0
+						};
 					}
 					glm::vec2 texSize = { (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[0], (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[1] };
 					glm::vec2 unitySize = texSize / 100.0f;

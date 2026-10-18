@@ -1,5 +1,6 @@
 #include "LevelEditor.h"
 #include "json.hpp"
+#include "Paths.h"
 
 LevelEditor::LevelEditor(GLFWwindow* window, SceneManager& sceneManager) : _SceneManager(sceneManager)
 {
@@ -127,7 +128,7 @@ void LevelEditor::OnMouseButton(int btn, int action)
 		std::cout << hit->Name << "\n";
 		if (!Mover)
 		{
-			auto* mover = _SceneManager.Scenes[_SceneManager.SceneIndex].get()->CreateGameObject("Peashooter", "Mover", "Default", "");
+			auto* mover = _SceneManager.Scenes[_SceneManager.SceneIndex].get()->CreateGameObject("Mover","Peashooter", "Mover", "Default", "");
 			mover->transform.position = glm::vec2(selectedObject->transform.position.x, selectedObject->transform.position.y);
 			mover->transform.scale = { 0.2, 0.2 };
 			mover->Name = "EDITOR_Mover";
@@ -194,7 +195,7 @@ void LevelEditor::SetCallbacks()
 
 void LevelEditor::SaveLevel()
 {
-	std::string FileName = _SceneManager.Scenes[_SceneManager.SceneIndex]->SceneName + ".json";
+	std::string FileName = Paths::Scenes(_SceneManager.Scenes[_SceneManager.SceneIndex]->SceneName) + ".json";
 	std::ifstream in(FileName);
 	nlohmann::json data = nlohmann::json::parse(in, nullptr, false);
 	in.close();

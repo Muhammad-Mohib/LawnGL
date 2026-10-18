@@ -43,6 +43,6 @@ void GameObject::Draw()
 
 void GameObject::Update(float deltaTime)
 {
-	Draw();
+	Draw();	
 	//transform.position.x += 100 * deltaTime;
 }

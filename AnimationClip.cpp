@@ -41,8 +41,6 @@ AnimationClip::AnimationClip(std::string AnimationName)
 
 				configuration.push_back(std::make_unique<FrameConfig>(config));
 			}
-
-			std::cout << frameConfig["Name"] << "   " << frameConfig["Active"] << "\n";
 		}
 		AnimationFrames.push_back(std::make_unique<AnimationFrame>(std::move(configuration), object["FrameExecutionMoment"]));
 	}

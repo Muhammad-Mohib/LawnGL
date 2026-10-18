@@ -9,10 +9,6 @@
 #include "GameObject.h"
 #include "ResourceManager.h"
 
-int WINDOW_WIDTH = 800;
-int WINDOW_HEIGHT = 600;
-const char* WINDOW_TITLE = "LawnGL";
-
 
 float vertices[] = {
 	// positions                   // texture coords
@@ -42,16 +38,7 @@ unsigned int indices[] = {
 	1, 2, 3   // Second triangle
 };
 
-
-int main()
-{
-	Application app;
-	app.Run();
-
-	return 0;
-}
-
-Application::Application() : _SceneManager(&_ResourceManager)
+Application::Application(int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* WINDOW_TITLE, bool isDebug) : _SceneManager(&_ResourceManager)
 {
 	Window window = Window(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 	currentWindow = window.window;
@@ -59,19 +46,17 @@ Application::Application() : _SceneManager(&_ResourceManager)
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		printf("Failed to initialize Glad");
-		//return -1;
 	}
-	glViewport(0, 0, 800, 600);
+	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
+
+	IS_APPLICATION_DEBUG_MODE = isDebug;
 
 	if(IS_APPLICATION_DEBUG_MODE)
 		editor = std::make_unique<LevelEditor>(currentWindow, _SceneManager);
 
 	AllocateResources();
 
-	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave1"));
-	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, "Wave2"));
-
-	_SceneManager.LoadScene(0);
+	
 }
 
 void Application::Run()
@@ -135,6 +120,16 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("Sunflower_Petals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
 	_ResourceManager.AddResource<Texture>("Sunflower_Head", "Animations_Atlas/Sunflower/Sunflower_Head.png");
 	_ResourceManager.AddResource<Texture>("Sunflower_Blink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
+}
+
+void Application::CreateScene(std::string SceneName)
+{
+	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, SceneName));
+}
+
+void Application::Print(std::string str)
+{
+	std::cout << str << "\n";
 }
 
 //

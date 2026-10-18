@@ -1,0 +1,2850 @@
+[
+  {
+    "FrameIndex": 0,
+    "FrameExecutionMoment": 0.0,
+    "FrameConfig": [
+      {
+        "Name": "BackLeaf_L",
+        "Position": [
+          -0.45,
+          0.85
+        ],
+        "Scale": [
+          1.6237,
+          1.2122
+        ],
+        "Rotation": [
+          0,
+          0,
+          180
+        ]
+      },
+      {
+        "Name": "BackLeaf_R",
+        "Position": [
+          0.425,
+          0.9
+        ],
+        "Scale": [
+          1.6237,
+          1.2122
+        ],
+        "Rotation": [
+          0,
+          0,
+          -180
+        ]
+      },
+      {
+        "Name": "FrontLeaves",
+        "Position": [
+          -0.0325,
+          0.4975
+        ],
+        "Scale": [
+          0.9834,
+          0.9917
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.05
+        ]
+      },
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1491,
+          2.0604
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.5613
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0057,
+          2.2862
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.8188
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2836,
+          2.1674
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.4337
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0768,
+          0.9112
+        ],
+        "Scale": [
+          0.7073,
+          1.0667
+        ],
+        "Rotation": [
+          0,
+          0,
+          1.096
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 1,
+    "FrameExecutionMoment": 0.04,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1536,
+          2.0228
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.019
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.003,
+          2.2394
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.8994
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2828,
+          2.125
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.7278
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0821,
+          0.8922
+        ],
+        "Scale": [
+          0.7073,
+          1.0141
+        ],
+        "Rotation": [
+          0,
+          0,
+          1.9909
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 2,
+    "FrameExecutionMoment": 0.08,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.146,
+          2.0678
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7463
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0132,
+          2.2696
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.4535
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2714,
+          2.1408
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          141.8912
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0832,
+          0.9143
+        ],
+        "Scale": [
+          0.7073,
+          1.0759
+        ],
+        "Rotation": [
+          0,
+          0,
+          2.0372
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 3,
+    "FrameExecutionMoment": 0.12,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1364,
+          2.1375
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.2211
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0245,
+          2.3297
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -91.1605
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2626,
+          2.1838
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          142.7332
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0816,
+          0.949
+        ],
+        "Scale": [
+          0.7073,
+          1.1721
+        ],
+        "Rotation": [
+          0,
+          0,
+          1.6481
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 4,
+    "FrameExecutionMoment": 0.16,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1278,
+          2.2195
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.0349
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0325,
+          2.4155
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -91.1045
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2573,
+          2.2592
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          141.8123
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.076,
+          0.9901
+        ],
+        "Scale": [
+          0.7073,
+          1.2865
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.8109
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 5,
+    "FrameExecutionMoment": 0.2,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1172,
+          2.3185
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.383
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0407,
+          2.5277
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.5269
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2517,
+          2.3595
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.53
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0664,
+          1.0398
+        ],
+        "Scale": [
+          0.7073,
+          1.4252
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.3505
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 6,
+    "FrameExecutionMoment": 0.24,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1053,
+          2.3935
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.9156
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0509,
+          2.6121
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.0682
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2438,
+          2.4352
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          139.1017
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0572,
+          1.0776
+        ],
+        "Scale": [
+          0.7073,
+          1.5307
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.2775
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 7,
+    "FrameExecutionMoment": 0.28,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0947,
+          2.4223
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8484
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0613,
+          2.6423
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.077
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2341,
+          2.4654
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          136.861
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0515,
+          1.092
+        ],
+        "Scale": [
+          0.7073,
+          1.5714
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8274
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 8,
+    "FrameExecutionMoment": 0.32,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0854,
+          2.4333
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8066
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0704,
+          2.6541
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.075
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2255,
+          2.4779
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          135.5666
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0466,
+          1.0975
+        ],
+        "Scale": [
+          0.7073,
+          1.5872
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.3063
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 9,
+    "FrameExecutionMoment": 0.36,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0713,
+          2.4504
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.6237
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0838,
+          2.6749
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7278
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2169,
+          2.4946
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          134.9957
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0383,
+          1.1062
+        ],
+        "Scale": [
+          0.7073,
+          1.6126
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.0924
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 10,
+    "FrameExecutionMoment": 0.4,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0507,
+          2.4705
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.5016
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1039,
+          2.6975
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7386
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2083,
+          2.5129
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          134.2369
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0272,
+          1.1163
+        ],
+        "Scale": [
+          0.7073,
+          1.6424
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.1155
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 11,
+    "FrameExecutionMoment": 0.44,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0295,
+          2.4755
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.433
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1249,
+          2.7039
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7218
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1974,
+          2.5243
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          133.0274
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0161,
+          1.1189
+        ],
+        "Scale": [
+          0.7073,
+          1.6521
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.169
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 12,
+    "FrameExecutionMoment": 0.48,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0083,
+          2.4644
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.3245
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1456,
+          2.695
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.128
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.179,
+          2.5305
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          130.901
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0048,
+          1.1134
+        ],
+        "Scale": [
+          0.7073,
+          1.6402
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.3137
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 13,
+    "FrameExecutionMoment": 0.52,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0196,
+          2.4467
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.2279
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1731,
+          2.6792
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -88.8083
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1523,
+          2.5351
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          128.708
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0098,
+          1.1046
+        ],
+        "Scale": [
+          0.7073,
+          1.6208
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.841
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 14,
+    "FrameExecutionMoment": 0.56,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0596,
+          2.4216
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.0559
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2125,
+          2.6576
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -88.9623
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1175,
+          2.5405
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          127.2518
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.031,
+          1.0921
+        ],
+        "Scale": [
+          0.7073,
+          1.5956
+        ],
+        "Rotation": [
+          0,
+          0,
+          -10.1104
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 15,
+    "FrameExecutionMoment": 0.6,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0984,
+          2.3954
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.87
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2505,
+          2.6351
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -88.8041
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0847,
+          2.5464
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          126.673
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0516,
+          1.0792
+        ],
+        "Scale": [
+          0.7073,
+          1.5714
+        ],
+        "Rotation": [
+          0,
+          0,
+          -12.4083
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 16,
+    "FrameExecutionMoment": 0.64,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.1307,
+          2.3664
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.7107
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2821,
+          2.6093
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -88.7182
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0532,
+          2.5351
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          126.2733
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0688,
+          1.0648
+        ],
+        "Scale": [
+          0.7073,
+          1.5435
+        ],
+        "Rotation": [
+          0,
+          0,
+          -14.4672
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 17,
+    "FrameExecutionMoment": 0.68,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.1688,
+          2.3232
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.5431
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.3194,
+          2.5695
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.069
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0152,
+          2.4954
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          126.1534
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.089,
+          1.0433
+        ],
+        "Scale": [
+          0.7073,
+          1.5011
+        ],
+        "Rotation": [
+          0,
+          0,
+          -17.1172
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 18,
+    "FrameExecutionMoment": 0.72,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.206,
+          2.2801
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.553
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.3567,
+          2.5261
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.4177
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.9807,
+          2.4477
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          127.611
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1075,
+          1.0217
+        ],
+        "Scale": [
+          0.7073,
+          1.4604
+        ],
+        "Rotation": [
+          0,
+          0,
+          -19.7547
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 19,
+    "FrameExecutionMoment": 0.76,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.2466,
+          2.2328
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.865
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.3986,
+          2.4726
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.5595
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.9378,
+          2.3914
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          130.5202
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1257,
+          0.9978
+        ],
+        "Scale": [
+          0.7073,
+          1.4167
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.5942
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 20,
+    "FrameExecutionMoment": 0.8,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.2942,
+          2.1762
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.258
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.4479,
+          2.4081
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.6177
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.8839,
+          2.3242
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          133.9292
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1469,
+          0.9693
+        ],
+        "Scale": [
+          0.7073,
+          1.3685
+        ],
+        "Rotation": [
+          0,
+          0,
+          -26.1619
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 21,
+    "FrameExecutionMoment": 0.84,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.3103,
+          2.1537
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.725
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.4658,
+          2.3762
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.9104
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.862,
+          2.2843
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          137.7867
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1518,
+          0.9578
+        ],
+        "Scale": [
+          0.7073,
+          1.3462
+        ],
+        "Rotation": [
+          0,
+          0,
+          -27.2891
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 22,
+    "FrameExecutionMoment": 0.88,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.2834,
+          2.1788
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.4582
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.4417,
+          2.3864
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.3594
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.8814,
+          2.2812
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          141.3345
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1335,
+          0.9699
+        ],
+        "Scale": [
+          0.7073,
+          1.3542
+        ],
+        "Rotation": [
+          0,
+          0,
+          -24.7053
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 23,
+    "FrameExecutionMoment": 0.92,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.2472,
+          2.2154
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.945
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.4071,
+          2.4133
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.5403
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.9125,
+          2.2963
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          142.8364
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.1121,
+          0.9881
+        ],
+        "Scale": [
+          0.7073,
+          1.3772
+        ],
+        "Rotation": [
+          0,
+          0,
+          -21.5708
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 24,
+    "FrameExecutionMoment": 0.96,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.2044,
+          2.2619
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7384
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.3636,
+          2.4639
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.2896
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -0.9582,
+          2.3361
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          142.3534
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0921,
+          1.0114
+        ],
+        "Scale": [
+          0.7073,
+          1.4192
+        ],
+        "Rotation": [
+          0,
+          0,
+          -18.508
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 25,
+    "FrameExecutionMoment": 1.0,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.1505,
+          2.3232
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.1911
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.3077,
+          2.5363
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.0098
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.016,
+          2.3961
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.9749
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0688,
+          1.0423
+        ],
+        "Scale": [
+          0.7073,
+          1.4829
+        ],
+        "Rotation": [
+          0,
+          0,
+          -15.0708
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 26,
+    "FrameExecutionMoment": 1.04,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.1099,
+          2.3676
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8163
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2657,
+          2.5882
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7566
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0536,
+          2.4395
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          139.4396
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.051,
+          1.0647
+        ],
+        "Scale": [
+          0.7073,
+          1.5316
+        ],
+        "Rotation": [
+          0,
+          0,
+          -12.6712
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 27,
+    "FrameExecutionMoment": 1.08,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0842,
+          2.3917
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.7156
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2396,
+          2.6144
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.5482
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0734,
+          2.4571
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          138.3193
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0388,
+          1.0768
+        ],
+        "Scale": [
+          0.7073,
+          1.5578
+        ],
+        "Rotation": [
+          0,
+          0,
+          -11.1786
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 28,
+    "FrameExecutionMoment": 1.12,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0583,
+          2.4145
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.7203
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.2138,
+          2.6371
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7025
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.0919,
+          2.4696
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          138.326
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0258,
+          1.0882
+        ],
+        "Scale": [
+          0.7073,
+          1.5825
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.6706
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 29,
+    "FrameExecutionMoment": 1.16,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          0.0255,
+          2.4436
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.7017
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1809,
+          2.6666
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.8822
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1137,
+          2.4885
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          139.9275
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          0.0096,
+          1.1027
+        ],
+        "Scale": [
+          0.7073,
+          1.6155
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.8435
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 30,
+    "FrameExecutionMoment": 1.2,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0116,
+          2.4775
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.6037
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1434,
+          2.7024
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.6768
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1438,
+          2.5091
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          142.7287
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0083,
+          1.1198
+        ],
+        "Scale": [
+          0.7073,
+          1.6567
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9074
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 31,
+    "FrameExecutionMoment": 1.24,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0357,
+          2.496
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.524
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.119,
+          2.7225
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.3167
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1696,
+          2.5168
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          145.3487
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0198,
+          1.129
+        ],
+        "Scale": [
+          0.7073,
+          1.6795
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.7305
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 32,
+    "FrameExecutionMoment": 1.28,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0452,
+          2.4921
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.5221
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.1094,
+          2.7187
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.3465
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1829,
+          2.5111
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          145.5176
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0246,
+          1.1271
+        ],
+        "Scale": [
+          0.7073,
+          1.6732
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.2904
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 33,
+    "FrameExecutionMoment": 1.32,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0558,
+          2.4787
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.6514
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0994,
+          2.7027
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.5374
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.1932,
+          2.5023
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          143.6586
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0307,
+          1.1203
+        ],
+        "Scale": [
+          0.7073,
+          1.6531
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.7496
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 34,
+    "FrameExecutionMoment": 1.36,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.0732,
+          2.458
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8882
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.083,
+          2.6772
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.5941
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2091,
+          2.4884
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          141.4516
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.041,
+          1.1098
+        ],
+        "Scale": [
+          0.7073,
+          1.6223
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.806
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 35,
+    "FrameExecutionMoment": 1.4,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.092,
+          2.4326
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.8875
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0641,
+          2.6518
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7705
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2296,
+          2.4676
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          139.8072
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0504,
+          1.0971
+        ],
+        "Scale": [
+          0.7073,
+          1.5857
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.9191
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 36,
+    "FrameExecutionMoment": 1.44,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1057,
+          2.3986
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.6092
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0494,
+          2.6234
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.865
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2449,
+          2.4397
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          139.923
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0554,
+          1.0803
+        ],
+        "Scale": [
+          0.7073,
+          1.5384
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.4634
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 37,
+    "FrameExecutionMoment": 1.48,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1158,
+          2.3433
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.448
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0386,
+          2.5714
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.6998
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2529,
+          2.3978
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.4767
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0594,
+          1.0528
+        ],
+        "Scale": [
+          0.7073,
+          1.4613
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.1063
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 38,
+    "FrameExecutionMoment": 1.52,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1245,
+          2.2717
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.4571
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.0299,
+          2.4996
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.6028
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2595,
+          2.3433
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.0623
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0638,
+          1.0169
+        ],
+        "Scale": [
+          0.7073,
+          1.3615
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.6671
+        ]
+      }
+    ]
+  },
+  {
+    "FrameIndex": 39,
+    "FrameExecutionMoment": 1.56,
+    "FrameConfig": [
+      {
+        "Name": "Head",
+        "Position": [
+          -0.1355,
+          2.171
+        ],
+        "Scale": [
+          0.814,
+          0.8349
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.4584
+        ]
+      },
+      {
+        "Name": "Muzzle",
+        "Position": [
+          1.019,
+          2.3988
+        ],
+        "Scale": [
+          0.7959,
+          0.8291
+        ],
+        "Rotation": [
+          0,
+          0,
+          -89.7265
+        ]
+      },
+      {
+        "Name": "Sprout",
+        "Position": [
+          -1.2711,
+          2.2616
+        ],
+        "Scale": [
+          0.621,
+          0.6136
+        ],
+        "Rotation": [
+          0,
+          0,
+          140.0797
+        ]
+      },
+      {
+        "Name": "Stem",
+        "Position": [
+          -0.0693,
+          0.9666
+        ],
+        "Scale": [
+          0.7073,
+          1.2208
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0266
+        ]
+      }
+    ]
+  }
+]
