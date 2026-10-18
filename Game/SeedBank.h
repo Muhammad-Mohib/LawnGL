@@ -14,5 +14,7 @@ public:
 	void Add(std::unique_ptr<SeedPacket> Packet);
 	void CreateSeedPackets();
 
-	int Suns = 0;
+	bool isSeedPacketSelected = false;
+
+	int Suns = 100;
 };

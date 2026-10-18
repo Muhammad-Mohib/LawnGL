@@ -15,6 +15,7 @@ private:
 	LevelManager _LevelManager;
 	GameInstances Instances;
 	GLFWwindow* currentWindow = nullptr;
+	void OnSeedPacketClicked();
 };
 
 
@@ -47,36 +48,53 @@ int main()
 
 void Game::Update(float deltaTime)
 {
+	OnSeedPacketClicked();
+}
+
+void Game::OnSeedPacketClicked()
+{
 	double cursorX, cursorY;
 	glfwGetCursorPos(currentWindow, &cursorX, &cursorY);
 
 	static bool wasDown = false;
 	bool isDown = glfwGetMouseButton(glfwGetCurrentContext(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 
-	
+	int Suns = _LevelManager.currentLevel.LevelBank.Suns;
 
-	for (auto& object : _LevelManager.currentLevel.LevelBank.SeedPackets)
+	for (auto& object : Instances._SceneManager->GetCurrentScene()->SceneGameObjects)
 	{
-		if (isDown && !wasDown)
+		if (object->Name[2] == 'n' && _LevelManager.currentLevel.LevelBank.isSeedPacketSelected)
 		{
-
-			glm::vec2 position = object->SeedPacketBaseObj->transform.position;
-			if (((position.x >= cursorX && position.x <= cursorX + 40)
-				|| (cursorX >= position.x && cursorX <= position.x + 40))
-				&& position.y <= (600 - cursorY) + 40
-				)
-			{
-				std::cout << object->Name << "  " << (600 - cursorY) << std::endl;
-			}
-
-
+			object->Origin = glm::vec2(cursorX, 600-cursorY );
 		}
-		
-		//std::cout << position.y << "   " << 600- cursorY << "\n";
 	}
 
+	if (!_LevelManager.currentLevel.LevelBank.isSeedPacketSelected)
+	{
+		for (auto& object : _LevelManager.currentLevel.LevelBank.SeedPackets)
+		{
+			if (isDown && !wasDown)
+			{
+				glm::vec2 position = object->SeedPacketBaseObj->transform.position;
+				if (((position.x >= cursorX && position.x <= cursorX + 40)
+					|| (cursorX >= position.x && cursorX <= position.x + 40))
+					&& position.y <= (600 - cursorY) + 40
+					)
+				{
+					if (Suns - object->Cost >= 0)
+					{
+						std::cout << "Bough it! \n";
+						_LevelManager.currentLevel.LevelBank.Suns -= object->Cost;
+						_LevelManager.currentLevel.LevelBank.isSeedPacketSelected = true;
+					}
+					else {
+						std::cout << "No we can't\n";
+					}
+				}
+			}
+		}
+	}
+	
+
 	wasDown = isDown;
-	//double x, y;
-	//glfwGetCursorPos(currentWindow, &x, &y);
-	//std::cout << x << "\n";
 }

@@ -15,6 +15,7 @@ struct Transform2D {
 
 	float rotationDegrees = 0.0f;
 
+
 	glm::mat4 GetMatrix() const
 	{
 		glm::mat4 model{1.0f};
@@ -43,6 +44,8 @@ public:
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;
 	bool isActive = true;
+
+	glm::vec2 Origin = { 222.0f, 250.0f };
 
 	std::vector<std::unique_ptr<Behaviour>> Behaviours;
 
