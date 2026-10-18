@@ -1,5 +1,11 @@
 {
   "Name": "Peashooter",
   "Cost": 75,
-  "CooldownPeriod": 40
+  "CooldownPeriod": 40,
+  "Bodyparts": [
+    "FrontLeaves",
+    "Head",
+    "Muzzle",
+    "Stem"
+  ]
 }

@@ -13,30 +13,40 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 {
 	if (Animation != nullptr)
 	{
-		_Elapsed += deltaTime;
-		Origin = { 222.0f, 250.0f };
+		if (isPaused)
+		{
+			_Elapsed = 0.0f;
+			_NextFrame = 0;
+		}
+		else
+		{
+			_Elapsed += deltaTime;
+		}
+		
+
+		//Origin = { 222.0f, 250.0f };
 		const glm::vec2 QuadSize = { 800.0f, 600.0f };
 		while (_NextFrame < Animation->AnimationFrames.size() && _Elapsed >= Animation->AnimationFrames[_NextFrame]->FrameExecutionMoment)
 		{
 			for (auto& config : Animation->AnimationFrames[_NextFrame]->Configs)
 			{
-				auto obj = _Scene->GetObjectByName(config->Name);
+				//auto obj = _Scene->GetObjectByNam(config->Name);
+				auto it = Parts.find(config->Name);
+				GameObject* obj = (it != Parts.end()) ? it->second : nullptr;
+
 				if (obj != NULL)
 				{
-					if (obj->Name[2] == 'n')
+					//Origin = obj->Origin;
+
+					if (obj->GameObject_SpriteRenderer.Sprite == nullptr)
 					{
-						Origin = {
-							218.0,
-							120.0
-						};
+						std::cout << "No sprite on: " << obj->Name << "\n";
+						continue;
 					}
-
-					Origin = obj->Origin;
-
 					glm::vec2 texSize = { (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[0], (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[1] };
 					glm::vec2 unitySize = texSize / 100.0f;
 					obj->transform.position = Origin + config->Position * PixelsPerUnit * ObjectScale;
-					obj->transform.scale = config->Scale * unitySize * PixelsPerUnit * ObjectScale / QuadSize;
+					obj->transform.scale = config->Scale * unitySize * PixelsPerUnit * ObjectScale;
 					obj->isActive = config->Active;
 				}
 			}

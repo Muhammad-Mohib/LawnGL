@@ -2,6 +2,7 @@
 #include "../json.hpp"
 #include<fstream>
 #include<iostream>
+#include "GameInstances.h"
 
 void LevelManager::LoadLevel(std::string LevelName)
 {
@@ -30,6 +31,28 @@ void LevelManager::LoadLevel(std::string LevelName)
 				a->Bank = &currentLevel.LevelBank;
 				currentLevel.LevelBank.Add(std::move(a));
 				counter++;
+
+				auto scene = currentLevel.LevelBank.Instances->_SceneManager->GetCurrentScene();
+				auto rm = currentLevel.LevelBank.Instances->_ResourceManager;
+				std::string name = plantName.get<std::string>();
+
+				GameObject* root = scene->CreateGameObject(name + "__Thumbnail", "SeedPacket", "", "Default", "");
+				root->_AnimationController.Animation = rm->GetResource<AnimationClip>(name +"_Idle_Frames");
+
+				root->_AnimationController.PixelsPerUnit = 100.0f;
+				root->_AnimationController.ObjectScale = 0.23f;
+				root->_AnimationController.Origin = root->Origin;
+
+				root->isActive = false;
+
+				for (auto& PlantBodyPart : plantData["Bodyparts"])
+				{
+					auto txtName = PlantBodyPart.get<std::string>();
+					GameObject* part = scene->CreateGameObject(name + "__Thumbnail/" + txtName, "Plant", txtName, "Default", "");
+					root->_AnimationController.Parts[txtName] = part;
+				}
+
+				//thumbnailRoot = root;
 			}
 
 

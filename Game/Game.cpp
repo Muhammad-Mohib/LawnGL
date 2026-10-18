@@ -24,7 +24,7 @@ void Game::Run()
 {
 	Application app = Application(800, 600, "LawnGL", false);
 	Instances = GameInstances();
-	Instances.SetInstance(&app._SceneManager);
+	Instances.SetInstance(&app._SceneManager, &app._ResourceManager);
 	currentWindow = app.currentWindow;
 
 	app.CreateScene("Wave1");
@@ -63,13 +63,30 @@ void Game::OnSeedPacketClicked()
 
 	for (auto& object : Instances._SceneManager->GetCurrentScene()->SceneGameObjects)
 	{
-		if (object->Name[2] == 'n' && _LevelManager.currentLevel.LevelBank.isSeedPacketSelected)
+		if (object->Name.starts_with("Sunflower") 
+			&& _LevelManager.
+			currentLevel.
+			LevelBank.
+			isSeedPacketSelected)
 		{
-			object->Origin = glm::vec2(cursorX, 600-cursorY );
+			//object->_AnimationController.isPaused = true;
+			//object->Origin = glm::vec2(cursorX, 600-cursorY );
+
+			//Instances._SceneManager->
+			//	GetCurrentScene()->
+			//	CreateGameObject(
+			//		"New"+object->Name, 
+			//		object->GameObject_Mesh->Name,
+			//		object->GameObject_SpriteRenderer.Sprite->Name,
+			//		"Default",
+			//		"");
 		}
 	}
 
-	if (!_LevelManager.currentLevel.LevelBank.isSeedPacketSelected)
+	if (!_LevelManager
+		.currentLevel
+		.LevelBank
+		.isSeedPacketSelected)
 	{
 		for (auto& object : _LevelManager.currentLevel.LevelBank.SeedPackets)
 		{
@@ -86,8 +103,10 @@ void Game::OnSeedPacketClicked()
 						std::cout << "Bough it! \n";
 						_LevelManager.currentLevel.LevelBank.Suns -= object->Cost;
 						_LevelManager.currentLevel.LevelBank.isSeedPacketSelected = true;
+						std::cout << object->Name << std::endl;
 					}
-					else {
+					else 
+					{
 						std::cout << "No we can't\n";
 					}
 				}

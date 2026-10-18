@@ -33,9 +33,23 @@ void GameObject::Draw()
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 
-		GameObject_SpriteRenderer.Sprite->Bind();
+		if(GameObject_SpriteRenderer.Sprite != NULL)
+		{
+			GameObject_SpriteRenderer.Sprite->Bind();
+		}
+		else
+		{
+			std::cout << Name << " Has null sprite\n";
+		}
 		glUniform1i(glGetUniformLocation(GameObject_SpriteRenderer.SpriteMaterial->MatShader->ID, "ourTexture"), 0);
-		GameObject_Mesh->MeshVAO.Bind();
+		if(GameObject_Mesh)
+		{
+			GameObject_Mesh->MeshVAO.Bind();
+		}
+		else
+		{
+			std::cout << Name << " Has null Mesh\n";
+		}
 
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 	}

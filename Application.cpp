@@ -17,6 +17,15 @@ float vertices[] = {
 	-400.0f, -300.0f,   0.0f, 0.0f,   // bottom left
 	-400.0f,  300.0f,   0.0f, 1.0f    // top left 
 };
+
+float plant_verts[] = {
+	// positions        // texture coords
+	 0.5f,  0.5f,   1.0f, 1.0f,   // top right
+	 0.5f, -0.5f,   1.0f, 0.0f,   // bottom right
+	-0.5f, -0.5f,   0.0f, 0.0f,   // bottom left
+	-0.5f,  0.5f,   0.0f, 1.0f    // top left
+};
+
 float seedPacketVerts[] = {
 	// positions                   // texture coords
 	 40.0f,  40.0f,   1.0f, 1.0f,   // top right
@@ -95,6 +104,7 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
+	_ResourceManager.AddResource<Mesh>("Plant", plant_verts, sizeof(plant_verts), indices, sizeof(indices));
 
 	_ResourceManager.AddResource<Texture>("Peashooter", "Thumbnails/Peashooter.png");
 	_ResourceManager.AddResource<Texture>("Sunflower", "Thumbnails/Sunflower.png");
@@ -116,17 +126,17 @@ void Application::AllocateResources()
 
 	//Peashooter Resource Allocation
 	_ResourceManager.AddResource<AnimationClip>("Sunflower_Idle_Frames");
-	_ResourceManager.AddResource<Texture>("Peashooter_Face", "Animations_Atlas/Peashooter/Peashooter_Face.png");
-	_ResourceManager.AddResource<Texture>("Peashooter_Mouth", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
-	_ResourceManager.AddResource<Texture>("Peashooter_Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");
-	_ResourceManager.AddResource<Texture>("Peashooter_Leaves", "Animations_Atlas/Peashooter/Peashooter_Leaves.png");
+	_ResourceManager.AddResource<Texture>("Head", "Animations_Atlas/Peashooter/Peashooter_Face.png");
+	_ResourceManager.AddResource<Texture>("Muzzle", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
+	_ResourceManager.AddResource<Texture>("Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");
+	_ResourceManager.AddResource<Texture>("FrontLeaves", "Animations_Atlas/Peashooter/Peashooter_Leaves.png");
 
 	//Sunflower Resource Allocation
-	_ResourceManager.AddResource<Texture>("Sunflower_Stem", "Animations_Atlas/Sunflower/Sunflower_Stem.png");
-	_ResourceManager.AddResource<Texture>("Sunflower_Leaves", "Animations_Atlas/Sunflower/Sunflower_Leaves.png");
-	_ResourceManager.AddResource<Texture>("Sunflower_Petals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
-	_ResourceManager.AddResource<Texture>("Sunflower_Head", "Animations_Atlas/Sunflower/Sunflower_Head.png");
-	_ResourceManager.AddResource<Texture>("Sunflower_Blink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
+	_ResourceManager.AddResource<Texture>("SunflowerStem", "Animations_Atlas/Sunflower/Sunflower_Stem.png");
+	_ResourceManager.AddResource<Texture>("SunflowerLeaves", "Animations_Atlas/Sunflower/Sunflower_Leaves.png");
+	_ResourceManager.AddResource<Texture>("SunflowerPetals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
+	_ResourceManager.AddResource<Texture>("SunflowerHead", "Animations_Atlas/Sunflower/Sunflower_Head.png");
+	_ResourceManager.AddResource<Texture>("SunflowerBlink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
 }
 
 void Application::CreateScene(std::string SceneName)

@@ -1,5 +1,6 @@
 {
   "Name": "Sunflower",
   "Cost": 50,
-  "CooldownPeriod": 30
+  "CooldownPeriod": 30,
+  "Bodyparts": [ "SunflowerLeaves", "SunflowerStem", "SunflowerPetals", "SunflowerHead", "SunflowerBlink" ]
 }

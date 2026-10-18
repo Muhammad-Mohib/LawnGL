@@ -1,5 +1,6 @@
 #include "SeedBank.h"
 #include "GameInstances.h"
+#include "../json.hpp"
 
 SeedBank::SeedBank()
 {
@@ -28,11 +29,25 @@ void SeedBank::CreateSeedPackets()
 		seedPacketObj->transform.scale = {1,1};
 
 
-		auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
-		GameObject* seedPacketThumbnail = Instances->_SceneManager->GetCurrentScene()->CreateGameObject(plantName + "_Thumbnail", "SeedPacket", plantName, "Default", "");
+		//auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
 
-		seedPacketThumbnail->transform.position = OriginOfPackets + glm::vec2(Offset * counter, 5);
-		seedPacketThumbnail->transform.scale = { 0.5,0.5 };
+		//auto fileName = "Plants/" + plantName + ".json";
+		//std::ifstream plantFile(fileName);
+
+		//nlohmann::json plantData = nlohmann::json::parse(plantFile);
+
+		//for (auto& PlantBodyPart : plantData["Bodyparts"])
+		//{
+		//	GameObject* bodyPart = Instances->_SceneManager->GetCurrentScene()->
+		//		CreateGameObject(plantName + "_Thumbnail", "SeedPacket", PlantBodyPart, "Default", "");
+
+		//	bodyPart->transform.position = { 200,300 };
+		//}
+
+		//GameObject* seedPacketThumbnail = Instances->_SceneManager->GetCurrentScene()->CreateGameObject(plantName + "_Thumbnail", "SeedPacket", plantName, "Default", "");
+
+		//seedPacketThumbnail->transform.position = OriginOfPackets + glm::vec2(Offset * counter, 5);
+		//seedPacketThumbnail->transform.scale = { 0.5,0.5 };
 		counter++;
 	}
 }

@@ -9,12 +9,12 @@ SeedPacket::SeedPacket(SeedBank* seedBank)
 
 void SeedPacket::Initialize()
 {
-	auto Thumbnail = Bank->
-	Instances->
-	_SceneManager->
-	GetCurrentScene()->
-	CreateGameObject("Thumbnail_"+ std::to_string(ID), "SeedPacket", "Peashooter", "Default", "");
-	Thumbnail->transform.position = SeedPacketBaseObj->transform.position;
+	//auto Thumbnail = Bank->
+	//Instances->
+	//_SceneManager->
+	//GetCurrentScene()->
+	//CreateGameObject("Thumbnail_"+ std::to_string(ID), "SeedPacket", "Peashooter", "Default", "");
+	//Thumbnail->transform.position = SeedPacketBaseObj->transform.position;
 
-	std::cout << Thumbnail->Name << "  ";
+	//std::cout << Thumbnail->Name << "  ";
 }

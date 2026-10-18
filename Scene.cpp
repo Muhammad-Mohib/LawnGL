@@ -20,7 +20,7 @@ void Scene::Load()
 	for (auto& gameObj : data)
 	{
 		std::string anim = "Sunflower_Idle_Frames";
-		if (gameObj.at("Name").get<std::string>()[1] == 'u')
+		if (gameObj.at("Name").get<std::string>()[2] == 'n')
 		{
 			anim = "Sunflower_Idle_Frames";
 		}
@@ -28,11 +28,21 @@ void Scene::Load()
 		{
 			anim = "Peashooter_Idle_Frames";
 		}
-		auto* obj = CreateGameObject(gameObj.at("Name"), gameObj.at("Mesh"), gameObj.at("Texture"), gameObj.at("Material"), anim);
-		if (!gameObj["TagID"].is_null())
-			obj->TagID = gameObj.at("TagID");
-		obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
-		obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
+
+		auto Name = gameObj.at("Name");
+		auto Mesh = gameObj.at("Mesh");
+		auto Texture = gameObj.at("Texture");
+		auto Material = gameObj.at("Material");
+
+		if (!Name.is_null() && !Mesh.is_null() && !Texture.is_null() && !Material.is_null())
+		{
+
+			auto* obj = CreateGameObject(Name.get<std::string>(), Mesh.get<std::string>(), Texture.get<std::string>(), Material.get<std::string>(), anim);
+			if (!gameObj["TagID"].is_null())
+				obj->TagID = gameObj.at("TagID");
+			obj->transform.position = glm::vec2(gameObj.at("Position")[0].get<float>(), gameObj.at("Position")[1].get<float>());
+			obj->transform.scale = glm::vec2(gameObj.at("Scale")[0].get<float>(), gameObj.at("Scale")[1].get<float>());
+		}
 
 		//if (obj->Name == "Peashooter")
 		//{
