@@ -4,6 +4,7 @@
 #include<iostream>
 #include "GameInstances.h"
 
+
 void LevelManager::LoadLevel(std::string LevelName)
 {
 	std::ifstream file("Levels.json");
@@ -35,30 +36,42 @@ void LevelManager::LoadLevel(std::string LevelName)
 				auto scene = currentLevel.LevelBank.Instances->_SceneManager->GetCurrentScene();
 				auto rm = currentLevel.LevelBank.Instances->_ResourceManager;
 				std::string name = plantName.get<std::string>();
+				GameObject* root = CreatePlant(scene, rm, plantData, name, { 200.0f, 300.0f });
 
-				GameObject* root = scene->CreateGameObject(name + "__Thumbnail", "SeedPacket", "", "Default", "");
-				root->_AnimationController.Animation = rm->GetResource<AnimationClip>(name +"_Idle_Frames");
-
-				root->_AnimationController.PixelsPerUnit = 100.0f;
-				root->_AnimationController.ObjectScale = 0.23f;
-				root->_AnimationController.Origin = root->Origin;
-
-				root->isActive = false;
-
-				for (auto& PlantBodyPart : plantData["Bodyparts"])
-				{
-					auto txtName = PlantBodyPart.get<std::string>();
-					GameObject* part = scene->CreateGameObject(name + "__Thumbnail/" + txtName, "Plant", txtName, "Default", "");
-					root->_AnimationController.Parts[txtName] = part;
-				}
-
+				currentLevel.LevelBank.CreateSeedPackets();
+				std::cout << "\n" << currentLevel.LevelBank.SeedPackets.size() << "\n";
+				
 				//thumbnailRoot = root;
 			}
 
 
-			currentLevel.LevelBank.CreateSeedPackets();
-			std::cout << "\n"<<currentLevel.LevelBank.SeedPackets.size() << "\n";
 		}
 	}
 
+}
+GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const nlohmann::json& plantData, const std::string& plantName, glm::vec2 position)
+{
+
+	static unsigned int nextId = 0;
+	std::string instanceName = plantName + "_" + std::to_string(nextId++);
+
+	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "", "Default", "");
+	root->isActive = false;
+	root->_AnimationController.Animation = rm->GetResource<AnimationClip>(plantName + "_Idle_Frames");
+
+	root->_AnimationController.PixelsPerUnit = 100.0f;
+	root->_AnimationController.ObjectScale = plantData.value("Scale", 0.3f);
+	root->_AnimationController.Origin = position;
+
+
+
+	for (auto& PlantBodyPart : plantData["Bodyparts"])
+	{
+		auto txtName = PlantBodyPart.get<std::string>();
+		GameObject* part = scene->CreateGameObject(instanceName + "/" + txtName, "Plant", txtName, "Default", "");
+		part->isActive = false;
+		root->_AnimationController.Parts[txtName] = part;
+	}
+
+	return root;
 }

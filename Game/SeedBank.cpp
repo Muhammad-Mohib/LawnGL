@@ -28,8 +28,7 @@ void SeedBank::CreateSeedPackets()
 		seedPacketObj->transform.position = OriginOfPackets + glm::vec2(Offset*counter, 0);
 		seedPacketObj->transform.scale = {1,1};
 
-
-		//auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
+		auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
 
 		//auto fileName = "Plants/" + plantName + ".json";
 		//std::ifstream plantFile(fileName);
@@ -43,7 +42,6 @@ void SeedBank::CreateSeedPackets()
 
 		//	bodyPart->transform.position = { 200,300 };
 		//}
-
 		//GameObject* seedPacketThumbnail = Instances->_SceneManager->GetCurrentScene()->CreateGameObject(plantName + "_Thumbnail", "SeedPacket", plantName, "Default", "");
 
 		//seedPacketThumbnail->transform.position = OriginOfPackets + glm::vec2(Offset * counter, 5);
