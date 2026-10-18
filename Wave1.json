@@ -12,7 +12,7 @@
       300.0
     ],
     "Scale": [
-      1.5,
+      1.6,
       1.0
     ],
     "Texture": "Bg"
@@ -35,119 +35,7 @@
     ],
     "Texture": "SeedBank"
   },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "SeedPacket",
-    "Name": "A3",
-    "Object": "GameObject",
-    "Position": [
-      220.0,
-      551.0
-    ],
-    "Scale": [
-      1.0,
-      1.0
-    ],
-    "TagID": "SeedPacketBase",
-    "Texture": "SeedPacket"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "SeedPacket",
-    "Name": "A4",
-    "Object": "GameObject",
-    "Position": [
-      299.0,
-      551.0
-    ],
-    "Scale": [
-      1.0,
-      1.0
-    ],
-    "TagID": "SeedPacketBase",
-    "Texture": "SeedPacket"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "SeedPacket",
-    "Name": "A5",
-    "Object": "GameObject",
-    "Position": [
-      378.0,
-      551.0
-    ],
-    "Scale": [
-      1.0,
-      1.0
-    ],
-    "TagID": "SeedPacketBase",
-    "Texture": "SeedPacket"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "SeedPacket",
-    "Name": "A6",
-    "Object": "GameObject",
-    "Position": [
-      457.0,
-      551.0
-    ],
-    "Scale": [
-      1.0,
-      1.0
-    ],
-    "TagID": "SeedPacketBase",
-    "Texture": "SeedPacket"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "SeedPacket",
-    "Name": "A7",
-    "Object": "GameObject",
-    "Position": [
-      536.0,
-      551.0
-    ],
-    "Scale": [
-      1.0,
-      1.0
-    ],
-    "TagID": "SeedPacketBase",
-    "Texture": "SeedPacket"
-  },
-  {
-    "Behaviours": [
-      "PlantShooter.cpp"
-    ],
-    "Material": "Default",
-    "Mesh": "Peashooter",
-    "Name": "Peashooter1",
-    "Object": "GameObject",
-    "Position": [
-      218.0,
-      553.0
-    ],
-    "Scale": [
-      0.06,
-      0.06
-    ],
-    "Texture": "Peashooter"
-  },
+
   {
     "Behaviours": [
       "PlantShooter.cpp"

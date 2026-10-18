@@ -18,6 +18,10 @@ public:
 	//debug function
 	void Print(std::string str);
 	GLFWwindow* currentWindow;
+
+	glm::vec2 GetCursorPosition();
+
+	std::function<void(float)> OnUpdate;
 private:
 	bool IS_APPLICATION_DEBUG_MODE = true;
 };

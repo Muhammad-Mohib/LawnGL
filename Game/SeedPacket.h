@@ -15,6 +15,10 @@ public:
 	GameObject* SeedPacketThumbnail = nullptr;
 	SeedBank* Bank = nullptr;
 
+	std::string Name;
+	int Cost = 0;
+	float CooldownPeriod = 30;
+
 	SeedPacket(SeedBank* seedBank);
 
 	void Initialize();

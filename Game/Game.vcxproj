@@ -154,15 +154,12 @@
     <ProjectReference Include="..\LawnGL.vcxproj">
       <Project>{754adff5-a73d-4c8b-9630-92544028e8f9}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\LawnGL\LawnGL.vcxproj">
-      <Project>{754adff5-a73d-4c8b-9630-92544028e8f9}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
     <None Include="Animations\Sunflower_Idle_Frames.json" />
     <None Include="Levels.json" />
-    <None Include="Plants\sunflower.json" />
+    <None Include="Plants\Sunflower.json" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameInstances.h" />

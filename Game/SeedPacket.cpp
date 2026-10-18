@@ -2,11 +2,6 @@
 #include "SeedBank.h"
 #include "GameInstances.h"
 
-//SeedPacket::SeedPacket(SeedBank* seedBank)
-//{
-//	Bank = seedBank;
-//}
-
 SeedPacket::SeedPacket(SeedBank* seedBank)
 {
 	Bank = seedBank;
@@ -18,7 +13,7 @@ void SeedPacket::Initialize()
 	Instances->
 	_SceneManager->
 	GetCurrentScene()->
-	CreateGameObject("Thumbnail_" + TagID + "_" + std::to_string(ID), "SeedPacket", "Peashooter", "Default", "");
+	CreateGameObject("Thumbnail_"+ std::to_string(ID), "SeedPacket", "Peashooter", "Default", "");
 	Thumbnail->transform.position = SeedPacketBaseObj->transform.position;
 
 	std::cout << Thumbnail->Name << "  ";

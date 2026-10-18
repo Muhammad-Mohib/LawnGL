@@ -62,7 +62,6 @@ Application::Application(int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* WINDOW
 void Application::Run()
 {
 	double lastTime = glfwGetTime();
-
 	while (!glfwWindowShouldClose(currentWindow))
 	{
 		double currentTime = glfwGetTime();
@@ -76,6 +75,10 @@ void Application::Run()
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		if (OnUpdate)
+		{
+			OnUpdate(deltaTime);
+		}
 
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
 
@@ -92,8 +95,12 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
-	_ResourceManager.AddResource<Texture>("Peashooter0", "peashooter2.png");
-	_ResourceManager.AddResource<Texture>("Peashooter", "repeater.png");
+
+	_ResourceManager.AddResource<Texture>("Peashooter", "Thumbnails/Peashooter.png");
+	_ResourceManager.AddResource<Texture>("Sunflower", "Thumbnails/Sunflower.png");
+	_ResourceManager.AddResource<Texture>("Potato", "Thumbnails/Potato.png");
+	
+	_ResourceManager.AddResource<Texture>("Peashooter0", "repeater.png");
 	_ResourceManager.AddResource<Texture>("SeedPacket", "SeedPacket.png");
 	_ResourceManager.AddResource<Texture>("Mover", "Mover.png");
 
@@ -130,6 +137,13 @@ void Application::CreateScene(std::string SceneName)
 void Application::Print(std::string str)
 {
 	std::cout << str << "\n";
+}
+
+glm::vec2 Application::GetCursorPosition()
+{
+	double x, y;
+	glfwGetCursorPos(currentWindow, &x, &y);
+	return glm::vec2(x,y);
 }
 
 //

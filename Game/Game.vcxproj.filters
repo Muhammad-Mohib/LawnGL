@@ -40,7 +40,7 @@
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
     <None Include="Animations\Sunflower_Idle_Frames.json" />
-    <None Include="Plants\sunflower.json" />
+    <None Include="Plants\Sunflower.json" />
     <None Include="Levels.json" />
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,6 @@ private:
     float PixelsPerUnit = 27.5f;
 	glm::vec2 Origin{ 0.0f, 0.0f };
 	float ObjectScale = 0.75f;
-
+	//GLFWwindow* currentWindow;
 };
 

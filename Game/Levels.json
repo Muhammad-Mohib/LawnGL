@@ -2,7 +2,7 @@
   {
     "LevelName": "Wave1",
     "Category": "Adventure",
-    "BankPlants": [ "Sunflower" ]
+    "BankPlants": [ "Sunflower", "Peashooter", "Potato" ]
   },
   {
     "LevelName": "Wave2",
