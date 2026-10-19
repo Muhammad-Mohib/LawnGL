@@ -103,6 +103,7 @@ void Application::AllocateResources()
 
 	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Walk_Frames");
 	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
+	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Eat_Frames");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Plant", plant_verts, sizeof(plant_verts), indices, sizeof(indices));
@@ -142,7 +143,26 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("SunflowerBlink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
 
 	//Zombie Resource Allocation
-	_ResourceManager.AddResource<Texture>("NormalZombie", "NormalZombie.png");
+	_ResourceManager.AddResource<Texture>("NormalZombie", "Animations_Atlas/NormalZombie/NormalZombie.png");
+	_ResourceManager.AddResource<Texture>("ZombieBody", "Animations_Atlas/NormalZombie/ZombieBody.png");
+	_ResourceManager.AddResource<Texture>("ZombieHair", "Animations_Atlas/NormalZombie/ZombieHair.png");
+	_ResourceManager.AddResource<Texture>("ZombieHead", "Animations_Atlas/NormalZombie/ZombieHead.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerArmHand", "Animations_Atlas/NormalZombie/ZombieInnerArmHand.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerArmLower", "Animations_Atlas/NormalZombie/ZombieInnerArmLower.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerArmUpper", "Animations_Atlas/NormalZombie/ZombieInnerArmUpper.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerLegLower", "Animations_Atlas/NormalZombie/ZombieInnerLegLower.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerLegToe", "Animations_Atlas/NormalZombie/ZombieInnerLegToe.png");
+	_ResourceManager.AddResource<Texture>("ZombieInnerLegUpper", "Animations_Atlas/NormalZombie/ZombieInnerLegUpper.png");
+	_ResourceManager.AddResource<Texture>("ZombieJaw", "Animations_Atlas/NormalZombie/ZombieJaw.png");
+	_ResourceManager.AddResource<Texture>("ZombieNeck", "Animations_Atlas/NormalZombie/ZombieNeck.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmHand", "Animations_Atlas/NormalZombie/ZombieOuterArmHand.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmLower", "Animations_Atlas/NormalZombie/ZombieOuterArmLower.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmUpper", "Animations_Atlas/NormalZombie/ZombieOuterArmUpper.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterLegFoot", "Animations_Atlas/NormalZombie/ZombieOuterLegFoot.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterLegLower", "Animations_Atlas/NormalZombie/ZombieOuterLegLower.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterLegUpper", "Animations_Atlas/NormalZombie/ZombieOuterLegUpper.png");
+	_ResourceManager.AddResource<Texture>("ZombieTie", "Animations_Atlas/NormalZombie/ZombieTie.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmHand2", "Animations_Atlas/NormalZombie/ZombieOuterArmHand2.png");
 }
 
 void Application::CreateScene(std::string SceneName)

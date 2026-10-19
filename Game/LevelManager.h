@@ -18,8 +18,8 @@ public:
 	//std::vector<std::unique_ptr<Level>> Levels;
 	Level currentLevel;
 
-	GameObject* CreatePlant(Scene* scene, ResourceManager* rm,
-		const std::string& plantName, glm::vec2 position);
+	GameObject* CreatePlant(Scene* scene, ResourceManager* rm, const std::string& plantName, glm::vec2 position);
+	GameObject* CreateZombie(Scene* scene, ResourceManager* rm, const std::string& plantName, glm::vec2 position);
 
 	void LoadLevel(std::string LevelName);
 };

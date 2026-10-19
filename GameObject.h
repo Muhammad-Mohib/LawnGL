@@ -51,6 +51,8 @@ public:
 
 	AnimationController _AnimationController;
 
+	float Health = 0; //Custom Added for game nature
+
 	void Draw();
 	void Update(float deltaTime);
 

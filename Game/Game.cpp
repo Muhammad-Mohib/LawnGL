@@ -268,7 +268,6 @@ void Game::OnSeedPacketClicked()
 						std::cout << object->Name << std::endl;
 
 						Bank.PurchasedObjRef = _LevelManager.CreatePlant(Instances._SceneManager->GetCurrentScene(), Instances._ResourceManager, object->Name, { cursorX, 600 - cursorY });
-
 						
 					}
 					else 

@@ -38,8 +38,6 @@ void LevelManager::LoadLevel(std::string LevelName)
 				//thumbnailRoot = root;
 			}
 
-			
-
 			currentLevel.LevelBank.CreateSeedPackets();
 			std::cout << "\n" << currentLevel.LevelBank.SeedPackets.size() << "\n";
 		}
@@ -64,6 +62,35 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const s
 	root->_AnimationController.Origin = position;
 
 	for (auto& PlantBodyPart : plantData["Bodyparts"])
+	{
+		auto txtName = PlantBodyPart.get<std::string>();
+		GameObject* part = scene->CreateGameObject(instanceName + "/" + txtName, "Plant", txtName, "Default", "");
+		part->isActive = false;
+		root->_AnimationController.Parts[txtName] = part;
+	}
+
+	return root;
+}
+
+GameObject* LevelManager::CreateZombie(Scene* scene, ResourceManager* rm, const std::string& zombieName, glm::vec2 position)
+{
+	auto fileName = "Zombies/" + zombieName + ".json";
+	std::ifstream zombieFile(fileName);
+
+	auto zombieData = nlohmann::json::parse(zombieFile);
+
+	static unsigned int ZnextId = 0;
+	std::string instanceName = zombieName + "_" + std::to_string(ZnextId++);
+
+	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "", "Default", "");
+	root->isActive = false;
+	root->_AnimationController.Animation = rm->GetResource<AnimationClip>("NormalZombie_Walk_Frames");
+
+	root->_AnimationController.PixelsPerUnit = 53.116f;
+	root->_AnimationController.ObjectScale = 0.7f;
+	root->_AnimationController.Origin = position;
+
+	for (auto& PlantBodyPart : zombieData["Bodyparts"])
 	{
 		auto txtName = PlantBodyPart.get<std::string>();
 		GameObject* part = scene->CreateGameObject(instanceName + "/" + txtName, "Plant", txtName, "Default", "");

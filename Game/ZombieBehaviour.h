@@ -13,7 +13,7 @@ enum class ZombieState
 class ZombieBehaviour : public Behaviour
 {
 public:
-	float Speed = 10.0f;
+	float Speed = 20.0f;
 	GameInstances* Instances;
 	void Start();
 	void Update(float deltaTime);
