@@ -40,7 +40,6 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 
 					if (obj->GameObject_SpriteRenderer.Sprite == nullptr)
 					{
-						std::cout << "No sprite on: " << obj->Name << "\n";
 						continue;
 					}
 					glm::vec2 texSize = { (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[0], (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[1] };

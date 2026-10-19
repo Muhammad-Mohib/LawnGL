@@ -67,5 +67,17 @@ public:
 		result->Start();
 		return *result;
 	}
+
+	template<typename T>
+	T* GetBehaviour()
+	{
+		for (auto& behaviour : Behaviours)
+		{
+			if (auto* result = dynamic_cast<T*>(behaviour.get()))
+				return result;
+		}
+
+		return nullptr;
+	}
 };
 

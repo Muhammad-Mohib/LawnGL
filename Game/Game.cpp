@@ -4,6 +4,8 @@
 #include "SeedPacket.h"
 #include "GameInstances.h"
 #include "LevelManager.h"
+#include "../ShooterBehaviour.h"
+#include "SunflowerBehaviour.h"
 
 class Game {
 public:
@@ -120,8 +122,57 @@ void Game::Update(float deltaTime)
 
 		if (isDown && !wasDown)
 		{
+			if (!occupied && Bank.isSeedPacketSelected && Bank.PurchasedObjRef)
+			{
+				for (auto& object : Bank.SeedPackets)
+				{
+					if (Bank.PurchasedObjRef->Name.starts_with(object->Name))
+					{
+						std::ifstream file("Plants/" + object->Name + ".json");
+
+						nlohmann::json data = nlohmann::json::parse(file);
+
+						if (!data["Behaviours"].is_null())
+						{
+							for (auto& behaviour : data["Behaviours"])
+							{
+								auto b = behaviour.get<std::string>();
+
+								if (b == "SunflowerBehaviour")
+								{
+									auto& result = Bank.PurchasedObjRef->AddBehaviour<SunflowerBehaviour>();
+									result.Instances = Bank.Instances;
+								}
+								else if (b == "ShooterBehaviour")
+								{
+									auto& result = Bank.PurchasedObjRef->AddBehaviour<ShooterBehaviour>();
+									result.Instances = Bank.Instances;
+								}
+							}
+						}
+					}
+					break;
+				}
+			}
+
+
 			Bank.isSeedPacketSelected = false;
 			Bank.PurchasedObjRef = nullptr;
+
+			for (auto& SceneObj : Instances._SceneManager->GetCurrentScene()->SceneGameObjects)
+			{
+				if (SceneObj->_AnimationController.Origin == Grid[hovered])
+				{
+					auto behaviour = SceneObj->GetBehaviour<SunflowerBehaviour>();
+					if (behaviour != nullptr && behaviour->CurrentSun != nullptr)
+					{
+						Bank.Suns += 50;
+						SceneObj->GetBehaviour<SunflowerBehaviour>()->CollectSun();
+					}
+				}
+			}
+
+			std::cout << Grid[hovered].x << "   " << occupied << "\n";
 		}
 		else
 		{
@@ -182,6 +233,8 @@ void Game::OnSeedPacketClicked()
 						std::cout << object->Name << std::endl;
 
 						Bank.PurchasedObjRef = _LevelManager.CreatePlant(Instances._SceneManager->GetCurrentScene(), Instances._ResourceManager, object->Name, { cursorX, 600 - cursorY });
+
+						
 					}
 					else 
 					{

@@ -1,7 +1,6 @@
 #include "SeedBank.h"
 #include "GameInstances.h"
 #include "../json.hpp"
-
 SeedBank::SeedBank()
 {
 	//for (auto& obj : Instances->_SceneManager.GetCurrentScene()->GetObjectsByTagID("SeedPacketBase"))
@@ -34,6 +33,7 @@ void SeedBank::CreateSeedPackets()
 		auto rm = Instances->_ResourceManager;
 		//std::string name = plantName.get<std::string>();
 		GameObject* root = Instances->_LevelManager->CreatePlant(scene, rm, plantName, seedPacketObj->transform.position-glm::vec2(0,15));
+
 		root->_AnimationController.isPaused = true;
 
 		//auto fileName = "Plants/" + plantName + ".json";

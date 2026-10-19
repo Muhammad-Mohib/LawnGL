@@ -54,14 +54,30 @@ void Scene::Load()
 
 void Scene::Run(float deltaTime)
 {
-	for (auto& gameObject : SceneGameObjects)
+	//for (auto& gameObject : SceneGameObjects)
+	//{
+	//	gameObject->Update(deltaTime);
+	//	
+	//	if (gameObject->Behaviours.size() > 0)
+	//	{
+	//		gameObject->Behaviours[0]->Update(deltaTime);
+	//	}
+	//	gameObject->_AnimationController.Run(this, deltaTime);
+	//}
+
+	const size_t count = SceneGameObjects.size();
+	for (size_t i = 0; i < count; ++i)
 	{
+		GameObject* gameObject = SceneGameObjects[i].get();          // raw pointers
+		// GameObject* gameObject = SceneGameObjects[i].get(); // if unique_ptr
+
 		gameObject->Update(deltaTime);
-		
-		if (gameObject->Behaviours.size() > 0)
+
+		for (size_t b = 0; b < gameObject->Behaviours.size(); ++b)
 		{
-			gameObject->Behaviours[0]->Update();
+			gameObject->Behaviours[b]->Update(deltaTime);
 		}
+
 		gameObject->_AnimationController.Run(this, deltaTime);
 	}
 }

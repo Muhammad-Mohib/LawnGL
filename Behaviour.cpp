@@ -4,7 +4,6 @@ void Behaviour::Start()
 {
 }
 
-void Behaviour::Update()
+void Behaviour::Update(float deltaTime)
 {
-	std::cout << "Updating from virtual\n";
 }

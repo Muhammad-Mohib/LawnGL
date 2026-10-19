@@ -149,6 +149,7 @@
     <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="SeedBank.cpp" />
     <ClCompile Include="SeedPacket.cpp" />
+    <ClCompile Include="SunflowerBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LawnGL.vcxproj">
@@ -167,6 +168,7 @@
     <ClInclude Include="LevelManager.h" />
     <ClInclude Include="SeedBank.h" />
     <ClInclude Include="SeedPacket.h" />
+    <ClInclude Include="SunflowerBehaviour.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

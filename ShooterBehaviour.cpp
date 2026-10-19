@@ -2,11 +2,11 @@
 
 void ShooterBehaviour::Start()
 {
+	std::cout << "Hello flower";
 }
 int c = 0;
 void ShooterBehaviour::Update()
 {
-
 	//if(txt.Name == "Sunflower")
 	//{
 	//	ShooterBehaviour::txt = Texture("Repeater", "snow_pal.png");

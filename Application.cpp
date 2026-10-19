@@ -132,6 +132,7 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("FrontLeaves", "Animations_Atlas/Peashooter/Peashooter_Leaves.png");
 
 	//Sunflower Resource Allocation
+	_ResourceManager.AddResource<Texture>("Sun", "Sun.png");
 	_ResourceManager.AddResource<Texture>("SunflowerStem", "Animations_Atlas/Sunflower/Sunflower_Stem.png");
 	_ResourceManager.AddResource<Texture>("SunflowerLeaves", "Animations_Atlas/Sunflower/Sunflower_Leaves.png");
 	_ResourceManager.AddResource<Texture>("SunflowerPetals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
