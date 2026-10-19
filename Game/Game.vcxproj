@@ -167,6 +167,7 @@
     <ClInclude Include="GameInstances.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelManager.h" />
+    <ClInclude Include="RowButtons.h" />
     <ClInclude Include="ShooterBehaviour.h" />
     <ClInclude Include="SeedBank.h" />
     <ClInclude Include="SeedPacket.h" />

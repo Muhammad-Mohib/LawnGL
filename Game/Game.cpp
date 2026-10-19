@@ -6,15 +6,9 @@
 #include "LevelManager.h"
 #include "ShooterBehaviour.h"
 #include "SunflowerBehaviour.h"
+#include "RowButtons.h"
 
 
-struct RowButtons {
-	bool First;
-	bool Second = false;
-	bool Third = false;
-	bool Fourth = false;
-	bool Fifth = false;
-};
 
 class Game {
 public:
@@ -78,6 +72,8 @@ void Game::Run()
 		//tile->transform.position = Grid[idx];
 
 	}
+
+	_RowButtons.First = true;
 
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
@@ -159,6 +155,9 @@ void Game::Update(float deltaTime)
 								{
 									auto& result = Bank.PurchasedObjRef->AddBehaviour<ShooterBehaviour>();
 									result.Instances = Bank.Instances;
+									result.Instances->_RowButtons = &_RowButtons;
+									result.RowNo = row + 1;
+									std::cout << result.RowNo;
 								}
 							}
 						break;

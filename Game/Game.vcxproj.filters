@@ -74,5 +74,8 @@
     <ClInclude Include="ShooterBehaviour.h">
       <Filter>Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="RowButtons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

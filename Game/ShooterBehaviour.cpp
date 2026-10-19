@@ -1,6 +1,7 @@
 #include "ShooterBehaviour.h"
 #include<iostream>
 #include"GameInstances.h"
+#include "RowButtons.h"
 
 void ShooterBehaviour::Start()
 {
@@ -8,6 +9,62 @@ void ShooterBehaviour::Start()
 
 void ShooterBehaviour::Update(float deltaTime)
 {
+    if (RowNo == 1)
+    {
+        if (Instances->_RowButtons->First)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 2)
+    {
+        if (Instances->_RowButtons->Second)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 3)
+    {
+        if (Instances->_RowButtons->Third)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 4)
+    {
+        if (Instances->_RowButtons->Fourth)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 5)
+    {
+        if (Instances->_RowButtons->Fifth)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+
     if (!isShooting) return;
 
     ShootingTimer -= deltaTime;
