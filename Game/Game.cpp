@@ -4,14 +4,25 @@
 #include "SeedPacket.h"
 #include "GameInstances.h"
 #include "LevelManager.h"
-#include "../ShooterBehaviour.h"
+#include "ShooterBehaviour.h"
 #include "SunflowerBehaviour.h"
+
+
+struct RowButtons {
+	bool First;
+	bool Second = false;
+	bool Third = false;
+	bool Fourth = false;
+	bool Fifth = false;
+};
 
 class Game {
 public:
 	void Run();
 
 private:
+	RowButtons _RowButtons;
+
 	void Update(float deltaTime);
 	glm::vec2 CursorPos = {0,0};
 	LevelManager _LevelManager;
@@ -78,6 +89,7 @@ int main()
 	game.Run();
 	return 0;
 }
+
 
 void Game::Update(float deltaTime)
 {
@@ -149,9 +161,9 @@ void Game::Update(float deltaTime)
 									result.Instances = Bank.Instances;
 								}
 							}
+						break;
 						}
 					}
-					break;
 				}
 			}
 
@@ -171,8 +183,6 @@ void Game::Update(float deltaTime)
 					}
 				}
 			}
-
-			std::cout << Grid[hovered].x << "   " << occupied << "\n";
 		}
 		else
 		{

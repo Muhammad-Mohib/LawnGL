@@ -42,6 +42,9 @@
     <ClCompile Include="SunflowerBehaviour.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="ShooterBehaviour.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
@@ -66,6 +69,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SunflowerBehaviour.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="ShooterBehaviour.h">
       <Filter>Scripts</Filter>
     </ClInclude>
   </ItemGroup>

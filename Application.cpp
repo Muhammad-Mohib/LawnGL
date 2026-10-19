@@ -126,6 +126,7 @@ void Application::AllocateResources()
 
 	//Peashooter Resource Allocation
 	_ResourceManager.AddResource<AnimationClip>("Sunflower_Idle_Frames");
+	_ResourceManager.AddResource<Texture>("Pea", "pea.png");
 	_ResourceManager.AddResource<Texture>("Head", "Animations_Atlas/Peashooter/Peashooter_Face.png");
 	_ResourceManager.AddResource<Texture>("Muzzle", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
 	_ResourceManager.AddResource<Texture>("Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");
