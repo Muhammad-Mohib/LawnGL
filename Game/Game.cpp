@@ -116,15 +116,32 @@ void Game::Update(float deltaTime)
 
 		static bool wasDown = false;
 		bool isDown = glfwGetMouseButton(glfwGetCurrentContext(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
+		bool occupied = false;
+
 		if (isDown && !wasDown)
 		{
 			Bank.isSeedPacketSelected = false;
+			Bank.PurchasedObjRef = nullptr;
 		}
 		else
 		{
 			if (Bank.PurchasedObjRef && Bank.isSeedPacketSelected)
 			{
-				Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+				auto& objects = Instances._SceneManager->GetCurrentScene()->SceneGameObjects;
+
+				for (auto& obj : objects)
+				{
+					if (obj.get() == Bank.PurchasedObjRef) continue;
+					if (obj->_AnimationController.Origin == Grid[hovered])
+					{
+						occupied = true;
+						break;
+					}
+				}
+				if (!occupied)
+				{
+					Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+				}
 			}
 		}
 		
