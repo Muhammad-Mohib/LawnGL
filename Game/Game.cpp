@@ -16,6 +16,8 @@ private:
 	GameInstances Instances;
 	GLFWwindow* currentWindow = nullptr;
 	void OnSeedPacketClicked();
+
+	glm::vec2 Grid[45] = { {0,0} };
 };
 
 
@@ -35,6 +37,35 @@ void Game::Run()
 	_LevelManager.currentLevel.LevelBank.Instances = &Instances;
 	_LevelManager.LoadLevel("Wave1");
 
+
+	//Set grid
+
+	constexpr int   ROWS = 5;
+	constexpr int   COLS = 9;
+	constexpr float START_X = 125.0f;  // centre of the leftmost column
+	constexpr float START_Y = 450.0f;  // centre of the top row
+	constexpr float CELL_W = 75.0f;   // horizontal spacing
+	constexpr float CELL_H = 95.0f;   // vertical spacing
+
+	glm::vec2 Origin = { 50.0, 450.0 };
+	auto counter = 1;
+	auto row = 1;
+	for (int idx = 0; idx < ROWS * COLS; ++idx)
+	{
+		int row = idx / COLS;  
+		int col = idx % COLS; 
+
+		Grid[idx] = glm::vec2(START_X + col * CELL_W,
+			START_Y - row * CELL_H); 
+
+		//auto* tile = Instances._SceneManager->GetCurrentScene()->CreateGameObject(
+		//	"Tile_" + std::to_string(row) + "_" + std::to_string(col),
+		//	"SeedPacket", "SeedPacket", "Default", "");
+
+		//tile->transform.position = Grid[idx];
+
+	}
+
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
 }
@@ -48,6 +79,48 @@ int main()
 
 void Game::Update(float deltaTime)
 {
+	constexpr int   ROWS = 5;
+	constexpr int   COLS = 9;
+	constexpr float CELL_W = 75.0f;   // horizontal spacing
+	constexpr float CELL_H = 95.0f;   // vertical spacing
+
+	double cursorX, cursorY;
+	glfwGetCursorPos(currentWindow, &cursorX, &cursorY);
+
+	int winW, winH;
+	glfwGetWindowSize(currentWindow, &winW, &winH);
+	float mx = static_cast<float>(cursorX);
+	float my = static_cast<float>(winH - cursorY);
+
+	constexpr float HALF_W = CELL_W / 2.0f;   // 37.5
+	constexpr float HALF_H = CELL_H / 2.0f;   // 47.5
+
+	int hovered = -1;
+	for (int idx = 0; idx < ROWS * COLS; ++idx)
+	{
+		const glm::vec2& c = Grid[idx];
+		if (std::abs(mx - c.x) <= HALF_W && std::abs(my - c.y) <= HALF_H)
+		{
+			hovered = idx;
+			break;
+		}
+	}
+
+	if (hovered != -1)
+	{
+		int row = hovered / COLS;
+		int col = hovered % COLS;
+
+		auto& CurrentLevel = _LevelManager.currentLevel;
+		auto& Bank = CurrentLevel.LevelBank;
+		if (Bank.PurchasedObjRef)
+		{
+			Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+		}
+
+		std::cout << "Hovering row " << row << ", col " << col
+			<< " (" << Grid[hovered].x << ", " << Grid[hovered].y << ")\n";
+	}
 	OnSeedPacketClicked();
 }
 
@@ -63,11 +136,6 @@ void Game::OnSeedPacketClicked()
 	auto& Bank = CurrentLevel.LevelBank;
 
 	int Suns = Bank.Suns;
-
-	if (Bank.PurchasedObjRef)
-	{
-		Bank.PurchasedObjRef->_AnimationController.Origin = { cursorX, 600 - cursorY };
-	}
 
 	if (!Bank.isSeedPacketSelected)
 	{
