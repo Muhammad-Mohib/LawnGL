@@ -8,5 +8,6 @@
     "Muzzle",
     "Stem"
   ],
-  "Behaviours": ["ShooterBehaviour"]
+  "Behaviours": ["ShooterBehaviour"],
+  "Health": 100
 }

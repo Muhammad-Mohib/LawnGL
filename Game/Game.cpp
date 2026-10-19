@@ -10,7 +10,6 @@
 #include "SpawnManager.h"
 
 
-
 class Game {
 public:
 	void Run();
@@ -26,6 +25,7 @@ private:
 	void OnSeedPacketClicked();
 	void GridOperations();
 
+	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
 };
 
@@ -40,6 +40,7 @@ void Game::Run()
 	SpawnManager _SpawnManager;
 	Instances._SpawnManager = &_SpawnManager;
 	_SpawnManager.Instances = &Instances;
+	Instances.GridMap = &GridMap;
 
 	app.CreateScene("Wave1");
 	app.CreateScene("Wave2");
@@ -69,6 +70,9 @@ void Game::Run()
 
 		Grid[idx] = glm::vec2(START_X + col * CELL_W,
 			START_Y - row * CELL_H); 
+
+		glm::vec2 c = { START_X + col * CELL_W, START_Y - row * CELL_H };
+		GridMap[c] = nullptr;
 	}
 
 	_RowButtons.First = true;
@@ -139,6 +143,12 @@ void Game::GridOperations()
 		{
 			if (!occupied && Bank.isSeedPacketSelected && Bank.PurchasedObjRef)
 			{
+				if (Bank.PurchasedObjRef != nullptr)
+				{
+					glm::vec2 c = { Grid[hovered].x, Grid[hovered].y };
+					GridMap[c] = Bank.PurchasedObjRef;
+				}
+
 				for (auto& object : Bank.SeedPackets)
 				{
 					if (Bank.PurchasedObjRef->Name.starts_with(object->Name))
@@ -156,6 +166,7 @@ void Game::GridOperations()
 								if (b == "SunflowerBehaviour")
 								{
 									auto& result = Bank.PurchasedObjRef->AddBehaviour<SunflowerBehaviour>();
+									result.Health = data["Health"];
 									result.Instances = Bank.Instances;
 								}
 								else if (b == "ShooterBehaviour")
@@ -174,9 +185,18 @@ void Game::GridOperations()
 			}
 
 
+			if (Bank.PurchasedObjRef)
+			{
+				std::cout << Bank.PurchasedObjRef->_AnimationController.Origin.x << "\n";
+			}
+
+			
+			//It makes the plant place on one place
+			
 			Bank.isSeedPacketSelected = false;
 			Bank.PurchasedObjRef = nullptr;
 
+			//Sun collection logic
 			for (auto& SceneObj : Instances._SceneManager->GetCurrentScene()->SceneGameObjects)
 			{
 				if (SceneObj->_AnimationController.Origin == Grid[hovered])

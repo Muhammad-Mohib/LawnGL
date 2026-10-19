@@ -1,5 +1,6 @@
 {
   "Name": "Potato",
   "Cost": 50,
-  "CooldownPeriod": 30
+  "CooldownPeriod": 30,
+  "Health": 200
 }

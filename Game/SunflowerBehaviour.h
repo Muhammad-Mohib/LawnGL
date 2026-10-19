@@ -13,6 +13,7 @@ public:
 	GameObject* CurrentSun = nullptr;
 	void CollectSun();
 
+	float Health;
 	//GameInstances* Instances;
 private:
 	void SpawnSun();

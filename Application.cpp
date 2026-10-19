@@ -101,6 +101,7 @@ void Application::Run()
 void Application::AllocateResources()
 {
 
+	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Walk_Frames");
 	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
