@@ -166,7 +166,7 @@ void Game::GridOperations()
 								if (b == "SunflowerBehaviour")
 								{
 									auto& result = Bank.PurchasedObjRef->AddBehaviour<SunflowerBehaviour>();
-									result.Health = data["Health"];
+									Bank.PurchasedObjRef->Health = data["Health"];
 									result.Instances = Bank.Instances;
 								}
 								else if (b == "ShooterBehaviour")

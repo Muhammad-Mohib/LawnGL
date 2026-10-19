@@ -24,6 +24,14 @@ void SunflowerBehaviour::Update(float deltaTime)
             CurrentSun = nullptr;                    
         }
     }
+
+    if (owner->Health <= 0)
+    {
+        for (auto& [key, value] : owner->_AnimationController.Parts)
+        {
+            value->isActive = false;
+        }
+    }
 }
 
 void SunflowerBehaviour::CollectSun()

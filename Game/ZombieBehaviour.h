@@ -19,6 +19,7 @@ public:
 	void Update(float deltaTime);
 	void Walk(float deltaTime);
 	ZombieState CurrentState = ZombieState::WALKING;
+	float ZombieDamage = 0;
 	
 
 	GameObject* _CollidingPlant = nullptr;

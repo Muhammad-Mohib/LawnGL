@@ -3,7 +3,7 @@
   "Tag": "Zombie",
   "Health": 200,
   "Speed": 16,
-  "BiteDamage": 100,
+  "BiteDamage": 30,
   "Scale": [80, 120],
   "Bodyparts": [
     "ZombieInnerArmUpper",

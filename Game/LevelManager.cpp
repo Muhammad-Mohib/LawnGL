@@ -32,8 +32,6 @@ void LevelManager::LoadLevel(std::string LevelName)
 				a->Bank = &currentLevel.LevelBank;
 				currentLevel.LevelBank.Add(std::move(a));
 				counter++;
-
-				
 				
 				//thumbnailRoot = root;
 			}
@@ -60,6 +58,7 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const s
 	root->_AnimationController.PixelsPerUnit = 100.0f;
 	root->_AnimationController.ObjectScale = plantData.value("Scale", 0.15f);
 	root->_AnimationController.Origin = position;
+	
 
 	for (auto& PlantBodyPart : plantData["Bodyparts"])
 	{
@@ -89,6 +88,9 @@ GameObject* LevelManager::CreateZombie(Scene* scene, ResourceManager* rm, const 
 	root->_AnimationController.PixelsPerUnit = 53.116f;
 	root->_AnimationController.ObjectScale = 0.7f;
 	root->_AnimationController.Origin = position;
+	root->_AnimationController.BiteDamage = zombieData["BiteDamage"];
+
+	root->Health = zombieData["Health"];
 
 	for (auto& PlantBodyPart : zombieData["Bodyparts"])
 	{

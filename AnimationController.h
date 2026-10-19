@@ -18,6 +18,7 @@ public:
 	std::unordered_map<std::string, GameObject*> Parts;
 	glm::vec2 Origin{ 0.0f, 0.0f };
 
+	float BiteDamage = 0; //Zombie
 
 	float PixelsPerUnit = 27.5f;
 	float ObjectScale = 0.75f;
