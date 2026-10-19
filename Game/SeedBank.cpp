@@ -30,6 +30,12 @@ void SeedBank::CreateSeedPackets()
 
 		auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
 
+		auto scene = Instances->_SceneManager->GetCurrentScene();
+		auto rm = Instances->_ResourceManager;
+		//std::string name = plantName.get<std::string>();
+		GameObject* root = Instances->_LevelManager->CreatePlant(scene, rm, plantName, seedPacketObj->transform.position-glm::vec2(0,15));
+		root->_AnimationController.isPaused = true;
+
 		//auto fileName = "Plants/" + plantName + ".json";
 		//std::ifstream plantFile(fileName);
 

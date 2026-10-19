@@ -24,7 +24,7 @@ void Game::Run()
 {
 	Application app = Application(800, 600, "LawnGL", false);
 	Instances = GameInstances();
-	Instances.SetInstance(&app._SceneManager, &app._ResourceManager);
+	Instances.SetInstance(&app._SceneManager, &app._ResourceManager, &_LevelManager);
 	currentWindow = app.currentWindow;
 
 	app.CreateScene("Wave1");
@@ -59,36 +59,19 @@ void Game::OnSeedPacketClicked()
 	static bool wasDown = false;
 	bool isDown = glfwGetMouseButton(glfwGetCurrentContext(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 
-	int Suns = _LevelManager.currentLevel.LevelBank.Suns;
+	auto& CurrentLevel = _LevelManager.currentLevel;
+	auto& Bank = CurrentLevel.LevelBank;
 
-	for (auto& object : Instances._SceneManager->GetCurrentScene()->SceneGameObjects)
+	int Suns = Bank.Suns;
+
+	if (Bank.PurchasedObjRef)
 	{
-		if (object->Name.starts_with("Sunflower") 
-			&& _LevelManager.
-			currentLevel.
-			LevelBank.
-			isSeedPacketSelected)
-		{
-			//object->_AnimationController.isPaused = true;
-			//object->Origin = glm::vec2(cursorX, 600-cursorY );
-
-			//Instances._SceneManager->
-			//	GetCurrentScene()->
-			//	CreateGameObject(
-			//		"New"+object->Name, 
-			//		object->GameObject_Mesh->Name,
-			//		object->GameObject_SpriteRenderer.Sprite->Name,
-			//		"Default",
-			//		"");
-		}
+		Bank.PurchasedObjRef->_AnimationController.Origin = { cursorX, 600 - cursorY };
 	}
 
-	if (!_LevelManager
-		.currentLevel
-		.LevelBank
-		.isSeedPacketSelected)
+	if (!Bank.isSeedPacketSelected)
 	{
-		for (auto& object : _LevelManager.currentLevel.LevelBank.SeedPackets)
+		for (auto& object : Bank.SeedPackets)
 		{
 			if (isDown && !wasDown)
 			{
@@ -101,9 +84,11 @@ void Game::OnSeedPacketClicked()
 					if (Suns - object->Cost >= 0)
 					{
 						std::cout << "Bough it! \n";
-						_LevelManager.currentLevel.LevelBank.Suns -= object->Cost;
-						_LevelManager.currentLevel.LevelBank.isSeedPacketSelected = true;
+						Bank.Suns -= object->Cost;
+						Bank.isSeedPacketSelected = true;
 						std::cout << object->Name << std::endl;
+
+						Bank.PurchasedObjRef = _LevelManager.CreatePlant(Instances._SceneManager->GetCurrentScene(), Instances._ResourceManager, object->Name, { cursorX, 600 - cursorY });
 					}
 					else 
 					{
@@ -111,6 +96,8 @@ void Game::OnSeedPacketClicked()
 					}
 				}
 			}
+
+			
 		}
 	}
 	

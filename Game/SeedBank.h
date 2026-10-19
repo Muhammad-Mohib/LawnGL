@@ -15,6 +15,7 @@ public:
 	void CreateSeedPackets();
 
 	bool isSeedPacketSelected = false;
+	GameObject* PurchasedObjRef;
 
 	int Suns = 100;
 };

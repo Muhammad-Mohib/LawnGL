@@ -33,24 +33,24 @@ void LevelManager::LoadLevel(std::string LevelName)
 				currentLevel.LevelBank.Add(std::move(a));
 				counter++;
 
-				auto scene = currentLevel.LevelBank.Instances->_SceneManager->GetCurrentScene();
-				auto rm = currentLevel.LevelBank.Instances->_ResourceManager;
-				std::string name = plantName.get<std::string>();
-				GameObject* root = CreatePlant(scene, rm, plantData, name, { 200.0f, 300.0f });
-
-				currentLevel.LevelBank.CreateSeedPackets();
-				std::cout << "\n" << currentLevel.LevelBank.SeedPackets.size() << "\n";
+				
 				
 				//thumbnailRoot = root;
 			}
 
+			
 
+			currentLevel.LevelBank.CreateSeedPackets();
+			std::cout << "\n" << currentLevel.LevelBank.SeedPackets.size() << "\n";
 		}
 	}
-
 }
-GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const nlohmann::json& plantData, const std::string& plantName, glm::vec2 position)
+GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const std::string& plantName, glm::vec2 position)
 {
+	auto fileName = "Plants/" + plantName + ".json";
+	std::ifstream plantFile(fileName);
+
+	auto plantData = nlohmann::json::parse(plantFile);
 
 	static unsigned int nextId = 0;
 	std::string instanceName = plantName + "_" + std::to_string(nextId++);
@@ -60,10 +60,8 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const n
 	root->_AnimationController.Animation = rm->GetResource<AnimationClip>(plantName + "_Idle_Frames");
 
 	root->_AnimationController.PixelsPerUnit = 100.0f;
-	root->_AnimationController.ObjectScale = plantData.value("Scale", 0.3f);
+	root->_AnimationController.ObjectScale = plantData.value("Scale", 0.15f);
 	root->_AnimationController.Origin = position;
-
-
 
 	for (auto& PlantBodyPart : plantData["Bodyparts"])
 	{
