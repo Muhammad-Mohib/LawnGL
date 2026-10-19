@@ -1,6 +1,7 @@
 #pragma once
 #include "../SceneManager.h"
 #include "LevelManager.h"
+#include "SpawnManager.h"
 struct RowButtons;
 class GameInstances {
 public:
@@ -15,4 +16,5 @@ public:
 	ResourceManager* _ResourceManager;
 	LevelManager* _LevelManager;
 	RowButtons* _RowButtons;
+	SpawnManager* _SpawnManager;
 };

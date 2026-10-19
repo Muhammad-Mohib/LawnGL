@@ -2,7 +2,9 @@
   {
     "LevelName": "Wave1",
     "Category": "Adventure",
-    "BankPlants": [ "Sunflower", "Peashooter" ]
+    "BankPlants": [ "Sunflower", "Peashooter" ],
+    "Zombies": [ "Normal" ],
+    "ZombiesCount": 50
   },
   {
     "LevelName": "Wave2",

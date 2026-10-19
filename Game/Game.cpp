@@ -7,6 +7,7 @@
 #include "ShooterBehaviour.h"
 #include "SunflowerBehaviour.h"
 #include "RowButtons.h"
+#include "SpawnManager.h"
 
 
 
@@ -23,6 +24,7 @@ private:
 	GameInstances Instances;
 	GLFWwindow* currentWindow = nullptr;
 	void OnSeedPacketClicked();
+	void GridOperations();
 
 	glm::vec2 Grid[45] = { {0,0} };
 };
@@ -35,6 +37,9 @@ void Game::Run()
 	Instances = GameInstances();
 	Instances.SetInstance(&app._SceneManager, &app._ResourceManager, &_LevelManager);
 	currentWindow = app.currentWindow;
+	SpawnManager _SpawnManager;
+	Instances._SpawnManager = &_SpawnManager;
+	_SpawnManager.Instances = &Instances;
 
 	app.CreateScene("Wave1");
 	app.CreateScene("Wave2");
@@ -64,16 +69,12 @@ void Game::Run()
 
 		Grid[idx] = glm::vec2(START_X + col * CELL_W,
 			START_Y - row * CELL_H); 
-
-		//auto* tile = Instances._SceneManager->GetCurrentScene()->CreateGameObject(
-		//	"Tile_" + std::to_string(row) + "_" + std::to_string(col),
-		//	"SeedPacket", "SeedPacket", "Default", "");
-
-		//tile->transform.position = Grid[idx];
-
 	}
 
 	_RowButtons.First = true;
+
+
+	_SpawnManager.SpawnZombie();
 
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
@@ -88,6 +89,12 @@ int main()
 
 
 void Game::Update(float deltaTime)
+{
+	GridOperations();
+	OnSeedPacketClicked();
+}
+
+void Game::GridOperations()
 {
 	constexpr int   ROWS = 5;
 	constexpr int   COLS = 9;
@@ -160,7 +167,7 @@ void Game::Update(float deltaTime)
 									std::cout << result.RowNo;
 								}
 							}
-						break;
+							break;
 						}
 					}
 				}
@@ -204,9 +211,8 @@ void Game::Update(float deltaTime)
 				}
 			}
 		}
-		
+
 	}
-	OnSeedPacketClicked();
 }
 
 void Game::OnSeedPacketClicked()

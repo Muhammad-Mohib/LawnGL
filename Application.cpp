@@ -139,6 +139,9 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("SunflowerPetals", "Animations_Atlas/Sunflower/Sunflower_Petals.png");
 	_ResourceManager.AddResource<Texture>("SunflowerHead", "Animations_Atlas/Sunflower/Sunflower_Head.png");
 	_ResourceManager.AddResource<Texture>("SunflowerBlink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
+
+	//Zombie Resource Allocation
+	_ResourceManager.AddResource<Texture>("NormalZombie", "NormalZombie.png");
 }
 
 void Application::CreateScene(std::string SceneName)

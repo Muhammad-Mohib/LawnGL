@@ -150,7 +150,9 @@
     <ClCompile Include="ShooterBehaviour.cpp" />
     <ClCompile Include="SeedBank.cpp" />
     <ClCompile Include="SeedPacket.cpp" />
+    <ClCompile Include="SpawnManager.cpp" />
     <ClCompile Include="SunflowerBehaviour.cpp" />
+    <ClCompile Include="ZombieBehaviour.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LawnGL.vcxproj">
@@ -171,7 +173,9 @@
     <ClInclude Include="ShooterBehaviour.h" />
     <ClInclude Include="SeedBank.h" />
     <ClInclude Include="SeedPacket.h" />
+    <ClInclude Include="SpawnManager.h" />
     <ClInclude Include="SunflowerBehaviour.h" />
+    <ClInclude Include="ZombieBehaviour.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
