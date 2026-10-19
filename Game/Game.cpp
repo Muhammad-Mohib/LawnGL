@@ -113,13 +113,21 @@ void Game::Update(float deltaTime)
 
 		auto& CurrentLevel = _LevelManager.currentLevel;
 		auto& Bank = CurrentLevel.LevelBank;
-		if (Bank.PurchasedObjRef)
-		{
-			Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
-		}
 
-		std::cout << "Hovering row " << row << ", col " << col
-			<< " (" << Grid[hovered].x << ", " << Grid[hovered].y << ")\n";
+		static bool wasDown = false;
+		bool isDown = glfwGetMouseButton(glfwGetCurrentContext(), GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
+		if (isDown && !wasDown)
+		{
+			Bank.isSeedPacketSelected = false;
+		}
+		else
+		{
+			if (Bank.PurchasedObjRef && Bank.isSeedPacketSelected)
+			{
+				Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+			}
+		}
+		
 	}
 	OnSeedPacketClicked();
 }
