@@ -7,9 +7,34 @@ SceneManager::SceneManager(ResourceManager* resourceManager)
 
 void SceneManager::LoadScene(unsigned int SceneIndex)
 {
-	this->SceneIndex = SceneIndex;
-	Scenes[SceneIndex]->Load();
-	std::cout << "Loading Scene : " << SceneIndex;
+    std::cout << "LoadScene requested\n";
+ //   GetCurrentScene()->SceneGameObjects.clear();
+	//this->SceneIndex = SceneIndex;
+	//Scenes[SceneIndex]->Load();
+	//std::cout << "Loading Scene : " << SceneIndex;
+    PendingSceneIndex = static_cast<int>(SceneIndex);
+}
+
+void SceneManager::ApplyPendingLoad()
+{
+    if (PendingSceneIndex < 0)
+        return;
+
+    if (OnSceneReset)
+        OnSceneReset();
+
+    GetCurrentScene()->PendingDestroy.clear();
+    GetCurrentScene()->SceneGameObjects.clear();
+
+    this->SceneIndex = static_cast<unsigned int>(PendingSceneIndex);
+    PendingSceneIndex = -1;
+
+    Scenes[SceneIndex]->Load();
+
+    if (OnSceneLoaded)
+        OnSceneLoaded();
+
+    std::cout << "Loading Scene : " << SceneIndex << "\n";
 }
 
 void SceneManager::Destroy(GameObject* gameObject)

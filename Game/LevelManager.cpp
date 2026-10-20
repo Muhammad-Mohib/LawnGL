@@ -7,6 +7,10 @@
 
 void LevelManager::LoadLevel(std::string LevelName)
 {
+	auto& bank = currentLevel.LevelBank;
+
+	bank.SeedPackets.clear();
+
 	std::ifstream file("Levels.json");
 
 	nlohmann::json data = nlohmann::json::parse(file);

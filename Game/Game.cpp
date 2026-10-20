@@ -28,7 +28,7 @@ private:
 	int GetCol(glm::vec2 cellOrigin);
 
 	int ZombieSpawnInterval = 12;
-	float ZombieSpawnTimer = ZombieSpawnInterval;
+	float ZombieSpawnTimer = 1;
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
@@ -40,7 +40,6 @@ private:
 	float CELL_W = 75.0f;   // horizontal spacing
 	float CELL_H = 95.0f;   // vertical spacing
 };
-
 
 
 void Game::Run() 
@@ -58,10 +57,34 @@ void Game::Run()
 	app.CreateScene("Wave1");
 	app.CreateScene("Wave2");
 
-	app._SceneManager.LoadScene(0);
+	//app._SceneManager.LoadScene(0);
 
 	_LevelManager.currentLevel.LevelBank.Instances = &Instances;
 	_LevelManager.LoadLevel("Wave1");
+
+
+
+	Instances._SceneManager->OnSceneReset = [this]()
+		{
+			Instances._SpawnManager->Zombies.clear();
+
+			for (auto& [cellCenter, plant] : *Instances.GridMap)
+				plant = nullptr;
+
+			auto& bank = Instances._LevelManager->currentLevel.LevelBank;
+			bank.Suns = 50;
+			bank.PurchasedObjRef = nullptr;
+			bank.isSeedPacketSelected = false;
+
+			bank.SeedPackets.clear();
+		};
+	Instances._SceneManager->OnSceneLoaded = [this]()
+	{
+		_LevelManager.LoadLevel("Wave1");
+	};
+
+	app._SceneManager.LoadScene(0);
+	app._SceneManager.ApplyPendingLoad();
 
 	//Set grid
 	glm::vec2 Origin = { 50.0, 450.0 };
@@ -79,11 +102,10 @@ void Game::Run()
 		GridMap[c] = nullptr;
 	}
 
-
-
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
 }
+
 
 int Game::GetRow(glm::vec2 cellOrigin)
 {

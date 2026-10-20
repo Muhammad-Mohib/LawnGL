@@ -92,6 +92,9 @@ void Application::Run()
 		
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
 
+
+		_SceneManager.ApplyPendingLoad();
+
 		glEnable(GL_BLEND);
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 

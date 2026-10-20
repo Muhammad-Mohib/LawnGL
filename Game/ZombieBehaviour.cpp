@@ -47,6 +47,15 @@ void ZombieBehaviour::Update(float deltaTime)
 		{
 			Instances->_RowButtons->Fifth = true;
 		}
+
+		if (owner->_AnimationController.Origin.x <= 10)
+		{
+			std::cout << "\n" << "You LOST!" << "\n";
+			Instances->_SceneManager->LoadScene(Instances->_SceneManager->SceneIndex);
+			//Instances->_LevelManager->LoadLevel("Wave1");
+
+			return;
+		}
 	}
 
 	glm::vec2 pos = owner->_AnimationController.Origin;
