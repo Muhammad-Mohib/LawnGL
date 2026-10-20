@@ -1,7 +1,7 @@
 {
   "Name": "NormalZombie",
   "Tag": "Zombie",
-  "Health": 200,
+  "Health": 100,
   "Speed": 16,
   "BiteDamage": 30,
   "Scale": [80, 120],

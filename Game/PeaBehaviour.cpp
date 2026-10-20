@@ -15,4 +15,14 @@ void PeaBehaviour::Update(float deltaTime)
 	{
 		Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);
 	}
+
+    auto& myPosition = owner->transform.position;
+    for (auto& zombie : Instances->_SpawnManager->Zombies)
+    {
+        if (myPosition.x >= (*zombie)->_AnimationController.Origin.x-20)
+        {
+            (*zombie)->Health -= 10;
+            Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);
+        }
+    }
 }

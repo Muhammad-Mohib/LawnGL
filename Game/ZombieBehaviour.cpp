@@ -20,9 +20,59 @@ void ZombieBehaviour::Start()
 
 void ZombieBehaviour::Update(float deltaTime)
 {
-	CurrentState = ZombieState::WALKING;
+
+
+	glm::vec2 cellOrigin = owner->_AnimationController.Origin;
+	int zombieInRow = (int)std::round((START_Y - cellOrigin.y) / CELL_H) + 1;
+
+	if (!owner->IsDestroyed)
+	{
+		if (zombieInRow == 1)
+		{
+			Instances->_RowButtons->First = true;
+		}
+		else if (zombieInRow == 2)
+		{
+			Instances->_RowButtons->Second = true;
+		}
+		else if (zombieInRow == 3)
+		{
+			Instances->_RowButtons->Third = true;
+		}
+		else if (zombieInRow == 4)
+		{
+			Instances->_RowButtons->Fourth = true;
+		}
+		else if (zombieInRow == 5)
+		{
+			Instances->_RowButtons->Fifth = true;
+		}
+	}
+
 	float x = (int)owner->_AnimationController.Origin.x;
 
+	if (owner->Health <= 0)
+	{
+		CurrentState = ZombieState::DYING;
+	}
+
+	if (CurrentState == ZombieState::EATING)
+	{
+		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Eat_Frames");
+	}
+	else if (CurrentState == ZombieState::DYING)
+	{
+
+		Instances->_RowButtons->First = false;
+		Instances->_RowButtons->Second = false;
+		Instances->_RowButtons->Third = false;
+		Instances->_RowButtons->Fourth = false;
+		Instances->_RowButtons->Fifth = false;
+		for (auto& [key, value] : owner->_AnimationController.Parts)
+		{
+			Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
+		}
+	}
 	for (auto& [cellCenter, plant] : *Instances->GridMap)
 	{
 		if (plant != nullptr)
@@ -44,34 +94,7 @@ void ZombieBehaviour::Update(float deltaTime)
 		}
 	}
 
-	if (CurrentState == ZombieState::EATING)
-	{
-		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Eat_Frames");
-	}
-
-	glm::vec2 cellOrigin = owner->_AnimationController.Origin;
-	int zombieInRow = (int)std::round((START_Y - cellOrigin.y) / CELL_H) + 1;
 	
-	if (zombieInRow == 1)
-	{
-		Instances->_RowButtons->First = true;
-	}
-	else if (zombieInRow == 2)
-	{
-		Instances->_RowButtons->Second = true;
-	}
-	else if (zombieInRow == 3)
-	{
-		Instances->_RowButtons->Third = true;
-	}
-	else if (zombieInRow == 4)
-	{
-		Instances->_RowButtons->Fourth = true;
-	}
-	else if (zombieInRow == 5)
-	{
-		Instances->_RowButtons->Fifth = true;
-	}
 
 	Walk(deltaTime);
 }

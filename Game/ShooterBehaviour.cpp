@@ -3,6 +3,7 @@
 #include"GameInstances.h"
 #include "RowButtons.h"
 #include "PeaBehaviour.h"
+#include"../GameObject.h"
 
 void ShooterBehaviour::Start()
 {
@@ -19,81 +20,79 @@ void ShooterBehaviour::Update(float deltaTime)
             Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
         }
 
-        for (auto& pea : Peas)
-        {
-            Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(pea.second);
-        }
+        return;
     }
-    else
+    if (RowNo == 1)
     {
-        if (RowNo == 1)
+        if (Instances->_RowButtons->First)
         {
-            if (Instances->_RowButtons->First)
-            {
-                isShooting = true;
-            }
-            else
-            {
-                isShooting = false;
-            }
+            isShooting = true;
         }
-        else if (RowNo == 2)
+        else
         {
-            if (Instances->_RowButtons->Second)
-            {
-                isShooting = true;
-            }
-            else
-            {
-                isShooting = false;
-            }
-        }
-        else if (RowNo == 3)
-        {
-            if (Instances->_RowButtons->Third)
-            {
-                isShooting = true;
-            }
-            else
-            {
-                isShooting = false;
-            }
-        }
-        else if (RowNo == 4)
-        {
-            if (Instances->_RowButtons->Fourth)
-            {
-                isShooting = true;
-            }
-            else
-            {
-                isShooting = false;
-            }
-        }
-        else if (RowNo == 5)
-        {
-            if (Instances->_RowButtons->Fifth)
-            {
-                isShooting = true;
-            }
-            else
-            {
-                isShooting = false;
-            }
-        }
-
-
-        ShootingTimer -= deltaTime;
-        if (ShootingTimer <= 0)
-        {
-            Shoot();
-            ShootingTimer = ShootingInterval;
+            isShooting = false;
         }
     }
+    else if (RowNo == 2)
+    {
+        if (Instances->_RowButtons->Second)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 3)
+    {
+        if (Instances->_RowButtons->Third)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            std::cout << "Rwo" << " " << RowNo << std::endl;
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 4)
+    {
+        if (Instances->_RowButtons->Fourth)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+    else if (RowNo == 5)
+    {
+        if (Instances->_RowButtons->Fifth)
+        {
+            isShooting = true;
+        }
+        else
+        {
+            isShooting = false;
+        }
+    }
+
+    CheckPeaHit();
+
+    ShootingTimer -= deltaTime;
+    if (ShootingTimer <= 0)
+    {
+        Shoot();
+        ShootingTimer = ShootingInterval;
+    }
+    std::cout << isShooting << " shoot \n";
 }
 
 void ShooterBehaviour::CheckPeaHit()
 {
+    
 }
 
 void ShooterBehaviour::Shoot()
