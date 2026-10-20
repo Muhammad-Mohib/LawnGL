@@ -51,6 +51,9 @@
     <ClCompile Include="ZombieBehaviour.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="PeaBehaviour.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
@@ -87,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ZombieBehaviour.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="PeaBehaviour.h">
       <Filter>Scripts</Filter>
     </ClInclude>
   </ItemGroup>

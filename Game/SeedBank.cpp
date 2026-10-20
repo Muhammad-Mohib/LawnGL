@@ -26,6 +26,7 @@ void SeedBank::CreateSeedPackets()
 		SeedPacket->SeedPacketBaseObj = seedPacketObj;
 		seedPacketObj->transform.position = OriginOfPackets + glm::vec2(Offset*counter, 0);
 		seedPacketObj->transform.scale = {1,1};
+		seedPacketObj->isActive = true;
 
 		auto& plantName = SeedPacket->Bank->SeedPackets[counter]->Name;
 
@@ -35,6 +36,8 @@ void SeedBank::CreateSeedPackets()
 		GameObject* root = Instances->_LevelManager->CreatePlant(scene, rm, plantName, seedPacketObj->transform.position-glm::vec2(0,15));
 
 		root->_AnimationController.isPaused = true;
+
+
 
 		//auto fileName = "Plants/" + plantName + ".json";
 		//std::ifstream plantFile(fileName);

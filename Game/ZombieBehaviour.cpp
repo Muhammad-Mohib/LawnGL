@@ -3,11 +3,18 @@
 #include <cmath>
 #include "../GameObject.h"
 #include "GameInstances.h"
+#include "RowButtons.h"
 
+int   ROWS = 5;
+int   COLS = 9;
+float START_X = 125.0f;  // centre of the leftmost column
+float START_Y = 450.0f;  // centre of the top row
+float CELL_W = 75.0f;   // horizontal spacing
+float CELL_H = 95.0f;   // vertical spacing
 
 void ZombieBehaviour::Start()
 {
-	owner->_AnimationController.Origin = { 400.0f,40 };
+	//owner->_AnimationController.Origin = { 800.0f,40 };
 	ZombieDamage = owner->_AnimationController.BiteDamage;
 }
 
@@ -22,7 +29,7 @@ void ZombieBehaviour::Update(float deltaTime)
 		{
 			if (x-30 == plant->_AnimationController.Origin.x)
 			{
-				std::cout << "Plant: " << plant->Health << "\n";
+				//std::cout << "Plant: " << plant->Name << "\n";
 				if (plant->Health <= 0.0f)
 				{
 					CurrentState = ZombieState::WALKING;
@@ -42,6 +49,29 @@ void ZombieBehaviour::Update(float deltaTime)
 		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Eat_Frames");
 	}
 
+	glm::vec2 cellOrigin = owner->_AnimationController.Origin;
+	int zombieInRow = (int)std::round((START_Y - cellOrigin.y) / CELL_H) + 1;
+	
+	if (zombieInRow == 1)
+	{
+		Instances->_RowButtons->First = true;
+	}
+	else if (zombieInRow == 2)
+	{
+		Instances->_RowButtons->Second = true;
+	}
+	else if (zombieInRow == 3)
+	{
+		Instances->_RowButtons->Third = true;
+	}
+	else if (zombieInRow == 4)
+	{
+		Instances->_RowButtons->Fourth = true;
+	}
+	else if (zombieInRow == 5)
+	{
+		Instances->_RowButtons->Fifth = true;
+	}
 
 	Walk(deltaTime);
 }

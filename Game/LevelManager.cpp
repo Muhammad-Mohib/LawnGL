@@ -51,8 +51,8 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const s
 	static unsigned int nextId = 0;
 	std::string instanceName = plantName + "_" + std::to_string(nextId++);
 
-	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "", "Default", "");
-	root->isActive = false;
+	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "SeedPacket", "Default", "");
+	root->transform.scale = { 0,0 };
 	root->_AnimationController.Animation = rm->GetResource<AnimationClip>(plantName + "_Idle_Frames");
 
 	root->_AnimationController.PixelsPerUnit = 100.0f;
@@ -64,7 +64,7 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const s
 	{
 		auto txtName = PlantBodyPart.get<std::string>();
 		GameObject* part = scene->CreateGameObject(instanceName + "/" + txtName, "Plant", txtName, "Default", "");
-		part->isActive = false;
+		//part->isActive = false;
 		root->_AnimationController.Parts[txtName] = part;
 	}
 
@@ -81,8 +81,9 @@ GameObject* LevelManager::CreateZombie(Scene* scene, ResourceManager* rm, const 
 	static unsigned int ZnextId = 0;
 	std::string instanceName = zombieName + "_" + std::to_string(ZnextId++);
 
-	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "", "Default", "");
-	root->isActive = false;
+	GameObject* root = scene->CreateGameObject(instanceName, "SeedPacket", "SeedPacket", "Default", "");
+	root->isActive = true;
+	root->transform.scale = { 0,0 };
 	root->_AnimationController.Animation = rm->GetResource<AnimationClip>("NormalZombie_Walk_Frames");
 
 	root->_AnimationController.PixelsPerUnit = 53.116f;

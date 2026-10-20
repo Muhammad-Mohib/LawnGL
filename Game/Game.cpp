@@ -24,9 +24,19 @@ private:
 	GLFWwindow* currentWindow = nullptr;
 	void OnSeedPacketClicked();
 	void GridOperations();
+	int GetRow(glm::vec2 cellOrigin);
+	int GetCol(glm::vec2 cellOrigin);
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
+
+
+	int   ROWS = 5;
+	int   COLS = 9;
+	float START_X = 125.0f;  // centre of the leftmost column
+	float START_Y = 450.0f;  // centre of the top row
+	float CELL_W = 75.0f;   // horizontal spacing
+	float CELL_H = 95.0f;   // vertical spacing
 };
 
 
@@ -41,6 +51,7 @@ void Game::Run()
 	Instances._SpawnManager = &_SpawnManager;
 	_SpawnManager.Instances = &Instances;
 	Instances.GridMap = &GridMap;
+	Instances._RowButtons = &_RowButtons;
 
 	app.CreateScene("Wave1");
 	app.CreateScene("Wave2");
@@ -50,16 +61,7 @@ void Game::Run()
 	_LevelManager.currentLevel.LevelBank.Instances = &Instances;
 	_LevelManager.LoadLevel("Wave1");
 
-
 	//Set grid
-
-	constexpr int   ROWS = 5;
-	constexpr int   COLS = 9;
-	constexpr float START_X = 125.0f;  // centre of the leftmost column
-	constexpr float START_Y = 450.0f;  // centre of the top row
-	constexpr float CELL_W = 75.0f;   // horizontal spacing
-	constexpr float CELL_H = 95.0f;   // vertical spacing
-
 	glm::vec2 Origin = { 50.0, 450.0 };
 	auto counter = 1;
 	auto row = 1;
@@ -75,13 +77,22 @@ void Game::Run()
 		GridMap[c] = nullptr;
 	}
 
-	_RowButtons.First = true;
 
-
-	_SpawnManager.SpawnZombie();
+	ZombieRowData _ZombieRowData;
+	_SpawnManager.SpawnZombie(_ZombieRowData.First);
 
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
+}
+
+int Game::GetRow(glm::vec2 cellOrigin)
+{
+	return (int)std::round((START_Y - cellOrigin.y) / CELL_H);
+}
+
+int Game::GetCol(glm::vec2 cellOrigin)
+{
+	return (int)std::round((cellOrigin.x - START_X) / CELL_W);
 }
 
 int main()
@@ -172,22 +183,17 @@ void Game::GridOperations()
 								else if (b == "ShooterBehaviour")
 								{
 									auto& result = Bank.PurchasedObjRef->AddBehaviour<ShooterBehaviour>();
+									Bank.PurchasedObjRef->Health = data["Health"];
 									result.Instances = Bank.Instances;
 									result.Instances->_RowButtons = &_RowButtons;
 									result.RowNo = row + 1;
-									std::cout << result.RowNo;
+									//std::cout << result.RowNo;
 								}
 							}
 							break;
 						}
 					}
 				}
-			}
-
-
-			if (Bank.PurchasedObjRef)
-			{
-				std::cout << Bank.PurchasedObjRef->_AnimationController.Origin.x << "\n";
 			}
 
 			

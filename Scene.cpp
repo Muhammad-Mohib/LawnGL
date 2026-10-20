@@ -68,8 +68,9 @@ void Scene::Run(float deltaTime)
 	const size_t count = SceneGameObjects.size();
 	for (size_t i = 0; i < count; ++i)
 	{
-		GameObject* gameObject = SceneGameObjects[i].get();          // raw pointers
-		// GameObject* gameObject = SceneGameObjects[i].get(); // if unique_ptr
+		GameObject* gameObject = SceneGameObjects[i].get(); // raw pointers
+
+		if (gameObject->IsDestroyed || !gameObject->isActive) continue;
 
 		gameObject->Update(deltaTime);
 
@@ -78,8 +79,26 @@ void Scene::Run(float deltaTime)
 			gameObject->Behaviours[b]->Update(deltaTime);
 		}
 
-		gameObject->_AnimationController.Run(this, deltaTime);
+		if (!gameObject->IsDestroyed)
+		{
+			gameObject->_AnimationController.Run(this, deltaTime);
+		}
 	}
+	//FlushDestroyed();
+}
+
+void Scene::DestroyWithParts(GameObject* root)
+{
+	if (!root || root->IsDestroyed) return;
+
+	const std::string prefix = root->Name + "/";
+	for (size_t i = 0; i < SceneGameObjects.size(); ++i)
+	{
+		GameObject* obj = SceneGameObjects[i].get();
+		if (obj->Name.starts_with(prefix))
+			DestroyGameObject(obj);
+	}
+	DestroyGameObject(root);   // root too, so its AnimationController stops
 }
 
 void Scene::Clear()
@@ -112,6 +131,29 @@ GameObject* Scene::CreateGameObject(std::string_view Name, std::string_view Obje
 		SceneGameObjects.push_back(std::move(obj));
 		return pointer;
 	}
+}
+
+void Scene::DestroyGameObject(GameObject* Object)
+{
+	if (Object == nullptr || Object->IsDestroyed)
+		return;                          // already queued; it avoid double-deletes
+	std::cout << "Destroying: " << Object->Name << "\n";
+	Object->IsDestroyed = true;
+	PendingDestroy.push_back(Object);
+}
+
+void Scene::FlushDestroyed()
+{
+	if (PendingDestroy.empty())
+		return;
+
+	std::erase_if(SceneGameObjects,      // C++20; frees the object via unique_ptr
+		[](const std::unique_ptr<GameObject>& obj)
+		{
+			return obj->IsDestroyed;
+		});
+
+	PendingDestroy.clear();
 }
 GameObject* Scene::GetObjectByName(std::string Name)
 {

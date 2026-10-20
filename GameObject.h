@@ -44,6 +44,7 @@ public:
 	Mesh* GameObject_Mesh;
 	SpriteRenderer GameObject_SpriteRenderer;
 	bool isActive = true;
+	bool IsDestroyed = false;
 
 	glm::vec2 Origin = { 222.0f, 250.0f };
 

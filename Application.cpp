@@ -89,6 +89,7 @@ void Application::Run()
 			OnUpdate(deltaTime);
 		}
 
+		
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
 
 		glEnable(GL_BLEND);

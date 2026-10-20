@@ -2,6 +2,7 @@
 #include<iostream>
 #include"GameInstances.h"
 #include "RowButtons.h"
+#include "PeaBehaviour.h"
 
 void ShooterBehaviour::Start()
 {
@@ -9,75 +10,90 @@ void ShooterBehaviour::Start()
 
 void ShooterBehaviour::Update(float deltaTime)
 {
-    if (RowNo == 1)
-    {
-        if (Instances->_RowButtons->First)
-        {
-            isShooting = true;
-        }
-        else
-        {
-            isShooting = false;
-        }
-    }
-    else if (RowNo == 2)
-    {
-        if (Instances->_RowButtons->Second)
-        {
-            isShooting = true;
-        }
-        else
-        {
-            isShooting = false;
-        }
-    }
-    else if (RowNo == 3)
-    {
-        if (Instances->_RowButtons->Third)
-        {
-            isShooting = true;
-        }
-        else
-        {
-            isShooting = false;
-        }
-    }
-    else if (RowNo == 4)
-    {
-        if (Instances->_RowButtons->Fourth)
-        {
-            isShooting = true;
-        }
-        else
-        {
-            isShooting = false;
-        }
-    }
-    else if (RowNo == 5)
-    {
-        if (Instances->_RowButtons->Fifth)
-        {
-            isShooting = true;
-        }
-        else
-        {
-            isShooting = false;
-        }
-    }
 
-    if (!isShooting) return;
-
-    ShootingTimer -= deltaTime;
-    if (ShootingTimer <= 0)
+    if (owner->Health <= 0)
     {
-        Shoot();
-        ShootingTimer = ShootingInterval;
-    }
+        for (auto& [key, value] : owner->_AnimationController.Parts)
+        {
+            value->isActive = false;
+            Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
+        }
 
-    for (auto& pea : Peas)
-    {
-        pea.second->transform.position += glm::vec2(200*deltaTime,0);
+        for (auto& pea : Peas)
+        {
+            Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(pea.second);
+        }
     }
+    else
+    {
+        if (RowNo == 1)
+        {
+            if (Instances->_RowButtons->First)
+            {
+                isShooting = true;
+            }
+            else
+            {
+                isShooting = false;
+            }
+        }
+        else if (RowNo == 2)
+        {
+            if (Instances->_RowButtons->Second)
+            {
+                isShooting = true;
+            }
+            else
+            {
+                isShooting = false;
+            }
+        }
+        else if (RowNo == 3)
+        {
+            if (Instances->_RowButtons->Third)
+            {
+                isShooting = true;
+            }
+            else
+            {
+                isShooting = false;
+            }
+        }
+        else if (RowNo == 4)
+        {
+            if (Instances->_RowButtons->Fourth)
+            {
+                isShooting = true;
+            }
+            else
+            {
+                isShooting = false;
+            }
+        }
+        else if (RowNo == 5)
+        {
+            if (Instances->_RowButtons->Fifth)
+            {
+                isShooting = true;
+            }
+            else
+            {
+                isShooting = false;
+            }
+        }
+
+
+        ShootingTimer -= deltaTime;
+        if (ShootingTimer <= 0)
+        {
+            Shoot();
+            ShootingTimer = ShootingInterval;
+        }
+    }
+}
+
+void ShooterBehaviour::CheckPeaHit()
+{
 }
 
 void ShooterBehaviour::Shoot()
@@ -94,9 +110,8 @@ void ShooterBehaviour::Shoot()
         glm::vec2 unitySize = texSize / 100.0f;
         pea->transform.position = owner->_AnimationController.Origin + glm::vec2(40.0f, 35.0f);
         pea->transform.scale = texSize * 0.6f;
-        std::cout << "tex: " << texSize.x << ", " << texSize.y
-            << "  scale: " << pea->transform.scale.x << ", " << pea->transform.scale.y << "\n";
-
+        pea->AddBehaviour<PeaBehaviour>();
+        pea->GetBehaviour<PeaBehaviour>()->Instances = Instances;
         Peas["Pea_" + std::to_string(PeaCount)] = pea;
 
         //isShooting = false;

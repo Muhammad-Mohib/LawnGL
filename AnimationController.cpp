@@ -42,6 +42,12 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 					{
 						continue;
 					}
+
+					if (obj->GameObject_SpriteRenderer.Sprite->textureSize == glm::vec2(0.0f))
+					{
+						continue;
+					}
+
 					glm::vec2 texSize = { (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[0], (float)obj->GameObject_SpriteRenderer.Sprite->textureSize[1] };
 					glm::vec2 unitySize = texSize / 100.0f;
 					obj->transform.position = Origin + config->Position * PixelsPerUnit * ObjectScale;
