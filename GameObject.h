@@ -72,6 +72,19 @@ public:
 	}
 
 	template<typename T>
+	void RemoveBehaviour()
+	{
+		for (size_t i = 0; i < Behaviours.size(); ++i)
+		{
+			if (dynamic_cast<T*>(Behaviours[i].get()) != nullptr)
+			{
+				Behaviours.erase(Behaviours.begin() + i);   // unique_ptr frees it here
+				return;
+			}
+		}
+	}
+
+	template<typename T>
 	T* GetBehaviour()
 	{
 		for (auto& behaviour : Behaviours)

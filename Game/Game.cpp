@@ -27,9 +27,11 @@ private:
 	int GetRow(glm::vec2 cellOrigin);
 	int GetCol(glm::vec2 cellOrigin);
 
+	int ZombieSpawnInterval = 12;
+	float ZombieSpawnTimer = 1;
+
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
-
 
 	int   ROWS = 5;
 	int   COLS = 9;
@@ -78,8 +80,6 @@ void Game::Run()
 	}
 
 
-	ZombieRowData _ZombieRowData;
-	_SpawnManager.SpawnZombie(_ZombieRowData.First);
 
 	app.OnUpdate = [this](float dt) {Update(dt);};
 	app.Run();
@@ -105,6 +105,19 @@ int main()
 
 void Game::Update(float deltaTime)
 {
+	if(ZombieSpawnTimer > 0)
+	{
+		ZombieSpawnTimer -= deltaTime;
+	}
+	else
+	{
+
+		ZombieRowData _ZombieRowData;
+		Instances._SpawnManager->SpawnZombie(_ZombieRowData.First);
+		ZombieSpawnTimer = ZombieSpawnInterval;
+	}
+
+
 	GridOperations();
 	OnSeedPacketClicked();
 }
@@ -218,22 +231,42 @@ void Game::GridOperations()
 		}
 		else
 		{
+			//if (Bank.PurchasedObjRef && Bank.isSeedPacketSelected)
+			//{
+			//	auto& objects = Instances._SceneManager->GetCurrentScene()->SceneGameObjects;
+
+			//	for (auto& obj : objects)
+			//	{
+			//		if (obj.get() == Bank.PurchasedObjRef) continue;
+			//		if (obj->_AnimationController.Origin == Grid[hovered])
+			//		{
+			//			occupied = true;
+			//			break;
+			//		}
+			//	}
+			//	if (!occupied)
+			//	{
+			//		Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+			//	}
+			//}
+
 			if (Bank.PurchasedObjRef && Bank.isSeedPacketSelected)
 			{
-				auto& objects = Instances._SceneManager->GetCurrentScene()->SceneGameObjects;
+				const glm::vec2 cell = Grid[hovered];
 
-				for (auto& obj : objects)
+				bool occupied = false;
+				for (auto& [cellCenter, plant] : *Instances.GridMap)
 				{
-					if (obj.get() == Bank.PurchasedObjRef) continue;
-					if (obj->_AnimationController.Origin == Grid[hovered])
+					if (cellCenter == cell)
 					{
-						occupied = true;
+						occupied = (plant != nullptr);
 						break;
 					}
 				}
+
 				if (!occupied)
 				{
-					Bank.PurchasedObjRef->_AnimationController.Origin = { Grid[hovered].x, Grid[hovered].y };
+					Bank.PurchasedObjRef->_AnimationController.Origin = cell;
 				}
 			}
 		}

@@ -17,12 +17,24 @@ void PeaBehaviour::Update(float deltaTime)
 	}
 
     auto& myPosition = owner->transform.position;
+
     for (auto& zombie : Instances->_SpawnManager->Zombies)
     {
-        if (myPosition.x >= (*zombie)->_AnimationController.Origin.x-20)
+        if ((*zombie)->IsDestroyed || !(*zombie)->isActive) continue;
+
+        constexpr float PEA_Y_OFFSET = 55.0f;   // pea.y - zombie.y = 55
+
+        glm::vec2 zombiePos = (*zombie)->_AnimationController.Origin;
+
+        bool sameRow = std::abs(myPosition.y - (zombiePos.y + PEA_Y_OFFSET)) < 20.0f;
+        bool touching = myPosition.x >= zombiePos.x - 20.0f &&
+            myPosition.x <= zombiePos.x + 80.0f;   
+
+        if (sameRow && touching)
         {
             (*zombie)->Health -= 10;
             Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);
+            break;   // a pea hits only one zombie
         }
     }
 }

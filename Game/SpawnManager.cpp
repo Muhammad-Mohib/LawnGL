@@ -4,6 +4,7 @@
 #include "ZombieBehaviour.h"
 #include <random>
 #include <array>
+#include "RowButtons.h"
 
 void SpawnManager::SpawnZombie(float ZombieRow)
 {
@@ -11,6 +12,27 @@ void SpawnManager::SpawnZombie(float ZombieRow)
 	auto LevelMgr = Instances->_LevelManager;
 
 	ZombieRow = GetRandomZombieRowY();
+
+	if (ZombieRow == _ZombieRowData.First)
+	{
+		Instances->_RowButtons->First = true;
+	}
+	else if (ZombieRow == _ZombieRowData.Second)
+	{
+		Instances->_RowButtons->Second = true;
+	}
+	else if (ZombieRow == _ZombieRowData.Third)
+	{
+		Instances->_RowButtons->Third = true;
+	}
+	else if (ZombieRow == _ZombieRowData.Fourth)
+	{
+		Instances->_RowButtons->Fourth = true;
+	}
+	else if (ZombieRow == _ZombieRowData.Fifth)
+	{
+		Instances->_RowButtons->Fifth = true;
+	}
 
 	float ZombieOffset = 20.0f;
 	auto* zombie = LevelMgr->CreateZombie(Instances->_SceneManager->GetCurrentScene(), Instances->_ResourceManager, "NormalZombie", { 800, ZombieRow-ZombieOffset });

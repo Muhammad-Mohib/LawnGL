@@ -11,17 +11,8 @@ void ShooterBehaviour::Start()
 
 void ShooterBehaviour::Update(float deltaTime)
 {
-
-    if (owner->Health <= 0)
-    {
-        for (auto& [key, value] : owner->_AnimationController.Parts)
-        {
-            value->isActive = false;
-            Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
-        }
-
-        return;
-    }
+    std::cout << RowNo << "\n";
+   
     if (RowNo == 1)
     {
         if (Instances->_RowButtons->First)
@@ -52,7 +43,6 @@ void ShooterBehaviour::Update(float deltaTime)
         }
         else
         {
-            std::cout << "Rwo" << " " << RowNo << std::endl;
             isShooting = false;
         }
     }
@@ -87,7 +77,21 @@ void ShooterBehaviour::Update(float deltaTime)
         Shoot();
         ShootingTimer = ShootingInterval;
     }
-    std::cout << isShooting << " shoot \n";
+
+    //if (owner->Health <= 0)
+    //{
+    //    for (auto& [cellCenter, plant] : *Instances->GridMap)
+    //    {
+    //        if (plant == owner)
+    //        {
+    //            plant = nullptr;
+    //            break;
+    //        }
+    //    }
+
+    //    Instances->_SceneManager->GetCurrentScene()->DestroyWithParts(owner);
+    //    return;
+    //}
 }
 
 void ShooterBehaviour::CheckPeaHit()
@@ -100,7 +104,6 @@ void ShooterBehaviour::Shoot()
     if (isShooting)
     {
         static unsigned int PeaCount = 0;
-        std::cout << "Shooooting.." << "\n";
         auto* scene = Instances->_SceneManager->GetCurrentScene();
         auto* pea = scene->CreateGameObject("Pea_" + std::to_string(PeaCount++),
             "Plant", "Pea", "Default", "");
@@ -112,7 +115,5 @@ void ShooterBehaviour::Shoot()
         pea->AddBehaviour<PeaBehaviour>();
         pea->GetBehaviour<PeaBehaviour>()->Instances = Instances;
         Peas["Pea_" + std::to_string(PeaCount)] = pea;
-
-        //isShooting = false;
     }
 }

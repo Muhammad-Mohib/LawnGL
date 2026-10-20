@@ -20,36 +20,36 @@ void ZombieBehaviour::Start()
 
 void ZombieBehaviour::Update(float deltaTime)
 {
-
+	//if (Instances == nullptr) return;
 
 	glm::vec2 cellOrigin = owner->_AnimationController.Origin;
 	int zombieInRow = (int)std::round((START_Y - cellOrigin.y) / CELL_H) + 1;
 
 	if (!owner->IsDestroyed)
 	{
-		if (zombieInRow == 1)
-		{
-			Instances->_RowButtons->First = true;
-		}
-		else if (zombieInRow == 2)
-		{
-			Instances->_RowButtons->Second = true;
-		}
-		else if (zombieInRow == 3)
-		{
-			Instances->_RowButtons->Third = true;
-		}
-		else if (zombieInRow == 4)
-		{
-			Instances->_RowButtons->Fourth = true;
-		}
-		else if (zombieInRow == 5)
-		{
-			Instances->_RowButtons->Fifth = true;
-		}
+		//if (zombieInRow == 1)
+		//{
+		//	Instances->_RowButtons->First = true;
+		//}
+		//else if (zombieInRow == 2)
+		//{
+		//	Instances->_RowButtons->Second = true;
+		//}
+		//else if (zombieInRow == 3)
+		//{
+		//	Instances->_RowButtons->Third = true;
+		//}
+		//else if (zombieInRow == 4)
+		//{
+		//	Instances->_RowButtons->Fourth = true;
+		//}
+		//else if (zombieInRow == 5)
+		//{
+		//	Instances->_RowButtons->Fifth = true;
+		//}
 	}
 
-	float x = (int)owner->_AnimationController.Origin.x;
+	glm::vec2 pos = owner->_AnimationController.Origin;
 
 	if (owner->Health <= 0)
 	{
@@ -62,7 +62,6 @@ void ZombieBehaviour::Update(float deltaTime)
 	}
 	else if (CurrentState == ZombieState::DYING)
 	{
-
 		Instances->_RowButtons->First = false;
 		Instances->_RowButtons->Second = false;
 		Instances->_RowButtons->Third = false;
@@ -72,29 +71,45 @@ void ZombieBehaviour::Update(float deltaTime)
 		{
 			Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
 		}
+
+		owner->RemoveBehaviour<ZombieBehaviour>();
+		return;
 	}
-	for (auto& [cellCenter, plant] : *Instances->GridMap)
+	
+	if (Instances != nullptr)
 	{
-		if (plant != nullptr)
+		constexpr float ZOMBIE_Y_OFFSET = 20.0f;   // zombie spawns this much below the row (ZombieOffset)
+
+		for (auto& [cellCenter, plant] : *Instances->GridMap)
 		{
-			if (x-30 == plant->_AnimationController.Origin.x)
+			if (plant == nullptr) continue;
+
+			glm::vec2 plantPos = plant->_AnimationController.Origin;
+
+			bool sameRow = std::abs((pos.y + ZOMBIE_Y_OFFSET) - plantPos.y) < 10.0f;
+			bool reached = std::abs((pos.x - 30.0f) - plantPos.x) < 10.0f;
+
+			if (sameRow && reached)
 			{
-				//std::cout << "Plant: " << plant->Name << "\n";
 				if (plant->Health <= 0.0f)
 				{
 					CurrentState = ZombieState::WALKING;
-					plant = nullptr;
+					Instances->_SceneManager->GetCurrentScene()->DestroyWithParts(plant);
+					plant = nullptr;            // clears the GridMap entry
 				}
 				else
 				{
 					plant->Health -= ZombieDamage * deltaTime;
 					CurrentState = ZombieState::EATING;
 				}
+				break;                          // a zombie eats one plant at a time
 			}
 		}
 	}
-
-	
+	else
+	{
+		return;
+	}
 
 	Walk(deltaTime);
 }
