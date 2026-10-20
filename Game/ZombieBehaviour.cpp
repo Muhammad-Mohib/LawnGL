@@ -27,26 +27,26 @@ void ZombieBehaviour::Update(float deltaTime)
 
 	if (!owner->IsDestroyed)
 	{
-		//if (zombieInRow == 1)
-		//{
-		//	Instances->_RowButtons->First = true;
-		//}
-		//else if (zombieInRow == 2)
-		//{
-		//	Instances->_RowButtons->Second = true;
-		//}
-		//else if (zombieInRow == 3)
-		//{
-		//	Instances->_RowButtons->Third = true;
-		//}
-		//else if (zombieInRow == 4)
-		//{
-		//	Instances->_RowButtons->Fourth = true;
-		//}
-		//else if (zombieInRow == 5)
-		//{
-		//	Instances->_RowButtons->Fifth = true;
-		//}
+		if (zombieInRow == 1)
+		{
+			Instances->_RowButtons->First = true;
+		}
+		else if (zombieInRow == 2)
+		{
+			Instances->_RowButtons->Second = true;
+		}
+		else if (zombieInRow == 3)
+		{
+			Instances->_RowButtons->Third = true;
+		}
+		else if (zombieInRow == 4)
+		{
+			Instances->_RowButtons->Fourth = true;
+		}
+		else if (zombieInRow == 5)
+		{
+			Instances->_RowButtons->Fifth = true;
+		}
 	}
 
 	glm::vec2 pos = owner->_AnimationController.Origin;
@@ -62,15 +62,39 @@ void ZombieBehaviour::Update(float deltaTime)
 	}
 	else if (CurrentState == ZombieState::DYING)
 	{
-		Instances->_RowButtons->First = false;
-		Instances->_RowButtons->Second = false;
-		Instances->_RowButtons->Third = false;
-		Instances->_RowButtons->Fourth = false;
-		Instances->_RowButtons->Fifth = false;
+		if (zombieInRow == 1)
+		{
+			Instances->_RowButtons->First = false;
+		}
+		else if (zombieInRow == 2)
+		{
+			Instances->_RowButtons->Second = false;
+		}
+		else if (zombieInRow == 3)
+		{
+			Instances->_RowButtons->Third = false;
+		}
+		else if (zombieInRow == 4)
+		{
+			Instances->_RowButtons->Fourth = false;
+		}
+		else if (zombieInRow == 5)
+		{
+			Instances->_RowButtons->Fifth = false;
+		}
+
+		auto* scene = Instances->_SceneManager->GetCurrentScene();
+
 		for (auto& [key, value] : owner->_AnimationController.Parts)
 		{
-			Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(value);
+			scene->DestroyGameObject(value);
 		}
+
+		std::erase_if(Instances->_SpawnManager->Zombies,
+			[this](const std::unique_ptr<GameObject*>& z) { return *z == owner; });
+
+		scene->DestroyGameObject(owner); 
+		return;
 
 		owner->RemoveBehaviour<ZombieBehaviour>();
 		return;

@@ -20,18 +20,16 @@ void SunflowerBehaviour::Update(float deltaTime)
 
         if (DisappearingTimer <= 0.0f)
         {
-            owner->_AnimationController = nullptr;
+            //owner->_AnimationController = nullptr;
             Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(CurrentSun);
-            //Instances->_SceneManager->GetCurrentScene()->DestroyWithParts(CurrentSun);
-            CurrentSun = nullptr;                    
+            CurrentSun = nullptr;
         }
     }
 
-    if (owner->Health <= 0)
-    {
-        Instances->_SceneManager->GetCurrentScene()->DestroyWithParts(owner);
-
-    }
+    //if (owner->Health <= 0)
+    //{
+    //    Instances->_SceneManager->GetCurrentScene()->DestroyWithParts(owner);
+    //}
 }
 
 void SunflowerBehaviour::CollectSun()

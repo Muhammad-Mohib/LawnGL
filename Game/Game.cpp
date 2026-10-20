@@ -28,7 +28,7 @@ private:
 	int GetCol(glm::vec2 cellOrigin);
 
 	int ZombieSpawnInterval = 12;
-	float ZombieSpawnTimer = 1;
+	float ZombieSpawnTimer = ZombieSpawnInterval;
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };

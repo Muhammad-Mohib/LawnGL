@@ -10,9 +10,7 @@ void ShooterBehaviour::Start()
 }
 
 void ShooterBehaviour::Update(float deltaTime)
-{
-    std::cout << RowNo << "\n";
-   
+{   
     if (RowNo == 1)
     {
         if (Instances->_RowButtons->First)
@@ -68,8 +66,6 @@ void ShooterBehaviour::Update(float deltaTime)
             isShooting = false;
         }
     }
-
-    CheckPeaHit();
 
     ShootingTimer -= deltaTime;
     if (ShootingTimer <= 0)
