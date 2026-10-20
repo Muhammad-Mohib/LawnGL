@@ -29,6 +29,7 @@ public:
 	int ZombieCount = 0;
 
 	void SpawnZombie(float ZombieRow);
+	float GetRandomZombieRowY();
 
 private:
 	float PixelsPerUnit = 27.5f;
