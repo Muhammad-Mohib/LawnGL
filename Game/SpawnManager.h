@@ -29,6 +29,7 @@ public:
 	int ZombieCount = 0;
 
 	void SpawnZombie(float ZombieRow);
+	std::string GetRandomZombieName();
 	float GetRandomZombieRowY();
 
 private:

@@ -29,7 +29,7 @@ void PeaBehaviour::Update(float deltaTime)
 
         bool sameRow = std::abs(myPosition.y - (zombiePos.y + PEA_Y_OFFSET)) < 20.0f;
         bool touching = myPosition.x >= zombiePos.x - 20.0f &&
-            myPosition.x <= zombiePos.x + 80.0f;   
+            myPosition.x <= zombiePos.x + 80.0f;
 
         if (sameRow && touching)
         {

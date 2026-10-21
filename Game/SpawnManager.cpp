@@ -35,11 +35,24 @@ void SpawnManager::SpawnZombie(float ZombieRow)
 	}
 
 	float ZombieOffset = 20.0f;
-	auto* zombie = LevelMgr->CreateZombie(Instances->_SceneManager->GetCurrentScene(), Instances->_ResourceManager, "FootballZombie", { 800, ZombieRow-ZombieOffset });
+	auto* zombie = LevelMgr->CreateZombie(Instances->_SceneManager->GetCurrentScene(), Instances->_ResourceManager, GetRandomZombieName(), {800, ZombieRow - ZombieOffset});
 	zombie->AddBehaviour<ZombieBehaviour>();
 	zombie->GetBehaviour<ZombieBehaviour>()->Instances = Instances;
 	Zombies.push_back(std::make_unique<GameObject*>(zombie));
 }
+
+std::string SpawnManager::GetRandomZombieName()
+{
+	static std::mt19937 rng{ std::random_device{}() };   // seeded once
+	std::uniform_int_distribution<int> dist(0, 1);
+
+	const std::array <std::string, 2 > ys = {
+		"NormalZombie", "FootballZombie"
+	};
+
+	return ys[dist(rng)];
+}
+
 
 float SpawnManager::GetRandomZombieRowY()
 {

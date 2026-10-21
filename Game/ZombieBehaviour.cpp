@@ -19,7 +19,7 @@ void ZombieBehaviour::Start()
 
 	if (owner->Name.starts_with("FootballZombie"))
 	{
-		owner->_AnimationController.ObjectScale = 0.5f;
+		owner->_AnimationController.ObjectScale = 0.63f;
 	}
 }
 
