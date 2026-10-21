@@ -13,7 +13,7 @@ public:
 	std::function<void()> OnSceneReset;
 	std::function<void()> OnSceneLoaded;
 	void LoadScene(unsigned int SceneIndex);
-	void ApplyPendingLoad();              // call once per frame, after FlushDestroyed
+	void ApplyPendingLoad();      
 
 
 	void Destroy(GameObject* gameObject);

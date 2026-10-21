@@ -6,6 +6,6 @@
                 "WallnutRightPupil","WallnutMouth","WallnutBlinkLeft","WallnutBlinkRight", "WallnutCracked1Body","WallnutCracked1Mouth"
               ,"WallnutCracked2Body","WallnutCracked2Mouth" ],
   "Behaviours": [ "PotatoBehaviour" ],
-  "Health": 200,
+  "Health": 400,
   "Scale": 0.27
 }

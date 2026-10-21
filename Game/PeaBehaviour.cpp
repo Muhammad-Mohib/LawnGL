@@ -38,7 +38,7 @@ void PeaBehaviour::Update(float deltaTime)
 
         if (sameRow && touching)
         {
-            (*zombie)->Health -= 10;
+            (*zombie)->Health -= 15;
 
             if (isSnowPal)
             {
