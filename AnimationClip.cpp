@@ -2,12 +2,13 @@
 #include <GLFW/glfw3.h>
 #include "json.hpp"
 #include <fstream>
+#include "Paths.h"
 
 AnimationClip::AnimationClip(std::string AnimationName)
 {
 	Name = AnimationName;
 
-	std::string path = "Animations//" + AnimationName + ".json";
+	std::string path = Paths::Animation(AnimationName + ".json");
 
 	std::ifstream file(path);
 

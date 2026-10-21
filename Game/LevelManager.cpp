@@ -3,6 +3,7 @@
 #include<fstream>
 #include<iostream>
 #include "GameInstances.h"
+#include "../Paths.h"
 
 
 void LevelManager::LoadLevel(std::string LevelName)
@@ -11,7 +12,7 @@ void LevelManager::LoadLevel(std::string LevelName)
 
 	bank.SeedPackets.clear();
 
-	std::ifstream file("Levels.json");
+	std::ifstream file((Paths::ExeDir()).string() + "/Levels.json");
 
 	nlohmann::json data = nlohmann::json::parse(file);
 

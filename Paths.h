@@ -1,15 +1,29 @@
 // Paths.h
 #pragma once
+#include <filesystem>
 #include <string>
 #include <string_view>
 
+struct HINSTANCE__;
+extern "C" __declspec(dllimport) unsigned long __stdcall
+GetModuleFileNameW(HINSTANCE__* module, wchar_t* filename, unsigned long size);
+
 namespace Paths
 {
-    inline constexpr std::string_view ShaderDir = "D:\\GraphicsStuff\\LawnGL\\";
-    inline constexpr std::string_view TextureDir = "D:\\GraphicsStuff\\LawnGL\\Textures\\";
-    inline constexpr std::string_view ScenesDir = "D:\\GraphicsStuff\\LawnGL\\";
+    inline const std::filesystem::path& ExeDir()
+    {
+        static const std::filesystem::path dir = []
+            {
+                wchar_t buffer[260];
+                unsigned long length = GetModuleFileNameW(nullptr, buffer, 260);
+                return std::filesystem::path(buffer, buffer + length).parent_path();
+            }();
+        return dir;
+    }
 
-    inline std::string Shader(std::string file) { return std::string(ShaderDir) + std::string(file); }
-    inline std::string Texture(std::string_view file) { return std::string(TextureDir) + std::string(file); }
-    inline std::string Scenes(std::string_view file) { return std::string(ScenesDir) + std::string(file); }
+
+    inline std::string Shader(std::string_view file) { return (ExeDir() / file).string(); }
+    inline std::string Texture(std::string_view file) { return (ExeDir() / "Textures" / file).string(); }
+    inline std::string Scenes(std::string_view file) { return (ExeDir() / file).string(); }
+    inline std::string Animation(std::string_view file) { return (ExeDir() / "Animations" / file).string(); }
 }
