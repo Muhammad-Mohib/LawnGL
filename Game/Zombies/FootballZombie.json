@@ -1,0 +1,44 @@
+{
+  "Name": "FootballZombie",
+  "Tag": "Zombie",
+  "Health": 150,
+  "Speed": 25,
+  "BiteDamage": 32,
+  "Scale": [80, 120],
+  "Bodyparts": [
+    "FootballInnerArmUpper",
+    "FootballInnerArmUpper2",
+    "FootballInnerArmLower",
+    "FootballInnerArmHand",
+    "FootballInnerArmFist",
+    "FootballInnerLegUpper",
+    "FootballInnerLegLower",
+    "FootballInnerLegFoot",
+    "FootballOuterLegUpper",
+    "FootballOuterLegLower",
+    "FootballOuterLegFoot",
+    "FootballBelt",
+    "FootballBody",
+    "FootballShoulderPad",
+    "FootballHead",
+    "FootballJaw",
+    "FootballHelmet",
+    "FootballHelmet2",
+    "FootballHelmet3",
+    "FootballOuterArmUpper",
+    "FootballOuterArmLower",
+    "FootballOuterArmHand",
+    "FootballOuterArmHand2",
+    "FootballDust",
+    "FootballDust2",
+    "FootballDust3"
+  ],
+  "Animations": {
+    "Walk": "FootballZombie_Run_Frames",
+    "Eat":  "FootballZombie_Eat_Frames",
+    "Die":  "FootballZombie_Die_Frames"
+  },
+  "Behaviours": [
+    "ZombieBehaviour"
+  ]
+}

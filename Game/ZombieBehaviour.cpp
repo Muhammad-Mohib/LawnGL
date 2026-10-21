@@ -16,6 +16,11 @@ void ZombieBehaviour::Start()
 {
 	//owner->_AnimationController.Origin = { 800.0f,40 };
 	ZombieDamage = owner->_AnimationController.BiteDamage;
+
+	if (owner->Name.starts_with("FootballZombie"))
+	{
+		owner->_AnimationController.ObjectScale = 0.5f;
+	}
 }
 
 void ZombieBehaviour::Update(float deltaTime)
@@ -66,12 +71,12 @@ void ZombieBehaviour::Update(float deltaTime)
 
 	if (CurrentState == ZombieState::EATING)
 	{
-		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Eat_Frames");
+		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>(owner->_AnimationController.AnimationNames["Eat"]);
 	}
 	else if (CurrentState == ZombieState::DYING)
 	{
 		ZombieDieTimer -= deltaTime;
-		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Die_Frames");
+		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>(owner->_AnimationController.AnimationNames["Die"]);
 		
 		if (zombieInRow == 1)
 		{
@@ -156,7 +161,7 @@ void ZombieBehaviour::Walk(float deltaTime)
 {
 	if (CurrentState == ZombieState::WALKING)
 	{
-		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Walk_Frames");
+		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>(owner->_AnimationController.AnimationNames["Walk"]);
 		owner->_AnimationController.Origin -= glm::vec2(Speed * deltaTime, 0);
 
 		if (Instances->GridMap == nullptr)

@@ -97,6 +97,11 @@ GameObject* LevelManager::CreateZombie(Scene* scene, ResourceManager* rm, const 
 
 	root->Health = zombieData["Health"];
 
+	for (auto& [animName, frameName] : zombieData["Animations"].items())
+	{
+		root->_AnimationController.AnimationNames[animName] = frameName;
+	}
+
 	for (auto& PlantBodyPart : zombieData["Bodyparts"])
 	{
 		auto txtName = PlantBodyPart.get<std::string>();

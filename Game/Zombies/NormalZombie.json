@@ -31,9 +31,9 @@
     "ZombieDust3"
   ],
   "Animations": {
-    "Walk": "Zombies/Normal/Walk",
-    "Eat":  "Zombies/Normal/Eat",
-    "Die":  "Zombies/Normal/Die"
+    "Walk": "NormalZombie_Walk_Frames",
+    "Eat":  "NormalZombie_Eat_Frames",
+    "Die":  "NormalZombie_Die_Frames"
   },
   "Behaviours": [
     "ZombieBehaviour"

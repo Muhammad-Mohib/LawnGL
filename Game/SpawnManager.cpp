@@ -35,7 +35,7 @@ void SpawnManager::SpawnZombie(float ZombieRow)
 	}
 
 	float ZombieOffset = 20.0f;
-	auto* zombie = LevelMgr->CreateZombie(Instances->_SceneManager->GetCurrentScene(), Instances->_ResourceManager, "NormalZombie", { 800, ZombieRow-ZombieOffset });
+	auto* zombie = LevelMgr->CreateZombie(Instances->_SceneManager->GetCurrentScene(), Instances->_ResourceManager, "FootballZombie", { 800, ZombieRow-ZombieOffset });
 	zombie->AddBehaviour<ZombieBehaviour>();
 	zombie->GetBehaviour<ZombieBehaviour>()->Instances = Instances;
 	Zombies.push_back(std::make_unique<GameObject*>(zombie));

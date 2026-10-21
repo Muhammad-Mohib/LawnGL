@@ -112,6 +112,10 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<AnimationClip>("Potato_Idle_Frames");
 	_ResourceManager.AddResource<AnimationClip>("Potato_Cracked_Idle_Frames");
 	_ResourceManager.AddResource<AnimationClip>("Potato_Banged_Idle_Frames");
+	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Idle_Frames");
+	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Run_Frames");
+	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Eat_Frames");
+	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Die_Frames");
 
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
@@ -223,6 +227,35 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("WallnutRightEye", "Animations_Atlas/Potato/WallnutRightEye.png");
 	_ResourceManager.AddResource<Texture>("WallnutRightPupil", "Animations_Atlas/Potato/WallnutRightPupil.png");
 	_ResourceManager.AddResource<Texture>("WallnutShadow", "Animations_Atlas/Potato/WallnutShadow.png");
+
+
+	//Football Zombie
+	_ResourceManager.AddResource<Texture>("FootballBelt", "Animations_Atlas/FootballZombie/FootballBelt.png");
+	_ResourceManager.AddResource<Texture>("FootballBody", "Animations_Atlas/FootballZombie/FootballBody.png");
+	_ResourceManager.AddResource<Texture>("FootballDust", "Animations_Atlas/FootballZombie/FootballDust.png");
+	_ResourceManager.AddResource<Texture>("FootballDust2", "Animations_Atlas/FootballZombie/FootballDust2.png");
+	_ResourceManager.AddResource<Texture>("FootballDust3", "Animations_Atlas/FootballZombie/FootballDust3.png");
+	_ResourceManager.AddResource<Texture>("FootballHead", "Animations_Atlas/FootballZombie/FootballHead.png");
+	_ResourceManager.AddResource<Texture>("FootballHelmet", "Animations_Atlas/FootballZombie/FootballHelmet.png");
+	_ResourceManager.AddResource<Texture>("FootballHelmet2", "Animations_Atlas/FootballZombie/FootballHelmet2.png");
+	_ResourceManager.AddResource<Texture>("FootballHelmet3", "Animations_Atlas/FootballZombie/FootballHelmet3.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerArmFist", "Animations_Atlas/FootballZombie/FootballInnerArmFist.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerArmHand", "Animations_Atlas/FootballZombie/FootballInnerArmHand.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerArmLower", "Animations_Atlas/FootballZombie/FootballInnerArmLower.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerArmUpper", "Animations_Atlas/FootballZombie/FootballInnerArmUpper.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerArmUpper2", "Animations_Atlas/FootballZombie/FootballInnerArmUpper2.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerLegFoot", "Animations_Atlas/FootballZombie/FootballInnerLegFoot.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerLegLower", "Animations_Atlas/FootballZombie/FootballInnerLegLower.png");
+	_ResourceManager.AddResource<Texture>("FootballInnerLegUpper", "Animations_Atlas/FootballZombie/FootballInnerLegUpper.png");
+	_ResourceManager.AddResource<Texture>("FootballJaw", "Animations_Atlas/FootballZombie/FootballJaw.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterArmHand", "Animations_Atlas/FootballZombie/FootballOuterArmHand.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterArmHand2", "Animations_Atlas/FootballZombie/FootballOuterArmHand2.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterArmLower", "Animations_Atlas/FootballZombie/FootballOuterArmLower.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterArmUpper", "Animations_Atlas/FootballZombie/FootballOuterArmUpper.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterLegFoot", "Animations_Atlas/FootballZombie/FootballOuterLegFoot.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterLegLower", "Animations_Atlas/FootballZombie/FootballOuterLegLower.png");
+	_ResourceManager.AddResource<Texture>("FootballOuterLegUpper", "Animations_Atlas/FootballZombie/FootballOuterLegUpper.png");
+	_ResourceManager.AddResource<Texture>("FootballShoulderPad", "Animations_Atlas/FootballZombie/FootballShoulderPad.png");
 }
 
 void Application::CreateScene(std::string SceneName)

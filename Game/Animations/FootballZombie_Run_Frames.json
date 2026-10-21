@@ -1,0 +1,7130 @@
+[
+  {
+    "FrameIndex": 0,
+    "FrameExecutionMoment": 0.0,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3433,
+          1.7623
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -116.2043
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.333,
+          1.902
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.1836
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7665,
+          2.2822
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.2763
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.3361,
+          0.9318
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.0878
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.6708,
+          0.5244
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -43.918
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.948,
+          0.4683
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -53.0
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.4713,
+          0.8881
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          38.744
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          1.0893,
+          0.7253
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          56.3566
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          1.2431,
+          0.51
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -75.0
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1138,
+          1.9243
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.1845
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          1.912
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.3101
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0034,
+          1.9205
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.9962
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3163,
+          2.5595
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.0092
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.319,
+          2.0667
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          14.5852
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2828,
+          2.5477
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.7099
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1187,
+          1.4544
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -69.2925
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1286,
+          1.5673
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.7439
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4451,
+          1.9081
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -103.8703
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Alpha": 0.5634
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 1,
+    "FrameExecutionMoment": 0.0333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3491,
+          1.7225
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -118.2475
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3326,
+          1.8865
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.0606
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7559,
+          2.2768
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.1455
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.3157,
+          0.8861
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -18.0839
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.6296,
+          0.4584
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -41.7447
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.9076,
+          0.3043
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.7128
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.4384,
+          0.8268
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          29.4177
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          1.0168,
+          0.7012
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          67.6203
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          1.2128,
+          0.5233
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -66.9482
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1191,
+          1.8928
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.1908
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          1.884
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9592
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0035,
+          1.8909
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.9813
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3115,
+          2.5292
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.6543
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3197,
+          2.0364
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.9996
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2782,
+          2.517
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -8.355
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1272,
+          1.4224
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -66.8894
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1227,
+          1.5256
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.697
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4424,
+          1.8611
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -103.4937
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.8108,
+          0.2416
+        ],
+        "Scale": [
+          1.663,
+          1.4135
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.4595
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 2,
+    "FrameExecutionMoment": 0.0667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3526,
+          1.8013
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -119.4643
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.332,
+          1.9784
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.4398
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7514,
+          2.3725
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.8303
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.276,
+          0.9523
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -11.627
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.5395,
+          0.4919
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -35.2252
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.7606,
+          0.2376
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          3.4583
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.3623,
+          0.8748
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          11.0298
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.8539,
+          0.733
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          73.7637
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          1.0604,
+          0.5665
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -51.3946
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.122,
+          1.982
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.9602
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          1.9766
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.0706
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0036,
+          1.9845
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.8687
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3226,
+          2.617
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -8.6352
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3257,
+          2.1281
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.3059
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2891,
+          2.6054
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.3359
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1395,
+          1.5131
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -64.1962
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1136,
+          1.605
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -30.9073
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4433,
+          1.9305
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -101.7859
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.9633,
+          0.2688
+        ],
+        "Scale": [
+          1.8045,
+          1.5338
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.3619
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 3,
+    "FrameExecutionMoment": 0.1,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3541,
+          1.8806
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -120.0165
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3315,
+          2.0633
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.5839
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7517,
+          2.4571
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.5566
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.208,
+          1.0069
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.4062
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.3865,
+          0.5037
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -26.0125
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.5816,
+          0.2346
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          5.6538
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.2483,
+          0.9537
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -12.572
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.6371,
+          0.729
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          65.6602
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.8087,
+          0.5197
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -46.317
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1211,
+          2.0721
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.0685
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0683
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0601
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0037,
+          2.0791
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.179
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3443,
+          2.7028
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.4287
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3331,
+          2.2191
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.4376
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3104,
+          2.6925
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.1294
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1516,
+          1.6045
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -61.8463
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1046,
+          1.6862
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -28.8992
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4477,
+          1.9994
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -99.2616
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          1.0786,
+          0.2894
+        ],
+        "Scale": [
+          1.9117,
+          1.6249
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.2714
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 4,
+    "FrameExecutionMoment": 0.1333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3544,
+          1.9014
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -120.1884
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3313,
+          2.0877
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.8266
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7545,
+          2.4795
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -24.7085
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.1197,
+          1.0046
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          14.1871
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.1784,
+          0.4695
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -14.1571
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.3672,
+          0.2243
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.0442
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.116,
+          1.0301
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -39.7562
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.3725,
+          0.7168
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          48.4201
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.4606,
+          0.4448
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -45.0488
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.117,
+          2.1013
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.9329
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0963
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.4006
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.004,
+          2.1109
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7029
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3665,
+          2.7263
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0673
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3353,
+          2.2434
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          15.799
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3322,
+          2.7174
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.768
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.159,
+          1.633
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -60.4741
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.0994,
+          1.7083
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -27.2659
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4558,
+          2.0103
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -96.576
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          1.1604,
+          0.304
+        ],
+        "Scale": [
+          1.9875,
+          1.6895
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.1888
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 5,
+    "FrameExecutionMoment": 0.1667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3544,
+          1.888
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -120.1884
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3315,
+          2.0793
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -24.3676
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7579,
+          2.4694
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.6172
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.0267,
+          0.9826
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          30.2718
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.0515,
+          0.4452
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.3151
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.1191,
+          0.2264
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -13.534
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.0402,
+          1.081
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -57.8375
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.1749,
+          0.6799
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          26.3438
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.1374,
+          0.3706
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -45.4437
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1115,
+          2.091
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.617
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0829
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.4006
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0041,
+          2.1
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.131
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3789,
+          2.7121
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.6559
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3358,
+          2.2301
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          17.2104
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3443,
+          2.704
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.3566
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.159,
+          1.6196
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -60.4741
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1006,
+          1.6943
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -26.4334
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4676,
+          1.9891
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -94.2823
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          1.2128,
+          0.3134
+        ],
+        "Scale": [
+          2.0363,
+          1.7307
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.1155
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 6,
+    "FrameExecutionMoment": 0.2,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3541,
+          1.8585
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -120.0165
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3321,
+          2.0558
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.1416
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7614,
+          2.4445
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.4144
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.0687,
+          0.9686
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          48.6241
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.2978,
+          0.4703
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.0108
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.1533,
+          0.2838
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -20.7949
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          -0.0013,
+          1.0862
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -67.9105
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.0312,
+          0.5855
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.5388
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.2364,
+          0.3052
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -47.9396
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1072,
+          2.058
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.8005
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0462
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0601
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0039,
+          2.0636
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7309
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3756,
+          2.6794
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.8549
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3342,
+          2.1972
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          17.0114
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3411,
+          2.6712
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.5556
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1516,
+          1.5825
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -61.8463
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.108,
+          1.6625
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -26.5021
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4818,
+          1.9551
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -92.6571
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          1.2406,
+          0.3183
+        ],
+        "Scale": [
+          2.0621,
+          1.7528
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.0539
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 7,
+    "FrameExecutionMoment": 0.2333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3526,
+          1.829
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -119.4643
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3329,
+          2.0283
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.8263
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7659,
+          2.4146
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -21.016
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.1345,
+          0.9716
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          64.2031
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.482,
+          0.5434
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          26.0868
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.3594,
+          0.413
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.7173
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          -0.0279,
+          1.063
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -72.7159
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.2042,
+          0.5305
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -24.1572
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.5146,
+          0.3251
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -50.4465
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.106,
+          2.0185
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9298
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0043
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.0706
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0036,
+          2.0196
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.222
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3582,
+          2.6444
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.5712
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3313,
+          2.1612
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          15.2951
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3239,
+          2.6351
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.2719
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1395,
+          1.5408
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -64.1962
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.119,
+          1.6303
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -27.2347
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4962,
+          1.925
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -91.6673
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.414
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          1.2498,
+          0.32
+        ],
+        "Scale": [
+          2.0706,
+          1.7599
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.0089
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 8,
+    "FrameExecutionMoment": 0.2667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3491,
+          1.9138
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -118.2475
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3337,
+          2.105
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.9881
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7733,
+          2.4852
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -19.24
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.1798,
+          1.098
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          77.755
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.6134,
+          0.7532
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          37.3524
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.5256,
+          0.7255
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -57.4011
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          -0.0363,
+          1.1218
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -71.0458
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.2649,
+          0.5759
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.8654
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.6054,
+          0.4163
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -55.9519
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1086,
+          2.0896
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.4763
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0753
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9592
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0034,
+          2.087
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9065
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3347,
+          2.721
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.0017
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3242,
+          2.2326
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          14.7888
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3009,
+          2.7103
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.7024
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1272,
+          1.6136
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -66.8894
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1293,
+          1.7141
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -28.1919
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.5079,
+          2.0125
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -91.0813
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.8528,
+          0.1649
+        ],
+        "Scale": [
+          1.2642,
+          1.0746
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.6731
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 9,
+    "FrameExecutionMoment": 0.3,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3433,
+          1.9895
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -116.2043
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3346,
+          2.1581
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.2989
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7847,
+          2.5268
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -16.9917
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.1932,
+          1.1863
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          82.9122
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.663,
+          0.9026
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          47.082
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.6215,
+          0.9467
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -75.0
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          -0.0281,
+          1.1613
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -66.256
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.2537,
+          0.5955
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -34.6434
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.6026,
+          0.4413
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -53.0
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1138,
+          2.1514
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.1845
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.1391
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.3101
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0034,
+          2.1476
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.9962
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3163,
+          2.7866
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.0092
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.319,
+          2.2938
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          14.5852
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2828,
+          2.7748
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.7099
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1187,
+          1.6815
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -69.2925
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1357,
+          1.7915
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -28.9496
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.5152,
+          2.093
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.6614
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.0893,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.5634
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 10,
+    "FrameExecutionMoment": 0.3333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3361,
+          1.9125
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -113.4592
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3351,
+          2.0443
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.72
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7987,
+          2.3964
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -14.4206
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.1636,
+          1.0589
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          73.5858
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.6065,
+          0.7972
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          58.3457
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.5628,
+          0.8422
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -66.9482
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          -0.0107,
+          1.0597
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -62.252
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.2083,
+          0.4789
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.4702
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.5611,
+          0.2776
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -24.8456
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1191,
+          2.0631
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.1908
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0543
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9592
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0035,
+          2.0612
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.9813
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3115,
+          2.6995
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.6543
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3197,
+          2.2067
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.9996
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2782,
+          2.6873
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -8.355
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1161,
+          1.6023
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -70.9937
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1369,
+          1.719
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -29.2946
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.5174,
+          2.0217
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.3361
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.2822,
+          0.2416
+        ],
+        "Scale": [
+          1.663,
+          1.4135
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.4595
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 11,
+    "FrameExecutionMoment": 0.3667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3289,
+          1.9364
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -110.4653
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3341,
+          2.0236
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -21.5636
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.8117,
+          2.3567
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -11.9586
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          0.0901,
+          1.0136
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          55.1979
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.4498,
+          0.7396
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          64.4892
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.3903,
+          0.7486
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -51.3946
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.0244,
+          1.0561
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -55.7952
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          -0.1062,
+          0.4568
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -25.9506
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.4258,
+          0.1859
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          5.1321
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.122,
+          2.0797
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.9602
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0743
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.0706
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0036,
+          2.0822
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.8687
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3226,
+          2.7147
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -8.6352
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3257,
+          2.2258
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.3059
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.2891,
+          2.703
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.3359
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1184,
+          1.6286
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -71.9097
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1341,
+          1.7487
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -29.3072
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.5149,
+          2.0514
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.2667
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.4347,
+          0.2688
+        ],
+        "Scale": [
+          1.8045,
+          1.5338
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.3619
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 12,
+    "FrameExecutionMoment": 0.4,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.323,
+          2.0273
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -107.8921
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3317,
+          2.073
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -19.3985
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.8201,
+          2.3896
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -10.2113
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.0278,
+          1.0648
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          31.5961
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          0.2106,
+          0.7411
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          56.3857
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          0.1396,
+          0.714
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -46.317
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.0847,
+          1.1094
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -44.5743
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.0607,
+          0.4918
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -16.738
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          -0.2168,
+          0.1818
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          6.9211
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1211,
+          2.1678
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.0685
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.164
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0601
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0037,
+          2.1749
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.179
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3443,
+          2.7986
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.4287
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3331,
+          2.3148
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          13.4376
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3104,
+          2.7883
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.1294
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1227,
+          1.7238
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -72.2386
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1295,
+          1.8452
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -29.2943
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.5082,
+          2.1486
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -90.7701
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.55,
+          0.2894
+        ],
+        "Scale": [
+          1.9117,
+          1.6249
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.2714
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 13,
+    "FrameExecutionMoment": 0.4333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3197,
+          2.0724
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -106.4011
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3291,
+          2.0912
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -17.8368
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.8226,
+          2.3993
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -9.7404
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.1738,
+          1.1351
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          4.4119
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.0867,
+          0.7797
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          39.1456
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.1827,
+          0.7133
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -45.0488
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.1642,
+          1.119
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -29.9811
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.2811,
+          0.5058
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.8825
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.058,
+          0.1737
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.7329
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.117,
+          2.2141
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.9329
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.2091
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.4006
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.004,
+          2.2237
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7029
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3665,
+          2.8391
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0673
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3353,
+          2.3562
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          15.799
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3322,
+          2.8302
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.768
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1259,
+          1.7721
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -72.2918
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1258,
+          1.8939
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -29.6086
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4985,
+          2.2011
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -92.1366
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.6318,
+          0.304
+        ],
+        "Scale": [
+          1.9875,
+          1.6895
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.1888
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 14,
+    "FrameExecutionMoment": 0.4667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3197,
+          2.0778
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -106.4011
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3283,
+          2.0917
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -17.2958
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.8194,
+          2.4023
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -10.8317
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.2628,
+          1.1963
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -13.6694
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.3035,
+          0.8178
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          17.0693
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.4434,
+          0.7211
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -45.4437
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.2502,
+          1.1038
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          -13.8964
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.5171,
+          0.5321
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          7.9594
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.364,
+          0.1868
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -13.6461
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1115,
+          2.2227
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.617
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.2146
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.4006
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0041,
+          2.2317
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.131
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3789,
+          2.8437
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.6559
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3358,
+          2.3618
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          17.2104
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3443,
+          2.8357
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.3566
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1259,
+          1.7776
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -72.2918
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1246,
+          1.8999
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -30.4411
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4866,
+          2.2146
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -94.4303
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.6842,
+          0.3134
+        ],
+        "Scale": [
+          2.0363,
+          1.7307
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.1155
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 15,
+    "FrameExecutionMoment": 0.5,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.323,
+          1.9897
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -107.8921
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3296,
+          2.0211
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -17.8409
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.811,
+          2.3449
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -13.3536
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.3122,
+          1.1511
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -23.7424
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.4999,
+          0.7485
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -11.8134
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.7078,
+          0.648
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -47.9396
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.3416,
+          1.0192
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          4.456
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.7613,
+          0.5378
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          22.2854
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.6927,
+          0.1941
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -20.865
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1072,
+          2.1383
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.8005
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.1265
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.0601
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0039,
+          2.1439
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.7309
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3756,
+          2.7597
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -2.8549
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3342,
+          2.2776
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          17.0114
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3411,
+          2.7515
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -1.5556
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1227,
+          1.6863
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -72.2386
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.126,
+          1.8091
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -31.6914
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4738,
+          2.1338
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -97.3746
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.712,
+          0.3183
+        ],
+        "Scale": [
+          2.0621,
+          1.7528
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.0539
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.6179,
+          0.2071
+        ],
+        "Scale": [
+          1.4837,
+          1.2612
+        ],
+        "Rotation": [
+          0,
+          0,
+          -0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 16,
+    "FrameExecutionMoment": 0.5333,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3289,
+          1.8684
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -110.4653
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3316,
+          1.9335
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -19.1771
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7978,
+          2.2769
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -16.7729
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.3424,
+          1.0545
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -28.5477
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.643,
+          0.6664
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.4318
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.9003,
+          0.5883
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -50.4422
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.4076,
+          0.9246
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          20.035
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          0.9359,
+          0.5579
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.3613
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          0.9462,
+          0.2416
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.7173
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.106,
+          2.0205
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9298
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          2.0063
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.0706
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0036,
+          2.0216
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.222
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3582,
+          2.6463
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -4.5712
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3313,
+          2.1632
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          15.2951
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3239,
+          2.6371
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -3.2719
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1184,
+          1.5606
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -71.9097
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1287,
+          1.6829
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -32.9798
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4616,
+          2.0172
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -100.3854
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          1.7212,
+          0.32
+        ],
+        "Scale": [
+          2.0706,
+          1.7599
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.0089
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.0986,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.414
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  },
+  {
+    "FrameIndex": 17,
+    "FrameExecutionMoment": 0.5667,
+    "FrameConfig": [
+      {
+        "Name": "FootballInnerArmUpper",
+        "Position": [
+          -0.3361,
+          1.8326
+        ],
+        "Scale": [
+          1.8827,
+          4.1263
+        ],
+        "Rotation": [
+          0,
+          0,
+          -113.4592
+        ]
+      },
+      {
+        "Name": "FootballInnerArmUpper2",
+        "Position": [
+          -0.2154,
+          2.1199
+        ],
+        "Scale": [
+          2.1415,
+          1.6394
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.8819
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerArmLower",
+        "Position": [
+          -1.3329,
+          1.9372
+        ],
+        "Scale": [
+          2.301,
+          2.2803
+        ],
+        "Rotation": [
+          0,
+          0,
+          -20.7925
+        ]
+      },
+      {
+        "Name": "FootballInnerArmHand",
+        "Position": [
+          -1.7816,
+          2.301
+        ],
+        "Scale": [
+          2.0617,
+          2.1547
+        ],
+        "Rotation": [
+          0,
+          0,
+          -20.3262
+        ]
+      },
+      {
+        "Name": "FootballInnerArmFist",
+        "Position": [
+          -1.627,
+          2.1658
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          -22.3749
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballInnerLegUpper",
+        "Position": [
+          -0.3487,
+          1.0156
+        ],
+        "Scale": [
+          2.1526,
+          2.1105
+        ],
+        "Rotation": [
+          0,
+          0,
+          -26.8777
+        ]
+      },
+      {
+        "Name": "FootballInnerLegLower",
+        "Position": [
+          -0.6865,
+          0.6276
+        ],
+        "Scale": [
+          2.3281,
+          1.7951
+        ],
+        "Rotation": [
+          0,
+          0,
+          -42.1399
+        ]
+      },
+      {
+        "Name": "FootballInnerLegFoot",
+        "Position": [
+          -0.957,
+          0.5785
+        ],
+        "Scale": [
+          2.0414,
+          2.1013
+        ],
+        "Rotation": [
+          0,
+          0,
+          -55.8387
+        ]
+      },
+      {
+        "Name": "FootballOuterLegUpper",
+        "Position": [
+          0.456,
+          0.9319
+        ],
+        "Scale": [
+          2.1124,
+          2.1562
+        ],
+        "Rotation": [
+          0,
+          0,
+          33.5869
+        ]
+      },
+      {
+        "Name": "FootballOuterLegLower",
+        "Position": [
+          1.0536,
+          0.6842
+        ],
+        "Scale": [
+          2.3533,
+          1.8188
+        ],
+        "Rotation": [
+          0,
+          0,
+          46.627
+        ]
+      },
+      {
+        "Name": "FootballOuterLegFoot",
+        "Position": [
+          1.1405,
+          0.422
+        ],
+        "Scale": [
+          1.8686,
+          1.8333
+        ],
+        "Rotation": [
+          0,
+          0,
+          -57.4011
+        ]
+      },
+      {
+        "Name": "FootballBelt",
+        "Position": [
+          -0.1086,
+          1.9887
+        ],
+        "Scale": [
+          2.1383,
+          2.099
+        ],
+        "Rotation": [
+          0,
+          0,
+          -6.4763
+        ]
+      },
+      {
+        "Name": "FootballBody",
+        "Position": [
+          0.0,
+          1.9743
+        ],
+        "Scale": [
+          2.0342,
+          2.0337
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9592
+        ]
+      },
+      {
+        "Name": "FootballShoulderPad",
+        "Position": [
+          -0.0034,
+          1.9861
+        ],
+        "Scale": [
+          1.9981,
+          2.0745
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.9065
+        ]
+      },
+      {
+        "Name": "FootballHead",
+        "Position": [
+          -0.3347,
+          2.6201
+        ],
+        "Scale": [
+          2.0261,
+          2.0318
+        ],
+        "Rotation": [
+          0,
+          0,
+          -7.0017
+        ]
+      },
+      {
+        "Name": "FootballJaw",
+        "Position": [
+          -0.3242,
+          2.1316
+        ],
+        "Scale": [
+          1.4122,
+          1.412
+        ],
+        "Rotation": [
+          0,
+          0,
+          14.7888
+        ]
+      },
+      {
+        "Name": "FootballHelmet",
+        "Position": [
+          -0.3009,
+          2.6094
+        ],
+        "Scale": [
+          2.0242,
+          2.0244
+        ],
+        "Rotation": [
+          0,
+          0,
+          -5.7024
+        ]
+      },
+      {
+        "Name": "FootballOuterArmUpper",
+        "Position": [
+          0.1161,
+          1.5224
+        ],
+        "Scale": [
+          1.9815,
+          1.8563
+        ],
+        "Rotation": [
+          0,
+          0,
+          -70.9937
+        ]
+      },
+      {
+        "Name": "FootballOuterArmLower",
+        "Position": [
+          -0.1303,
+          1.6417
+        ],
+        "Scale": [
+          2.0564,
+          2.0128
+        ],
+        "Rotation": [
+          0,
+          0,
+          -33.7998
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand",
+        "Position": [
+          -0.4517,
+          1.982
+        ],
+        "Scale": [
+          2.0107,
+          2.021
+        ],
+        "Rotation": [
+          0,
+          0,
+          -102.7485
+        ]
+      },
+      {
+        "Name": "FootballOuterArmHand2",
+        "Position": [
+          -0.6349,
+          2.169
+        ],
+        "Scale": [
+          2.3533,
+          2.3533
+        ],
+        "Rotation": [
+          0,
+          0,
+          35.244
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust",
+        "Position": [
+          0.57,
+          0.1144
+        ],
+        "Scale": [
+          1.0016,
+          0.8513
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Active": false
+      },
+      {
+        "Name": "FootballDust2",
+        "Position": [
+          0.3814,
+          0.1649
+        ],
+        "Scale": [
+          1.2642,
+          1.0746
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.0
+        ],
+        "Alpha": 0.6731
+      },
+      {
+        "Name": "FootballDust3",
+        "Position": [
+          0.9604,
+          0.0531
+        ],
+        "Scale": [
+          0.5047,
+          0.4291
+        ],
+        "Rotation": [
+          0,
+          0,
+          0.3162
+        ],
+        "Active": false
+      }
+    ]
+  }
+]
