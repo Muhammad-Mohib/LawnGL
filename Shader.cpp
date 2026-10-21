@@ -21,13 +21,22 @@ Shader::Shader(std::string ShaderName, const char* vertexFile, const char* fragm
 	glShaderSource(fragmentShader, 1, &fragmentShaderCode, NULL);
 	glCompileShader(fragmentShader);
 
+
 	ID = glCreateProgram();
 	glAttachShader(ID, vertexShader);
 	glAttachShader(ID, fragmentShader);
 
+	
+
 	glLinkProgram(ID);
 	glDeleteShader(vertexShader);
 	glDeleteShader(fragmentShader);
+}
+
+void Shader::SetTint(float r, float g, float b, float a)
+{
+	glUseProgram(ID);
+	glUniform4f(glGetUniformLocation(ID, "tint"), r, g, b, a);
 }
 
 Shader::~Shader()

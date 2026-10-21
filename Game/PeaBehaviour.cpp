@@ -16,6 +16,11 @@ void PeaBehaviour::Update(float deltaTime)
 	{
 		Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);
 	}
+    if (isSnowPal)
+    {
+        glm::vec4 frozen = { 0.3f, 0.5f, 1.0f, 1.0f };
+        owner->GameObject_SpriteRenderer.Tint = frozen;
+    }
 
     auto& myPosition = owner->transform.position;
 
@@ -38,6 +43,15 @@ void PeaBehaviour::Update(float deltaTime)
             if (isSnowPal)
             {
                 (*zombie)->GetBehaviour<ZombieBehaviour>()->Speed = 9.0f;
+                glm::vec4 frozen = { 0.55f, 0.75f, 1.0f, 1.0f };
+                (*zombie)->GameObject_SpriteRenderer.Tint = frozen;
+                for (const auto& entry : (*zombie)->_AnimationController.Parts)
+                {
+                    if (entry.second)
+                        entry.second->GameObject_SpriteRenderer.Tint = frozen;
+                }
+
+                owner->GameObject_SpriteRenderer.Tint = frozen;
             }
 
             Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);

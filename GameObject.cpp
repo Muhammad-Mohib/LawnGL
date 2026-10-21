@@ -18,6 +18,7 @@ void GameObject::Draw()
 	if (isActive)
 	{
 		GameObject_SpriteRenderer.SpriteMaterial->MatShader->Activate();
+		GameObject_SpriteRenderer.SpriteMaterial->MatShader->SetTint(GameObject_SpriteRenderer.Tint.r, GameObject_SpriteRenderer.Tint.g, GameObject_SpriteRenderer.Tint.b, GameObject_SpriteRenderer.Tint.a);
 
 		glm::mat4 projection = glm::ortho(
 			0.0f, 800.0f,

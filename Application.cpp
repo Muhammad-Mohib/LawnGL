@@ -131,6 +131,7 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("Mover", "Mover.png");
 
 	_ResourceManager.AddResource<Mesh>("SeedBank", seedBankVertices, sizeof(seedBankVertices), indices, sizeof(indices));
+	_ResourceManager.AddResource<Shader>("Plant", "default.vert", "default.frag");
 	_ResourceManager.AddResource<Shader>("Default", "default.vert", "default.frag");
 	_ResourceManager.AddResource<Material>("Default", _ResourceManager.GetResource<Shader>("Default"));
 	_ResourceManager.AddResource<Mesh>("Bg", vertices, sizeof(vertices), indices, sizeof(indices));
