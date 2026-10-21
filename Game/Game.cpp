@@ -29,7 +29,7 @@ private:
 	int GetCol(glm::vec2 cellOrigin);
 
 	int ZombieSpawnInterval = 12;
-	float ZombieSpawnTimer = 1;
+	float ZombieSpawnTimer = ZombieSpawnInterval+10;
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
@@ -73,7 +73,7 @@ void Game::Run()
 				plant = nullptr;
 
 			auto& bank = Instances._LevelManager->currentLevel.LevelBank;
-			bank.Suns = 500;
+			bank.Suns = 50;
 			bank.PurchasedObjRef = nullptr;
 			bank.isSeedPacketSelected = false;
 

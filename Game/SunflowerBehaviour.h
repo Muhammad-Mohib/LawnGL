@@ -18,7 +18,7 @@ public:
 private:
 	void SpawnSun();
 	float Interval = 24.0f;
-	float Timer = 1.0f;
+	float Timer = 5.0f;
 	float DisappearingInterval = 10.0f;
 	float DisappearingTimer = 10.0f;
 };
