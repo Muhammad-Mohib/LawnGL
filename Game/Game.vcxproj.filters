@@ -54,6 +54,9 @@
     <ClCompile Include="PeaBehaviour.cpp">
       <Filter>Scripts</Filter>
     </ClCompile>
+    <ClCompile Include="PotatoBehaviour.cpp">
+      <Filter>Scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Animations\Peashooter_Idle_Frames.json" />
@@ -93,6 +96,9 @@
       <Filter>Scripts</Filter>
     </ClInclude>
     <ClInclude Include="PeaBehaviour.h">
+      <Filter>Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="PotatoBehaviour.h">
       <Filter>Scripts</Filter>
     </ClInclude>
   </ItemGroup>

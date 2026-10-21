@@ -17,5 +17,5 @@ public:
 	bool isSeedPacketSelected = false;
 	GameObject* PurchasedObjRef;
 
-	int Suns = 500;
+	int Suns = 50;
 };

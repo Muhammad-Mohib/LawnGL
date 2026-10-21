@@ -22,9 +22,13 @@
     "ZombieHead",
     "ZombieHair",
     "ZombieOuterArmUpper",
+    "ZombieOuterArmUpper2",
     "ZombieOuterArmLower",
     "ZombieOuterArmHand",
-    "ZombieOuterArmHand2"
+    "ZombieOuterArmHand2",
+    "ZombieDust",
+    "ZombieDust2",
+    "ZombieDust3"
   ],
   "Animations": {
     "Walk": "Zombies/Normal/Walk",

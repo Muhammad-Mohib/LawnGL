@@ -13,13 +13,14 @@ enum class ZombieState
 class ZombieBehaviour : public Behaviour
 {
 public:
-	float Speed = 50.0f;
+	float Speed = 20.0f;
 	GameInstances* Instances;
 	void Start();
 	void Update(float deltaTime);
 	void Walk(float deltaTime);
 	ZombieState CurrentState = ZombieState::WALKING;
 	float ZombieDamage = 0;
+	float ZombieDieTimer = 3.0f;
 	
 
 	GameObject* _CollidingPlant = nullptr;

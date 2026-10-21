@@ -148,6 +148,7 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelManager.cpp" />
     <ClCompile Include="PeaBehaviour.cpp" />
+    <ClCompile Include="PotatoBehaviour.cpp" />
     <ClCompile Include="ShooterBehaviour.cpp" />
     <ClCompile Include="SeedBank.cpp" />
     <ClCompile Include="SeedPacket.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelManager.h" />
     <ClInclude Include="PeaBehaviour.h" />
+    <ClInclude Include="PotatoBehaviour.h" />
     <ClInclude Include="RowButtons.h" />
     <ClInclude Include="ShooterBehaviour.h" />
     <ClInclude Include="SeedBank.h" />

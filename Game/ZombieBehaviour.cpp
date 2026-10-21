@@ -21,7 +21,6 @@ void ZombieBehaviour::Start()
 void ZombieBehaviour::Update(float deltaTime)
 {
 	//if (Instances == nullptr) return;
-
 	glm::vec2 cellOrigin = owner->_AnimationController.Origin;
 	int zombieInRow = (int)std::round((START_Y - cellOrigin.y) / CELL_H) + 1;
 
@@ -71,6 +70,9 @@ void ZombieBehaviour::Update(float deltaTime)
 	}
 	else if (CurrentState == ZombieState::DYING)
 	{
+		ZombieDieTimer -= deltaTime;
+		owner->_AnimationController.Animation = Instances->_ResourceManager->GetResource<AnimationClip>("NormalZombie_Die_Frames");
+		
 		if (zombieInRow == 1)
 		{
 			Instances->_RowButtons->First = false;
@@ -92,21 +94,24 @@ void ZombieBehaviour::Update(float deltaTime)
 			Instances->_RowButtons->Fifth = false;
 		}
 
-		auto* scene = Instances->_SceneManager->GetCurrentScene();
-
-		for (auto& [key, value] : owner->_AnimationController.Parts)
+		if (ZombieDieTimer <= 0)
 		{
-			scene->DestroyGameObject(value);
+			auto* scene = Instances->_SceneManager->GetCurrentScene();
+
+			for (auto& [key, value] : owner->_AnimationController.Parts)
+			{
+				scene->DestroyGameObject(value);
+			}
+
+			std::erase_if(Instances->_SpawnManager->Zombies,
+				[this](const std::unique_ptr<GameObject*>& z) { return *z == owner; });
+
+			scene->DestroyGameObject(owner); 
+			return;
+
+			owner->RemoveBehaviour<ZombieBehaviour>();
+			return;
 		}
-
-		std::erase_if(Instances->_SpawnManager->Zombies,
-			[this](const std::unique_ptr<GameObject*>& z) { return *z == owner; });
-
-		scene->DestroyGameObject(owner); 
-		return;
-
-		owner->RemoveBehaviour<ZombieBehaviour>();
-		return;
 	}
 	
 	if (Instances != nullptr)

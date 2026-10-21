@@ -108,6 +108,11 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Walk_Frames");
 	_ResourceManager.AddResource<AnimationClip>("Peashooter_Idle_Frames");
 	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Eat_Frames");
+	_ResourceManager.AddResource<AnimationClip>("NormalZombie_Die_Frames");
+	_ResourceManager.AddResource<AnimationClip>("Potato_Idle_Frames");
+	_ResourceManager.AddResource<AnimationClip>("Potato_Cracked_Idle_Frames");
+	_ResourceManager.AddResource<AnimationClip>("Potato_Banged_Idle_Frames");
+
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Plant", plant_verts, sizeof(plant_verts), indices, sizeof(indices));
@@ -147,8 +152,42 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("SunflowerBlink", "Animations_Atlas/Sunflower/Sunflower_Blink.png");
 
 	//Zombie Resource Allocation
-	_ResourceManager.AddResource<Texture>("NormalZombie", "Animations_Atlas/NormalZombie/NormalZombie.png");
+	//_ResourceManager.AddResource<Texture>("NormalZombie", "Animations_Atlas/NormalZombie/NormalZombie.png");
+	//_ResourceManager.AddResource<Texture>("ZombieBody", "Animations_Atlas/NormalZombie/ZombieBody.png");
+	//_ResourceManager.AddResource<Texture>("ZombieHair", "Animations_Atlas/NormalZombie/ZombieHair.png");
+	//_ResourceManager.AddResource<Texture>("ZombieHead", "Animations_Atlas/NormalZombie/ZombieHead.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerArmHand", "Animations_Atlas/NormalZombie/ZombieInnerArmHand.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerArmLower", "Animations_Atlas/NormalZombie/ZombieInnerArmLower.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerArmUpper", "Animations_Atlas/NormalZombie/ZombieInnerArmUpper.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerLegLower", "Animations_Atlas/NormalZombie/ZombieInnerLegLower.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerLegToe", "Animations_Atlas/NormalZombie/ZombieInnerLegToe.png");
+	//_ResourceManager.AddResource<Texture>("ZombieInnerLegUpper", "Animations_Atlas/NormalZombie/ZombieInnerLegUpper.png");
+	//_ResourceManager.AddResource<Texture>("ZombieJaw", "Animations_Atlas/NormalZombie/ZombieJaw.png");
+	//_ResourceManager.AddResource<Texture>("ZombieNeck", "Animations_Atlas/NormalZombie/ZombieNeck.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterArmHand", "Animations_Atlas/NormalZombie/ZombieOuterArmHand.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterArmLower", "Animations_Atlas/NormalZombie/ZombieOuterArmLower.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterArmUpper", "Animations_Atlas/NormalZombie/ZombieOuterArmUpper.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterLegFoot", "Animations_Atlas/NormalZombie/ZombieOuterLegFoot.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterLegLower", "Animations_Atlas/NormalZombie/ZombieOuterLegLower.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterLegUpper", "Animations_Atlas/NormalZombie/ZombieOuterLegUpper.png");
+	//_ResourceManager.AddResource<Texture>("ZombieTie", "Animations_Atlas/NormalZombie/ZombieTie.png");
+	//_ResourceManager.AddResource<Texture>("ZombieOuterArmHand2", "Animations_Atlas/NormalZombie/ZombieOuterArmHand2.png");
+
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Foot", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Foot.png");
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Lower", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Lower.png");
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Shin", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Shin.png");
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Thigh", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Thigh.png");
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Toe", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Toe.png");
+	_ResourceManager.AddResource<Texture>("Zombie_BackLeg_Upper", "Animations_Atlas/NormalZombie/Zombie_BackLeg_Upper.png");
+	_ResourceManager.AddResource<Texture>("Zombie_Coat", "Animations_Atlas/NormalZombie/Zombie_Coat.png");
+	_ResourceManager.AddResource<Texture>("Zombie_FrontLeg_Foot", "Animations_Atlas/NormalZombie/Zombie_FrontLeg_Foot.png");
+	_ResourceManager.AddResource<Texture>("Zombie_FrontLeg_Shin", "Animations_Atlas/NormalZombie/Zombie_FrontLeg_Shin.png");
+	_ResourceManager.AddResource<Texture>("Zombie_FrontLeg_Thigh", "Animations_Atlas/NormalZombie/Zombie_FrontLeg_Thigh.png");
+	_ResourceManager.AddResource<Texture>("Zombie_FrontLeg_Upper", "Animations_Atlas/NormalZombie/Zombie_FrontLeg_Upper.png");
 	_ResourceManager.AddResource<Texture>("ZombieBody", "Animations_Atlas/NormalZombie/ZombieBody.png");
+	_ResourceManager.AddResource<Texture>("ZombieDust", "Animations_Atlas/NormalZombie/ZombieDust.png");
+	_ResourceManager.AddResource<Texture>("ZombieDust2", "Animations_Atlas/NormalZombie/ZombieDust2.png");
+	_ResourceManager.AddResource<Texture>("ZombieDust3", "Animations_Atlas/NormalZombie/ZombieDust3.png");
 	_ResourceManager.AddResource<Texture>("ZombieHair", "Animations_Atlas/NormalZombie/ZombieHair.png");
 	_ResourceManager.AddResource<Texture>("ZombieHead", "Animations_Atlas/NormalZombie/ZombieHead.png");
 	_ResourceManager.AddResource<Texture>("ZombieInnerArmHand", "Animations_Atlas/NormalZombie/ZombieInnerArmHand.png");
@@ -160,13 +199,30 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<Texture>("ZombieJaw", "Animations_Atlas/NormalZombie/ZombieJaw.png");
 	_ResourceManager.AddResource<Texture>("ZombieNeck", "Animations_Atlas/NormalZombie/ZombieNeck.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterArmHand", "Animations_Atlas/NormalZombie/ZombieOuterArmHand.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmHand2", "Animations_Atlas/NormalZombie/ZombieOuterArmHand2.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterArmLower", "Animations_Atlas/NormalZombie/ZombieOuterArmLower.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterArmUpper", "Animations_Atlas/NormalZombie/ZombieOuterArmUpper.png");
+	_ResourceManager.AddResource<Texture>("ZombieOuterArmUpper2", "Animations_Atlas/NormalZombie/ZombieOuterArmUpper2.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterLegFoot", "Animations_Atlas/NormalZombie/ZombieOuterLegFoot.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterLegLower", "Animations_Atlas/NormalZombie/ZombieOuterLegLower.png");
 	_ResourceManager.AddResource<Texture>("ZombieOuterLegUpper", "Animations_Atlas/NormalZombie/ZombieOuterLegUpper.png");
 	_ResourceManager.AddResource<Texture>("ZombieTie", "Animations_Atlas/NormalZombie/ZombieTie.png");
-	_ResourceManager.AddResource<Texture>("ZombieOuterArmHand2", "Animations_Atlas/NormalZombie/ZombieOuterArmHand2.png");
+
+
+	//Potato/Wallnut
+	_ResourceManager.AddResource<Texture>("WallnutBlinkLeft", "Animations_Atlas/Potato/WallnutBlinkLeft.png");
+	_ResourceManager.AddResource<Texture>("WallnutBlinkRight", "Animations_Atlas/Potato/WallnutBlinkRight.png");
+	_ResourceManager.AddResource<Texture>("WallnutBody", "Animations_Atlas/Potato/WallnutBody.png");
+	_ResourceManager.AddResource<Texture>("WallnutCracked1Body", "Animations_Atlas/Potato/WallnutCracked1Body.png");
+	_ResourceManager.AddResource<Texture>("WallnutCracked1Mouth", "Animations_Atlas/Potato/WallnutCracked1Mouth.png");
+	_ResourceManager.AddResource<Texture>("WallnutCracked2Body", "Animations_Atlas/Potato/WallnutCracked2Body.png");
+	_ResourceManager.AddResource<Texture>("WallnutCracked2Mouth", "Animations_Atlas/Potato/WallnutCracked2Mouth.png");
+	_ResourceManager.AddResource<Texture>("WallnutLeftEye", "Animations_Atlas/Potato/WallnutLeftEye.png");
+	_ResourceManager.AddResource<Texture>("WallnutLeftPupil", "Animations_Atlas/Potato/WallnutLeftPupil.png");
+	_ResourceManager.AddResource<Texture>("WallnutMouth", "Animations_Atlas/Potato/WallnutMouth.png");
+	_ResourceManager.AddResource<Texture>("WallnutRightEye", "Animations_Atlas/Potato/WallnutRightEye.png");
+	_ResourceManager.AddResource<Texture>("WallnutRightPupil", "Animations_Atlas/Potato/WallnutRightPupil.png");
+	_ResourceManager.AddResource<Texture>("WallnutShadow", "Animations_Atlas/Potato/WallnutShadow.png");
 }
 
 void Application::CreateScene(std::string SceneName)

@@ -8,6 +8,7 @@
 #include "SunflowerBehaviour.h"
 #include "RowButtons.h"
 #include "SpawnManager.h"
+#include "PotatoBehaviour.h"
 
 
 class Game {
@@ -72,7 +73,7 @@ void Game::Run()
 				plant = nullptr;
 
 			auto& bank = Instances._LevelManager->currentLevel.LevelBank;
-			bank.Suns = 50;
+			bank.Suns = 500;
 			bank.PurchasedObjRef = nullptr;
 			bank.isSeedPacketSelected = false;
 
@@ -222,7 +223,12 @@ void Game::GridOperations()
 									result.Instances = Bank.Instances;
 									result.Instances->_RowButtons = &_RowButtons;
 									result.RowNo = row + 1;
-									//std::cout << result.RowNo;
+								}
+								else if (b == "PotatoBehaviour")
+								{
+									auto& result = Bank.PurchasedObjRef->AddBehaviour<PotatoBehaviour>();
+									Bank.PurchasedObjRef->Health = data["Health"];
+									result.Instances = Bank.Instances;
 								}
 							}
 							break;
