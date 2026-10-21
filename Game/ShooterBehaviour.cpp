@@ -103,6 +103,8 @@ void ShooterBehaviour::Shoot()
         auto* scene = Instances->_SceneManager->GetCurrentScene();
         auto* pea = scene->CreateGameObject("Pea_" + std::to_string(PeaCount++),
             "Plant", "Pea", "Default", "");
+
+
         pea->transform.position = owner->transform.position;
         glm::vec2 texSize = { (float)pea->GameObject_SpriteRenderer.Sprite->textureSize[0], (float)pea->GameObject_SpriteRenderer.Sprite->textureSize[1] };
         glm::vec2 unitySize = texSize / 100.0f;
@@ -110,6 +112,12 @@ void ShooterBehaviour::Shoot()
         pea->transform.scale = texSize * 0.6f;
         pea->AddBehaviour<PeaBehaviour>();
         pea->GetBehaviour<PeaBehaviour>()->Instances = Instances;
+        
+        if (owner->Name.starts_with("SnowPal"))
+        {
+            pea->GetBehaviour<PeaBehaviour>()->isSnowPal = true;
+        }
+
         Peas["Pea_" + std::to_string(PeaCount)] = pea;
     }
 }

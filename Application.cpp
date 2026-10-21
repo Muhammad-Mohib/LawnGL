@@ -116,6 +116,7 @@ void Application::AllocateResources()
 	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Run_Frames");
 	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Eat_Frames");
 	_ResourceManager.AddResource<AnimationClip>("FootballZombie_Die_Frames");
+	_ResourceManager.AddResource<AnimationClip>("SnowPal_Idle_Frames");
 
 	_ResourceManager.AddResource<Mesh>("SeedPacket", seedPacketVerts, sizeof(seedPacketVerts), indices, sizeof(indices));
 	_ResourceManager.AddResource<Mesh>("Peashooter", vertices, sizeof(vertices), indices, sizeof(indices));
@@ -142,6 +143,8 @@ void Application::AllocateResources()
 	//Peashooter Resource Allocation
 	_ResourceManager.AddResource<AnimationClip>("Sunflower_Idle_Frames");
 	_ResourceManager.AddResource<Texture>("Pea", "pea.png");
+	_ResourceManager.AddResource<Texture>("SnowHead", "Animations_Atlas/Peashooter/SnowHead.png");
+	_ResourceManager.AddResource<Texture>("SnowMuzzle", "Animations_Atlas/Peashooter/SnowPal_Face.png");
 	_ResourceManager.AddResource<Texture>("Head", "Animations_Atlas/Peashooter/Peashooter_Face.png");
 	_ResourceManager.AddResource<Texture>("Muzzle", "Animations_Atlas/Peashooter/Peashooter_Mouth.png");
 	_ResourceManager.AddResource<Texture>("Stem", "Animations_Atlas/Peashooter/Peashooter_Stem.png");

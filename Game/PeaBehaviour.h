@@ -8,4 +8,5 @@ class PeaBehaviour : public Behaviour {
 public:
 	void Start();
 	void Update(float deltaTime);
+	bool isSnowPal = false;
 };

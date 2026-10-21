@@ -2,6 +2,7 @@
 #include<iostream>
 #include"../GameObject.h"
 #include "GameInstances.h"
+#include "ZombieBehaviour.h"
 
 void PeaBehaviour::Start()
 {
@@ -33,8 +34,14 @@ void PeaBehaviour::Update(float deltaTime)
         if (sameRow && touching)
         {
             (*zombie)->Health -= 10;
+
+            if (isSnowPal)
+            {
+                (*zombie)->GetBehaviour<ZombieBehaviour>()->Speed = 9.0f;
+            }
+
             Instances->_SceneManager->GetCurrentScene()->DestroyGameObject(owner);
-            break;   // a pea hits only one zombie
+            break;
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "Name": "SnowPal",
+  "Cost": 150,
+  "CooldownPeriod": 40,
+  "Bodyparts": [
+    "FrontLeaves",
+    "SnowHead",
+    "SnowMuzzle",
+    "Stem"
+  ],
+  "Behaviours": ["ShooterBehaviour"],
+  "Health": 100,
+  "Animation": [{"Idle":"SnowPal_Idle_Frames"}]
+}

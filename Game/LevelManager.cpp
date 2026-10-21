@@ -62,7 +62,6 @@ GameObject* LevelManager::CreatePlant(Scene* scene, ResourceManager* rm, const s
 	root->_AnimationController.PixelsPerUnit = 100.0f;
 	root->_AnimationController.ObjectScale = plantData.value("Scale", 0.15f);
 	root->_AnimationController.Origin = position;
-	
 
 	for (auto& PlantBodyPart : plantData["Bodyparts"])
 	{
