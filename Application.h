@@ -11,17 +11,15 @@ public:
 	SceneManager _SceneManager;
 	Application(int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* WINDOW_TITLE, bool isDebug);
 	void Run();
-	void AllocateResources();
 	void CreateScene(std::string SceneName);
-	std::unique_ptr<LevelEditor> editor;
 
-	//debug function
-	void Print(std::string str);
 	GLFWwindow* currentWindow;
-
-	glm::vec2 GetCursorPosition();
-
 	std::function<void(float)> OnUpdate;
 private:
 	bool IS_APPLICATION_DEBUG_MODE = true;
+#if IS_APPLICATION_DEBUG_MODE
+	std::unique_ptr<LevelEditor> editor;
+#endif // 0
+
+	void AllocateResources();
 };

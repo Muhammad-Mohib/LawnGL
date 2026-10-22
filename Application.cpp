@@ -58,11 +58,12 @@ Application::Application(int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* WINDOW
 	}
 	glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
 
+#if isDebug
 	IS_APPLICATION_DEBUG_MODE = isDebug;
 
 	if(IS_APPLICATION_DEBUG_MODE)
 		editor = std::make_unique<LevelEditor>(currentWindow, _SceneManager);
-
+#endif
 	AllocateResources();
 
 	
@@ -241,19 +242,6 @@ void Application::CreateScene(std::string SceneName)
 {
 	_SceneManager.Scenes.push_back(std::make_unique<Scene>(&_ResourceManager, &_SceneManager, SceneName));
 }
-
-void Application::Print(std::string str)
-{
-	std::cout << str << "\n";
-}
-
-glm::vec2 Application::GetCursorPosition()
-{
-	double x, y;
-	glfwGetCursorPos(currentWindow, &x, &y);
-	return glm::vec2(x,y);
-}
-
 //
 //Application
 //SceneManager

@@ -45,7 +45,7 @@ private:
 
 void Game::Run() 
 {
-	Application app = Application(800, 600, "LawnGL", false);
+	Application app = Application(800, 600, "LawnGL", true);
 	Instances = GameInstances();
 	Instances.SetInstance(&app._SceneManager, &app._ResourceManager, &_LevelManager);
 	currentWindow = app.currentWindow;
@@ -138,8 +138,6 @@ void Game::Update(float deltaTime)
 		Instances._SpawnManager->SpawnZombieRandomly();
 		ZombieSpawnTimer = ZombieSpawnInterval;
 	}
-
-
 	GridOperations();
 	OnSeedPacketClicked();
 }
