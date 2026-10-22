@@ -65,8 +65,6 @@ Application::Application(int WINDOW_WIDTH, int WINDOW_HEIGHT, const char* WINDOW
 		editor = std::make_unique<LevelEditor>(currentWindow, _SceneManager);
 #endif
 	AllocateResources();
-
-	
 }
 
 void Application::Run()
@@ -90,10 +88,7 @@ void Application::Run()
 			OnUpdate(deltaTime);
 		}
 
-		
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
-
-
 		_SceneManager.ApplyPendingLoad();
 
 		glEnable(GL_BLEND);

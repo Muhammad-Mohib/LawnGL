@@ -5,12 +5,9 @@
 #include "GameInstances.h"
 #include "RowButtons.h"
 
-int   ROWS = 5;
-int   COLS = 9;
-float START_X = 125.0f;  // centre of the leftmost column
-float START_Y = 450.0f;  // centre of the top row
-float CELL_W = 75.0f;   // horizontal spacing
-float CELL_H = 95.0f;   // vertical spacing
+constexpr float START_X = 125.0f;  // centre of the leftmost column
+constexpr float START_Y = 450.0f;  // centre of the top row
+constexpr float CELL_H = 95.0f;   // vertical spacing
 
 void ZombieBehaviour::Start()
 {
@@ -145,7 +142,7 @@ void ZombieBehaviour::Update(float deltaTime)
 					plant->Health -= ZombieDamage * deltaTime;
 					CurrentState = ZombieState::EATING;
 				}
-				break;                          // a zombie eats one plant at a time
+				break;
 			}
 		}
 	}

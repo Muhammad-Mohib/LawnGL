@@ -29,7 +29,7 @@ private:
 	int GetCol(glm::vec2 cellOrigin);
 
 	int ZombieSpawnInterval = 15;
-	float ZombieSpawnTimer = ZombieSpawnInterval+10;
+	float ZombieSpawnTimer = (float)ZombieSpawnInterval+10.0f;
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
@@ -45,7 +45,7 @@ private:
 
 void Game::Run() 
 {
-	Application app = Application(800, 600, "LawnGL", true);
+	Application app = Application(800, 600, "LawnGL", false);
 	Instances = GameInstances();
 	Instances.SetInstance(&app._SceneManager, &app._ResourceManager, &_LevelManager);
 	currentWindow = app.currentWindow;
@@ -62,8 +62,6 @@ void Game::Run()
 
 	_LevelManager.currentLevel.LevelBank.Instances = &Instances;
 	_LevelManager.LoadLevel("Wave1");
-
-
 
 	Instances._SceneManager->OnSceneReset = [this]()
 		{
@@ -295,7 +293,6 @@ void Game::GridOperations()
 				}
 			}
 		}
-
 	}
 }
 
@@ -339,12 +336,8 @@ void Game::OnSeedPacketClicked()
 						std::cout << "No we can't\n";
 					}
 				}
-			}
-
-			
+			}			
 		}
 	}
-	
-
 	wasDown = isDown;
 }
