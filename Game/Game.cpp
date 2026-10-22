@@ -134,9 +134,8 @@ void Game::Update(float deltaTime)
 	}
 	else
 	{
-
 		ZombieRowData _ZombieRowData;
-		Instances._SpawnManager->SpawnZombie(_ZombieRowData.First);
+		Instances._SpawnManager->SpawnZombieRandomly();
 		ZombieSpawnTimer = ZombieSpawnInterval;
 	}
 

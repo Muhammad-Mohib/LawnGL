@@ -6,7 +6,7 @@
 #include <array>
 #include "RowButtons.h"
 
-void SpawnManager::SpawnZombie(float ZombieRow)
+void SpawnManager::SpawnZombieRandomly()
 {
 	auto scene = Instances->_SceneManager->GetCurrentScene();
 	auto LevelMgr = Instances->_LevelManager;
