@@ -20,7 +20,7 @@ public:
 	void Walk(float deltaTime);
 	ZombieState CurrentState = ZombieState::WALKING;
 	float ZombieDamage = 0;
-	float ZombieDieTimer = 3.0f;
+	float ZombieDieTimer = 2.9f;
 	
 
 	GameObject* _CollidingPlant = nullptr;

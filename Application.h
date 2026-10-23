@@ -15,6 +15,7 @@ public:
 
 	GLFWwindow* currentWindow;
 	std::function<void(float)> OnUpdate;
+	std::function<void()>      OnRenderUI;
 private:
 	bool IS_APPLICATION_DEBUG_MODE = true;
 #if IS_APPLICATION_DEBUG_MODE

@@ -9,16 +9,17 @@
 #include "RowButtons.h"
 #include "SpawnManager.h"
 #include "PotatoBehaviour.h"
-
+#include "../Paths.h"
+#include "../TextRenderer.h"
 
 class Game {
 public:
 	void Run();
-
 private:
 	RowButtons _RowButtons;
 
 	void Update(float deltaTime);
+	void RenderUI();
 	glm::vec2 CursorPos = {0,0};
 	LevelManager _LevelManager;
 	GameInstances Instances;
@@ -28,8 +29,10 @@ private:
 	int GetRow(glm::vec2 cellOrigin);
 	int GetCol(glm::vec2 cellOrigin);
 
+	TextRenderer sunText;
 	int ZombieSpawnInterval = 15;
 	float ZombieSpawnTimer = (float)ZombieSpawnInterval+10.0f;
+
 
 	std::unordered_map<glm::vec2, GameObject*, Vec2Hash, Vec2Equal> GridMap;
 	glm::vec2 Grid[45] = { {0,0} };
@@ -58,6 +61,13 @@ void Game::Run()
 	app.CreateScene("Wave1");
 	app.CreateScene("Wave2");
 
+	std::string fontPath = (Paths::ExeDir() / "Fonts" / "Kraskario.ttf").string();
+	if (!sunText.init(fontPath.c_str(), 20.0f, 800, 600)) {
+		std::cerr << "Failed to load sun font\n";   // the reason is printed to stderr
+	}
+
+	sunText.init(fontPath.c_str(), 20.0f, 800, 600);
+
 	//app._SceneManager.LoadScene(0);
 
 	_LevelManager.currentLevel.LevelBank.Instances = &Instances;
@@ -85,6 +95,8 @@ void Game::Run()
 	app._SceneManager.LoadScene(0);
 	app._SceneManager.ApplyPendingLoad();
 
+
+
 	//Set grid
 	glm::vec2 Origin = { 50.0, 450.0 };
 	auto counter = 1;
@@ -101,10 +113,25 @@ void Game::Run()
 		GridMap[c] = nullptr;
 	}
 
-	app.OnUpdate = [this](float dt) {Update(dt);};
-	app.Run();
-}
+	std::string s = Paths::ExeDir().string() + "/Fonts/Kraskario.ttf";
 
+	app.OnUpdate = [this](float dt) {Update(dt);};
+	app.OnRenderUI = [this]() { RenderUI(); };
+	app.Run();
+	sunText.shutdown();
+}
+void Game::RenderUI()
+{
+	int suns = _LevelManager.currentLevel.LevelBank.Suns;
+	std::string s = std::to_string(suns);
+	float w = sunText.measureWidth(s);
+	auto x = 125;
+	if (suns == 0)
+	{
+		x = 130;
+	}
+	sunText.draw(std::to_string(suns), x, 73, 0, 0, 0, 1);
+}
 
 int Game::GetRow(glm::vec2 cellOrigin)
 {
@@ -138,6 +165,12 @@ void Game::Update(float deltaTime)
 	}
 	GridOperations();
 	OnSeedPacketClicked();
+
+
+	sunText.draw("Sun: 150", 20, 85, 0, 0, 0, 1);
+	sunText.draw("Wave 3", 20, 60, 1.0f, 0.85f, 0.2f);
+
+	//sunText.shutdown();
 }
 
 void Game::GridOperations()

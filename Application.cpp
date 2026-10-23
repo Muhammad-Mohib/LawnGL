@@ -87,8 +87,8 @@ void Application::Run()
 		{
 			OnUpdate(deltaTime);
 		}
-
 		_SceneManager.Scenes[_SceneManager.SceneIndex]->Run(deltaTime);
+		if (OnRenderUI) OnRenderUI();
 		_SceneManager.ApplyPendingLoad();
 
 		glEnable(GL_BLEND);

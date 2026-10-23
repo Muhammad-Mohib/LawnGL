@@ -21,8 +21,7 @@ void AnimationController::Run(Scene* _Scene, float deltaTime)
 		else
 		{
 			_Elapsed += deltaTime;
-		}
-		
+		}	
 
 		//Origin = { 222.0f, 250.0f };
 		const glm::vec2 QuadSize = { 800.0f, 600.0f };
