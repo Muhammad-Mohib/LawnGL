@@ -278,7 +278,7 @@ void Application::CreateScene(std::string SceneName)
 
 
 /*
-
+My Plan
 
 Animation controller that would have a tree that tells you that state from start and combines animation to it
 

@@ -78,7 +78,7 @@ public:
 		{
 			if (dynamic_cast<T*>(Behaviours[i].get()) != nullptr)
 			{
-				Behaviours.erase(Behaviours.begin() + i);   // unique_ptr frees it here
+				Behaviours.erase(Behaviours.begin() + i); 
 				return;
 			}
 		}
