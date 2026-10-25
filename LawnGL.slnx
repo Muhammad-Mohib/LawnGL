@@ -3,6 +3,9 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="x64/Release.zip" />
+  </Folder>
   <Project Path="Game/Game.vcxproj" Id="b8b4ca8c-0846-4fd6-9cf2-987c21d29717" />
   <Project Path="LawnGL.vcxproj" Id="754adff5-a73d-4c8b-9630-92544028e8f9" />
 </Solution>
